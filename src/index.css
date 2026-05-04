@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #7f3d59;
+  --color-brand-dark: #5e2c41;
+  --color-brand-light: #a85d7a;
+  --color-accent: #2D8A6E;
+  --color-accent-light: #3DAF8E;
+  --color-warm: #F5F0EB;
+  --color-cream: #FDFCFA;
+  --color-charcoal: #1a1a2e;
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  @apply bg-cream text-charcoal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+@layer utilities {
+  .editorial-grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 2rem;
+  }
+
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-xl;
+  }
+
+  .overlap-top {
+    @apply -mt-24 relative z-10;
+  }
+
+  .overlap-bottom {
+    @apply -mb-24 relative z-10;
+  }
+
+  .text-outline {
+    -webkit-text-stroke: 1px currentColor;
+    color: transparent;
+  }
+
+  .section-spacing {
+    @apply py-24 md:py-32;
+  }
+
+  .transition-editorial {
+    @apply transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)];
+  }
+}

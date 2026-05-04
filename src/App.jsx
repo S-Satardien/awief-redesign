@@ -1,0 +1,33 @@
+import './index.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import About from './pages/About'
+import OurImpact from './pages/OurImpact'
+import WhatWeDo from './pages/WhatWeDo'
+import News from './pages/News'
+import GetInvolved from './pages/GetInvolved'
+import ContactUs from './pages/ContactUs'
+import PastConferences from './pages/PastConferences'
+import PastAwards from './pages/PastAwards'
+import PurchaseTickets from './pages/PurchaseTickets'
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/our-impact" element={<OurImpact />} />
+        <Route path="/what-we-do" element={<WhatWeDo />} />
+        <Route path="/news" element={<News />} />
+        <Route path="/get-involved" element={<GetInvolved />} />
+        <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/past-conferences" element={<PastConferences />} />
+        <Route path="/past-awards" element={<PastAwards />} />
+        <Route path="/purchase-conference-tickets" element={<PurchaseTickets />} />
+      </Routes>
+    </BrowserRouter>
+  )
+}
+
+export default App
