@@ -8,67 +8,61 @@ export default function Home() {
     <div className="min-h-screen font-body text-charcoal bg-cream overflow-x-hidden">
       <Navbar activePage="home" />
       
-      {/* Wireframe Aligned Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-warm">
-        <div className="african-pattern absolute inset-0 opacity-10 scale-110"></div>
-        <div className="editorial-grid max-w-[1600px] mx-auto px-6 md:px-12 w-full h-full relative z-10 items-center">
-          {/* Left Text Column */}
-          <div className="col-span-12 lg:col-span-6 flex flex-col justify-center py-20 lg:py-0">
-            <div className="space-y-4 mb-10">
-              <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-brand/40 bg-brand/10 backdrop-blur">
-                <Sparkles size={14} className="text-brand animate-pulse" />
-                <span className="text-brand text-[10px] font-black tracking-[0.3em] uppercase italic">Est. 2015 — Pan-African Impact</span>
-              </div>
-              <h1 className="text-6xl md:text-8xl lg:text-[7rem] font-black leading-[0.85] tracking-tighter uppercase font-heading text-charcoal">
-                Empowering <br/>
-                <span className="text-brand">Women</span>. <br/>
-                Transforming <br/>
-                Africa.
-              </h1>
+      {/* Figma-Inspired Berry Hero Section */}
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-charcoal">
+        {/* Background Image with Gradient Overlay */}
+        <div className="absolute top-0 right-0 w-full md:w-[60%] h-full z-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-charcoal via-charcoal/80 to-transparent z-10"></div>
+          <img 
+            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1200&q=80" 
+            alt="AWIEF Impact" 
+            className="w-full h-full object-cover object-top opacity-40 grayscale"
+          />
+        </div>
+
+        <div className="max-w-[1600px] mx-auto px-6 md:px-12 w-full relative z-20 pt-24 md:pt-0">
+          <div className="max-w-3xl">
+            <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-brand/40 bg-brand/10 backdrop-blur mb-10">
+              <Sparkles size={14} className="text-brand animate-pulse" />
+              <span className="text-brand text-[10px] font-black tracking-[0.3em] uppercase italic">Africa's Premier Women's Economic Forum</span>
             </div>
             
-            <p className="text-xl text-charcoal/50 leading-relaxed max-w-lg mb-12 font-medium italic">
-              We are a pan-African organization dedicated to accelerating women's economic empowerment through innovation, leadership, and entrepreneurship.
+            <h1 className="text-5xl md:text-7xl lg:text-[6.5rem] font-black leading-[0.85] tracking-tighter uppercase font-heading text-white mb-10">
+              Empowering <br/>
+              Women to Shape <br/>
+              the <span className="text-gold italic serif normal-case">Global Economy</span>
+            </h1>
+
+            <p className="text-xl text-white/50 leading-relaxed max-w-xl mb-12 font-medium italic">
+              Africa Women Innovation and Entrepreneurship Forum is a non-profit, award-winning pan-African organization dedicated to women's economic empowerment.
             </p>
 
+            {/* UN ECOSOC Badge — Redesigned for Hero */}
+            <div className="glass-panel p-8 rounded-[32px] border border-white/10 mb-12 max-w-lg shadow-2xl flex items-center justify-between gap-6">
+              <div className="flex items-center gap-6">
+                <div className="w-14 h-14 rounded-full border-2 border-gold/40 flex items-center justify-center text-gold shadow-lg">
+                  <Globe size={24} />
+                </div>
+                <div>
+                  <h4 className="font-black text-xs tracking-widest uppercase text-white">UN ECOSOC Status</h4>
+                  <p className="text-[10px] text-white/40 font-black tracking-widest uppercase mt-1">Accredited Consultative Status since 2023</p>
+                </div>
+              </div>
+              <div className="px-4 py-2 rounded-xl bg-gold/10 border border-gold/20 text-gold font-black text-xs">
+                2023
+              </div>
+            </div>
+
             <div className="flex flex-wrap items-center gap-8">
-              <a href="/purchase-conference-tickets" className="bg-brand text-white px-12 py-6 rounded-full font-black tracking-widest text-xs hover:bg-charcoal hover:text-white transition-editorial shadow-2xl">
-                ATTEND THE SUMMIT
+              <a href="/purchase-conference-tickets" className="bg-brand text-white px-12 py-6 rounded-full font-black tracking-widest text-xs hover:bg-gold transition-editorial shadow-2xl flex items-center gap-3">
+                REGISTER FOR CONFERENCE <ArrowRight size={18} />
               </a>
-              <button className="flex items-center gap-4 group text-charcoal">
-                <div className="w-14 h-14 rounded-full border border-charcoal/20 flex items-center justify-center group-hover:bg-brand group-hover:border-brand transition-editorial">
+              <button className="flex items-center gap-4 group text-white">
+                <div className="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-brand group-hover:border-brand transition-editorial">
                   <Play size={20} fill="currentColor" />
                 </div>
                 <span className="font-black tracking-widest text-[11px] uppercase group-hover:text-brand transition-editorial">Watch Story</span>
               </button>
-            </div>
-          </div>
-
-          {/* Right Visual Column - Improved Sizing and Positioning */}
-          <div className="col-span-12 lg:col-span-6 relative mt-12 lg:mt-0 flex items-center justify-end">
-            <div className="relative w-full max-w-md aspect-[4/5] rounded-[60px] overflow-hidden shadow-2xl border-8 border-white/10 rotate-2 hover:rotate-0 transition-editorial duration-1000">
-              <img 
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1000&q=80" 
-                alt="AWIEF Impact" 
-                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-editorial duration-[2000ms] scale-110 hover:scale-100"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-charcoal/40 to-transparent opacity-60"></div>
-              
-              {/* Overlapping Info Card */}
-              <div className="absolute bottom-8 left-6 right-6 glass-panel p-6 rounded-[32px] border border-white/20 hidden md:block">
-                <div className="flex items-center gap-4 mb-3">
-                  <div className="w-10 h-10 rounded-xl bg-brand text-white flex items-center justify-center shadow-lg">
-                    <Globe size={20} />
-                  </div>
-                  <div>
-                    <h4 className="font-black text-[10px] tracking-widest uppercase text-charcoal">UN ECOSOC</h4>
-                    <p className="text-[9px] text-brand font-black tracking-widest uppercase mt-0.5">CONSULTATIVE STATUS</p>
-                  </div>
-                </div>
-                <p className="text-[10px] text-charcoal/60 leading-relaxed font-bold uppercase tracking-wider">
-                  Accredited since 2023, representing the highest level of UN recognition.
-                </p>
-              </div>
             </div>
           </div>
         </div>
