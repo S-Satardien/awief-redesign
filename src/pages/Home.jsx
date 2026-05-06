@@ -9,9 +9,9 @@ export default function Home() {
       <Navbar activePage="home" />
       
       {/* Wireframe Aligned Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-charcoal">
-        <div className="african-pattern absolute inset-0 opacity-10"></div>
-        <div className="editorial-grid max-w-[1600px] mx-auto px-6 md:px-12 w-full h-full relative z-10">
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-warm">
+        <div className="african-pattern absolute inset-0 opacity-10 scale-110"></div>
+        <div className="editorial-grid max-w-[1600px] mx-auto px-6 md:px-12 w-full h-full relative z-10 items-center">
           {/* Left Text Column */}
           <div className="col-span-12 lg:col-span-6 flex flex-col justify-center py-20 lg:py-0">
             <div className="space-y-4 mb-10">
@@ -19,7 +19,7 @@ export default function Home() {
                 <Sparkles size={14} className="text-brand animate-pulse" />
                 <span className="text-brand text-[10px] font-black tracking-[0.3em] uppercase italic">Est. 2015 — Pan-African Impact</span>
               </div>
-              <h1 className="text-6xl md:text-8xl lg:text-[7rem] font-black leading-[0.85] tracking-tighter uppercase font-heading text-white">
+              <h1 className="text-6xl md:text-8xl lg:text-[7rem] font-black leading-[0.85] tracking-tighter uppercase font-heading text-charcoal">
                 Empowering <br/>
                 <span className="text-brand">Women</span>. <br/>
                 Transforming <br/>
@@ -27,16 +27,16 @@ export default function Home() {
               </h1>
             </div>
             
-            <p className="text-xl text-white/50 leading-relaxed max-w-lg mb-12 font-medium">
+            <p className="text-xl text-charcoal/50 leading-relaxed max-w-lg mb-12 font-medium italic">
               We are a pan-African organization dedicated to accelerating women's economic empowerment through innovation, leadership, and entrepreneurship.
             </p>
 
             <div className="flex flex-wrap items-center gap-8">
-              <a href="/purchase-conference-tickets" className="bg-brand text-white px-12 py-6 rounded-full font-black tracking-widest text-xs hover:bg-white hover:text-brand transition-editorial shadow-2xl">
+              <a href="/purchase-conference-tickets" className="bg-brand text-white px-12 py-6 rounded-full font-black tracking-widest text-xs hover:bg-charcoal hover:text-white transition-editorial shadow-2xl">
                 ATTEND THE SUMMIT
               </a>
-              <button className="flex items-center gap-4 group text-white">
-                <div className="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-brand group-hover:border-brand transition-editorial">
+              <button className="flex items-center gap-4 group text-charcoal">
+                <div className="w-14 h-14 rounded-full border border-charcoal/20 flex items-center justify-center group-hover:bg-brand group-hover:border-brand transition-editorial">
                   <Play size={20} fill="currentColor" />
                 </div>
                 <span className="font-black tracking-widest text-[11px] uppercase group-hover:text-brand transition-editorial">Watch Story</span>
@@ -44,29 +44,29 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Right Visual Column */}
-          <div className="col-span-12 lg:col-span-6 relative mt-12 lg:mt-0 flex items-center justify-center">
-            <div className="relative w-full aspect-square md:aspect-[4/5] rounded-[60px] overflow-hidden shadow-2xl border-8 border-white/5 rotate-2 hover:rotate-0 transition-editorial duration-1000">
+          {/* Right Visual Column - Improved Sizing and Positioning */}
+          <div className="col-span-12 lg:col-span-6 relative mt-12 lg:mt-0 flex items-center justify-end">
+            <div className="relative w-full max-w-md aspect-[4/5] rounded-[60px] overflow-hidden shadow-2xl border-8 border-white/10 rotate-2 hover:rotate-0 transition-editorial duration-1000">
               <img 
                 src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1000&q=80" 
                 alt="AWIEF Impact" 
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-editorial duration-[2000ms] scale-110 hover:scale-100"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-charcoal to-transparent opacity-60"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-charcoal/40 to-transparent opacity-60"></div>
               
               {/* Overlapping Info Card */}
-              <div className="absolute bottom-12 left-10 right-10 glass-card !bg-white/10 backdrop-blur-xl p-8 rounded-[32px] border border-white/20 hidden md:block">
-                <div className="flex items-center gap-5 mb-4">
-                  <div className="w-14 h-14 rounded-2xl bg-brand text-white flex items-center justify-center shadow-xl">
-                    <Globe size={28} />
+              <div className="absolute bottom-8 left-6 right-6 glass-panel p-6 rounded-[32px] border border-white/20 hidden md:block">
+                <div className="flex items-center gap-4 mb-3">
+                  <div className="w-10 h-10 rounded-xl bg-brand text-white flex items-center justify-center shadow-lg">
+                    <Globe size={20} />
                   </div>
                   <div>
-                    <h4 className="font-black text-xs tracking-widest uppercase text-white">UN ECOSOC</h4>
-                    <p className="text-[10px] text-brand font-black tracking-widest uppercase mt-1">CONSULTATIVE STATUS</p>
+                    <h4 className="font-black text-[10px] tracking-widest uppercase text-charcoal">UN ECOSOC</h4>
+                    <p className="text-[9px] text-brand font-black tracking-widest uppercase mt-0.5">CONSULTATIVE STATUS</p>
                   </div>
                 </div>
-                <p className="text-xs text-white/60 leading-relaxed font-medium">
-                  Accredited since 2023, representing the highest level of UN recognition for civil society organizations.
+                <p className="text-[10px] text-charcoal/60 leading-relaxed font-bold uppercase tracking-wider">
+                  Accredited since 2023, representing the highest level of UN recognition.
                 </p>
               </div>
             </div>

@@ -45,6 +45,7 @@ const programmesData = [
 export default function WhatWeDo() {
   const filterOptions = ['All', 'Idea & Launch Stage', 'Growth & Scale Stage', 'Open Applications'];
   const [activeFilter, setActiveFilter] = useState('All');
+  const [selectedProg, setSelectedProg] = useState(null);
 
   const filteredProgrammes = programmesData.filter(prog => {
     if (activeFilter === 'All') return true;
@@ -57,32 +58,32 @@ export default function WhatWeDo() {
       <Navbar activePage="what-we-do" />
 
       {/* Editorial Header */}
-      <header className="relative bg-charcoal pt-48 pb-32 px-6 md:px-12 overflow-hidden text-center">
-        <div className="african-pattern absolute inset-0 opacity-10"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-charcoal z-10 pointer-events-none"></div>
+      <header className="relative bg-charcoal pt-56 pb-32 px-6 md:px-12 overflow-hidden text-center">
+        <div className="african-pattern absolute inset-0 opacity-20 scale-150"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-charcoal/50 to-charcoal z-10 pointer-events-none"></div>
         
         <div className="max-w-4xl mx-auto relative z-20">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-brand/40 bg-brand/10 backdrop-blur mb-8">
-            <Layers size={14} className="text-brand"/>
-            <span className="text-brand text-[11px] font-black tracking-[0.2em] uppercase">Ecosystem of Growth</span>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gold/40 bg-gold/10 backdrop-blur mb-8">
+            <Layers size={14} className="text-gold"/>
+            <span className="text-gold text-[11px] font-black tracking-[0.2em] uppercase">Ecosystem of Growth</span>
           </div>
-          <h1 className="text-5xl md:text-8xl font-black uppercase font-heading leading-[0.85] tracking-tighter mb-12 text-white">
+          <h1 className="text-6xl md:text-8xl font-black uppercase font-heading leading-[0.85] tracking-tighter mb-12 text-white">
             What We <span className="text-brand">Do</span>
           </h1>
-          <p className="text-xl md:text-2xl text-white/50 leading-relaxed font-medium">
+          <p className="text-xl md:text-2xl text-white/50 leading-relaxed font-medium max-w-3xl mx-auto">
             From early-stage ideation to cross-border scaling, global networking, and policy reform—discover how we actively break down barriers for African women in business.
           </p>
         </div>
       </header>
 
       {/* Filterable Programmes Section */}
-      <section className="py-32 px-6 md:px-12 bg-white rounded-t-[60px] -mt-12 relative z-20" id="programmes">
+      <section className="py-32 px-6 md:px-12 bg-warm rounded-t-[60px] -mt-12 relative z-20" id="programmes">
         <div className="max-w-[1400px] mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
             <div className="max-w-2xl">
               <p className="text-brand font-black tracking-[0.3em] uppercase text-[10px] mb-4 italic">Capacity Building</p>
               <h2 className="text-4xl md:text-6xl font-black uppercase font-heading tracking-tighter leading-none">Tailored <span className="text-brand">Programmes</span></h2>
-              <p className="text-charcoal/50 text-lg mt-6 font-medium">Find the perfect initiative for your current business stage.</p>
+              <p className="text-charcoal/50 text-lg mt-6 font-medium">Empowering women with the tools and networks they need to succeed at every stage.</p>
             </div>
             
             {/* Filter Bar */}
@@ -93,8 +94,8 @@ export default function WhatWeDo() {
                   onClick={() => setActiveFilter(option)}
                   className={`px-6 py-3 rounded-full text-[10px] font-black uppercase tracking-widest transition-editorial border ${
                     activeFilter === option 
-                    ? 'bg-charcoal text-white border-charcoal shadow-xl' 
-                    : 'bg-transparent text-charcoal/40 border-charcoal/10 hover:border-brand hover:text-brand'
+                    ? 'bg-brand text-white border-brand shadow-xl' 
+                    : 'bg-white text-charcoal/40 border-charcoal/10 hover:border-brand hover:text-brand shadow-sm'
                   }`}
                 >
                   {option}
@@ -103,35 +104,33 @@ export default function WhatWeDo() {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProgrammes.map((p, i) => (
               <div 
                 key={p.id} 
                 onClick={() => setSelectedProg(p)}
-                className="bg-cream rounded-[40px] p-10 border border-charcoal/5 group hover:border-brand hover:shadow-2xl transition-editorial cursor-pointer flex flex-col h-full relative overflow-hidden"
+                className="glass-panel p-10 group hover:border-brand transition-editorial cursor-pointer flex flex-col h-full relative overflow-hidden"
               >
                 <div className="african-pattern absolute inset-0 opacity-5"></div>
                 <div className="relative z-10 flex flex-col h-full">
                   <div className="flex justify-between items-start mb-8">
-                    <div className="flex items-center gap-4">
-                      <div className={`w-12 h-12 rounded-2xl ${p.color} flex items-center justify-center text-white shrink-0 group-hover:rotate-12 transition-editorial shadow-lg`}>
-                        <Zap size={20} />
-                      </div>
-                      <div>
-                        <span className="text-brand font-black tracking-widest text-[9px] uppercase">{p.stage}</span>
-                        <h3 className="text-2xl font-black uppercase font-heading leading-tight group-hover:text-brand transition-editorial mt-1">{p.title}</h3>
-                      </div>
+                    <div className="w-14 h-14 rounded-2xl bg-brand/5 flex items-center justify-center text-brand shrink-0 group-hover:bg-brand group-hover:text-white transition-editorial shadow-sm">
+                      <Zap size={24} />
                     </div>
                     <span className={`px-4 py-1.5 rounded-full text-[9px] font-black uppercase tracking-widest ${
                       p.status === 'Open' ? 'bg-green-100 text-green-700' :
-                      p.status === 'Ongoing' ? 'bg-blue-100 text-blue-700' :
+                      p.status === 'Ongoing' ? 'bg-gold/10 text-gold' :
                       'bg-charcoal/5 text-charcoal/40'
                     }`}>
                       {p.status}
                     </span>
                   </div>
-                  <p className="text-charcoal/50 text-sm font-medium leading-relaxed mb-8 flex-grow pr-12">{p.desc}</p>
-                  <div className="flex items-center gap-2 text-brand font-black tracking-widest text-[10px] uppercase group-hover:gap-4 transition-editorial">
+                  <div className="mb-6">
+                    <span className="text-brand font-black tracking-widest text-[9px] uppercase">{p.stage}</span>
+                    <h3 className="text-2xl font-black uppercase font-heading leading-tight group-hover:text-brand transition-editorial mt-2">{p.title}</h3>
+                  </div>
+                  <p className="text-charcoal/60 text-sm font-medium leading-relaxed mb-10 flex-grow">{p.desc}</p>
+                  <div className="flex items-center gap-2 text-brand font-black tracking-widest text-[10px] uppercase group-hover:gap-4 transition-editorial mt-auto">
                     Learn More <ArrowRight size={14} />
                   </div>
                 </div>

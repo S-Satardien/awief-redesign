@@ -26,56 +26,60 @@ export default function News() {
       <Navbar activePage="news" />
 
       {/* Editorial Magazine Hero */}
-      <header className="pt-48 pb-24 px-6 md:px-12 max-w-[1400px] mx-auto">
-        <div className="editorial-grid items-center gap-16">
+      <header className="pt-56 pb-24 px-6 md:px-12 max-w-[1400px] mx-auto relative">
+        <div className="african-pattern absolute inset-0 opacity-10 scale-125"></div>
+        <div className="editorial-grid items-center gap-16 relative z-10">
           <div className="col-span-12 lg:col-span-7">
             <p className="text-brand font-black tracking-[0.4em] uppercase text-xs mb-8">Editorial Feed</p>
-            <h1 className="text-5xl md:text-[7rem] font-black uppercase font-heading leading-[0.85] tracking-tighter mb-12">
+            <h1 className="text-6xl md:text-[8rem] font-black uppercase font-heading leading-[0.85] tracking-tighter mb-12">
               News & <br/> <span className="text-brand">Insights</span>
             </h1>
             <div onClick={() => setArticle(featured)} className="group cursor-pointer">
-              <div className="relative aspect-[16/9] rounded-[40px] overflow-hidden shadow-2xl mb-10">
+              <div className="relative aspect-[16/9] rounded-[40px] overflow-hidden shadow-2xl mb-10 border-4 border-white/10">
                 <img src={`https://images.unsplash.com/${featured.img}?w=1200&q=80`} alt="Featured" className="w-full h-full object-cover transition-editorial duration-1000 group-hover:scale-105 grayscale group-hover:grayscale-0" />
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 to-transparent"></div>
-                <div className="absolute top-8 left-8 bg-brand text-white px-4 py-1 text-[10px] font-black uppercase tracking-widest rounded-full">
-                  Featured
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent"></div>
+                <div className="absolute top-8 left-8 bg-brand text-white px-6 py-2 text-[10px] font-black uppercase tracking-widest rounded-full shadow-lg">
+                   Featured Story
                 </div>
               </div>
               <h2 className="text-3xl md:text-5xl font-black uppercase font-heading leading-tight group-hover:text-brand transition-editorial">
                 {featured.title}
               </h2>
-              <p className="text-xl text-charcoal/60 mt-6 font-medium leading-relaxed max-w-2xl">
+              <p className="text-xl text-charcoal/60 mt-6 font-medium leading-relaxed max-w-2xl italic">
                 {featured.excerpt}
               </p>
             </div>
           </div>
           
           <div className="col-span-12 lg:col-span-5 lg:pl-12 space-y-12">
-            <div className="p-10 bg-white rounded-[40px] shadow-xl">
+            <div className="p-10 glass-panel rounded-[40px] border border-charcoal/5">
                <h3 className="text-xs font-black tracking-[0.3em] uppercase text-brand mb-8 flex items-center gap-4">
                  <Search size={16}/> Filter Perspectives
                </h3>
                <div className="flex flex-wrap gap-3">
                  {['All', 'Partnerships', 'Insights', 'Awards', 'Events'].map(f => (
-                   <button key={f} onClick={() => setFilter(f)} className={`px-6 py-2 rounded-full text-[11px] font-black uppercase tracking-widest transition-editorial ${filter === f ? 'bg-brand text-white' : 'bg-cream text-charcoal/40 hover:bg-charcoal/5'}`}>
+                   <button key={f} onClick={() => setFilter(f)} className={`px-6 py-2 rounded-full text-[11px] font-black uppercase tracking-widest transition-editorial border ${filter === f ? 'bg-brand text-white border-brand' : 'bg-white text-charcoal/40 border-charcoal/10 hover:border-brand hover:text-brand shadow-sm'}`}>
                      {f}
                    </button>
                  ))}
                </div>
             </div>
             
-            <div className="p-10 bg-charcoal rounded-[40px] text-white shadow-2xl relative overflow-hidden">
-               <div className="absolute -right-12 -bottom-12 text-white/5 text-[10rem] font-black select-none">
+            <div className="p-10 bg-charcoal rounded-[40px] text-white shadow-2xl relative overflow-hidden group">
+               <div className="african-pattern absolute inset-0 opacity-10 group-hover:opacity-20 transition-editorial"></div>
+               <div className="absolute -right-12 -bottom-12 text-white/5 text-[10rem] font-black select-none rotate-12">
                  @
                </div>
-               <Mail className="text-brand mb-6" size={32} />
-               <h3 className="text-2xl font-black uppercase font-heading mb-4">The Digest</h3>
-               <p className="text-white/40 text-sm font-medium mb-8">Receive weekly intelligence on African female entrepreneurship.</p>
-               <div className="space-y-4">
-                 <input type="email" placeholder="Email Address" className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-sm focus:outline-none focus:border-brand transition-editorial" />
-                 <button className="w-full bg-brand text-white py-4 rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-brand-dark transition-editorial">
-                   SUBSCRIBE
-                 </button>
+               <div className="relative z-10">
+                  <Mail className="text-brand mb-6" size={32} />
+                  <h3 className="text-2xl font-black uppercase font-heading mb-4">The Digest</h3>
+                  <p className="text-white/40 text-sm font-medium mb-8">Receive weekly intelligence on African female entrepreneurship.</p>
+                  <div className="space-y-4">
+                    <input type="email" placeholder="Email Address" className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-sm focus:outline-none focus:border-brand transition-editorial" />
+                    <button className="w-full bg-brand text-white py-4 rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-white hover:text-brand transition-editorial shadow-xl">
+                      SUBSCRIBE
+                    </button>
+                  </div>
                </div>
             </div>
           </div>
@@ -83,7 +87,7 @@ export default function News() {
       </header>
 
       {/* Asymmetrical Article Grid */}
-      <section className="section-spacing px-6 md:px-12 bg-white rounded-t-[60px]">
+      <section className="section-spacing px-6 md:px-12 bg-warm rounded-t-[60px] -mt-12 relative z-20">
         <div className="max-w-[1400px] mx-auto">
           <div className="editorial-grid">
             {newsData.map((a, i) => (
@@ -92,7 +96,7 @@ export default function News() {
                 onClick={() => setArticle(a)}
                 className={`col-span-12 md:col-span-6 lg:col-span-4 group cursor-pointer ${i % 3 === 1 ? 'lg:mt-24' : ''}`}
               >
-                <div className="relative aspect-square rounded-[32px] overflow-hidden mb-8 shadow-xl">
+                <div className="relative aspect-square rounded-[40px] overflow-hidden mb-8 shadow-xl border-4 border-white/10">
                   <img src={`https://images.unsplash.com/${a.img}?w=800&q=80`} alt={a.title} className="w-full h-full object-cover transition-editorial duration-700 grayscale group-hover:grayscale-0 group-hover:scale-110" />
                   <div className="absolute inset-0 bg-charcoal/20 group-hover:bg-transparent transition-editorial"></div>
                 </div>
@@ -102,10 +106,10 @@ export default function News() {
                 <h3 className="text-2xl font-black uppercase font-heading leading-tight group-hover:text-brand transition-editorial">
                   {a.title}
                 </h3>
-                <p className="text-charcoal/60 mt-4 font-medium leading-relaxed line-clamp-2">
+                <p className="text-charcoal/50 mt-4 font-medium leading-relaxed line-clamp-2 italic">
                   {a.excerpt}
                 </p>
-                <div className="mt-8 flex items-center gap-2 text-xs font-black uppercase tracking-widest group-hover:gap-4 transition-editorial">
+                <div className="mt-8 flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-brand group-hover:gap-4 transition-editorial">
                    Read Perspective <ArrowRight size={16} />
                 </div>
               </div>

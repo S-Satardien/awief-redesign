@@ -51,7 +51,8 @@ export default function OurImpact() {
       <Navbar activePage="our-impact" />
 
       {/* Header Scale Refinement */}
-      <header className="pt-40 pb-12 px-6 md:px-12 max-w-[1400px] mx-auto relative overflow-hidden">
+      <header className="pt-56 pb-12 px-6 md:px-12 max-w-[1400px] mx-auto relative overflow-hidden">
+        <div className="african-pattern absolute inset-0 opacity-10 scale-150"></div>
         <div className="absolute top-0 right-0 text-[20rem] font-black text-brand/5 leading-none select-none pointer-events-none -mr-24 -mt-12 rotate-12">
            GOAL
         </div>
@@ -70,8 +71,9 @@ export default function OurImpact() {
       </header>
 
       {/* Giant Kinetic Metrics - Scaled Down */}
-      <section className="py-24 px-6 md:px-12 bg-charcoal text-white rounded-b-[60px]">
-        <div className="max-w-[1300px] mx-auto">
+      <section className="py-24 px-6 md:px-12 bg-charcoal text-white rounded-b-[60px] relative overflow-hidden">
+        <div className="african-pattern absolute inset-0 opacity-10"></div>
+        <div className="max-w-[1300px] mx-auto relative z-10">
           <div className="grid lg:grid-cols-3 gap-16">
             {[
               { num: "1M+", label: "REACHED", desc: "Engaged through conferences and digital networking.", icon: Globe },
@@ -79,15 +81,15 @@ export default function OurImpact() {
               { num: "60+", label: "LAUREATES", desc: "Celebrated on the world stage via AWIEF Awards.", icon: Award },
             ].map((s, i) => (
               <div key={i} className="group relative">
-                <div className="text-brand text-[9px] font-black tracking-[0.3em] mb-8 flex items-center gap-3">
+                <div className="text-gold text-[9px] font-black tracking-[0.3em] mb-8 flex items-center gap-3">
                    <span className="text-white/20">0{i+1}</span>
                    {s.label}
                 </div>
-                <h3 className="text-6xl md:text-8xl font-black font-heading leading-none mb-8 tracking-tighter transition-editorial group-hover:text-brand">
+                <h3 className="text-6xl md:text-8xl font-black font-heading leading-none mb-8 tracking-tighter transition-editorial group-hover:text-gold">
                   {s.num}
                 </h3>
-                <div className="w-16 h-0.5 bg-brand mb-8 transition-editorial group-hover:w-full"></div>
-                <p className="text-white/40 text-lg font-medium leading-relaxed max-w-xs">{s.desc}</p>
+                <div className="w-16 h-0.5 bg-gold mb-8 transition-editorial group-hover:w-full"></div>
+                <p className="text-white/40 text-lg font-medium leading-relaxed max-w-xs italic">{s.desc}</p>
               </div>
             ))}
           </div>
@@ -95,7 +97,7 @@ export default function OurImpact() {
       </section>
 
       {/* Triptych Stories - Proportions Refined */}
-      <section className="py-32 px-6 md:px-12 bg-white relative">
+      <section className="py-32 px-6 md:px-12 bg-warm relative">
         <div className="max-w-[1300px] mx-auto">
            <div className="editorial-grid items-end mb-24">
               <div className="col-span-12 lg:col-span-8">
@@ -114,15 +116,15 @@ export default function OurImpact() {
            <div className="grid lg:grid-cols-3 gap-8">
               {stories.map((s, i) => (
                 <div key={i} className={`group ${i === 1 ? 'lg:mt-16' : ''}`}>
-                   <div className="relative aspect-[3/4] rounded-[48px] overflow-hidden shadow-xl bg-charcoal mb-6">
+                   <div className="relative aspect-[3/4] rounded-[48px] overflow-hidden shadow-2xl bg-charcoal mb-6 border-4 border-white/10">
                       <img src={`https://images.unsplash.com/${s.img}?w=600&q=80`} alt={s.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-editorial duration-1000 scale-110 group-hover:scale-100 opacity-80" />
                       <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-transparent to-transparent"></div>
                       <div className="absolute bottom-8 left-8 right-8">
-                         <div className="w-10 h-10 rounded-full bg-brand flex items-center justify-center text-white mb-4">
+                         <div className="w-10 h-10 rounded-full bg-gold flex items-center justify-center text-white mb-4 shadow-lg">
                             <Video size={16} />
                          </div>
                          <h3 className="text-2xl font-black uppercase font-heading text-white mb-1 leading-none">{s.name}</h3>
-                         <p className="text-brand font-bold tracking-[0.2em] uppercase text-[8px]">{s.title}</p>
+                         <p className="text-gold font-bold tracking-[0.2em] uppercase text-[8px]">{s.title}</p>
                       </div>
                    </div>
                    <p className="text-charcoal/40 text-base font-medium leading-relaxed italic border-l-2 border-brand pl-6">
@@ -136,6 +138,7 @@ export default function OurImpact() {
 
       {/* Hall of Excellence - Spread Refinement */}
       <section className="py-32 px-6 md:px-12 bg-charcoal text-white rounded-[60px] relative overflow-hidden">
+         <div className="african-pattern absolute inset-0 opacity-10"></div>
          <div className="max-w-[1200px] mx-auto relative z-10">
             <div className="grid lg:grid-cols-12 gap-20 items-center">
                <div className="lg:col-span-5">
@@ -143,13 +146,13 @@ export default function OurImpact() {
                      <div className="aspect-square rounded-[48px] overflow-hidden border-4 border-white shadow-2xl rotate-2">
                         <img src="https://images.unsplash.com/photo-1561489396-888724a1543d?w=800&q=80" alt="Awards" className="w-full h-full object-cover grayscale" />
                      </div>
-                     <div className="absolute -bottom-8 -right-8 bg-brand text-white p-8 rounded-full shadow-2xl rotate-12">
+                     <div className="absolute -bottom-8 -right-8 bg-gold text-white p-8 rounded-full shadow-2xl rotate-12 border-4 border-charcoal">
                         <Award size={32} />
                      </div>
                   </div>
                </div>
                <div className="lg:col-span-7">
-                  <p className="text-brand font-black tracking-[0.4em] uppercase text-[10px] mb-8">Hall of Excellence</p>
+                  <p className="text-gold font-black tracking-[0.4em] uppercase text-[10px] mb-8">Hall of Excellence</p>
                   <h2 className="text-5xl md:text-7xl font-black uppercase font-heading leading-[0.9] tracking-tighter mb-8">
                     Celebrating <br/> <span className="text-brand serif italic">60+ Winners</span>
                   </h2>
@@ -157,8 +160,8 @@ export default function OurImpact() {
                     The AWIEF Awards spotlight the ingenuity and resilience of women business owners across the continent.
                   </p>
                   <div className="flex flex-wrap gap-6">
-                    <a href="/past-awards" className="bg-white text-charcoal px-10 py-5 rounded-full font-black text-[10px] uppercase tracking-[0.2em] hover:bg-brand hover:text-white transition-editorial shadow-xl">Meet the winners</a>
-                    <a href="/what-we-do#awards" className="flex items-center gap-3 text-white font-black text-[10px] uppercase tracking-widest hover:text-brand transition-editorial">Nominate now <MoveUpRight size={18}/></a>
+                    <a href="/past-awards" className="bg-white text-charcoal px-10 py-5 rounded-full font-black text-[10px] uppercase tracking-[0.2em] hover:bg-gold hover:text-white transition-editorial shadow-xl">Meet the winners</a>
+                    <a href="/what-we-do#awards" className="flex items-center gap-3 text-gold font-black text-[10px] uppercase tracking-widest hover:text-white transition-editorial">Nominate now <MoveUpRight size={18}/></a>
                   </div>
                </div>
             </div>
@@ -166,7 +169,7 @@ export default function OurImpact() {
       </section>
 
       {/* News Grid - Compact Refinement */}
-      <section className="py-32 px-6 md:px-12 bg-white">
+      <section className="py-32 px-6 md:px-12 bg-warm">
         <div className="max-w-[1300px] mx-auto">
            <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
               <div>
@@ -176,19 +179,19 @@ export default function OurImpact() {
                  </h2>
               </div>
               <a href="/news" className="text-charcoal font-black text-[10px] uppercase tracking-widest flex items-center gap-3 group">
-                 View newsroom <div className="w-10 h-10 rounded-full border border-charcoal/10 flex items-center justify-center group-hover:bg-charcoal group-hover:text-white transition-editorial"><ArrowRight size={16}/></div>
+                 View newsroom <div className="w-10 h-10 rounded-full border border-charcoal/10 flex items-center justify-center group-hover:bg-brand group-hover:text-white transition-editorial"><ArrowRight size={16}/></div>
               </a>
            </div>
 
            <div className="grid lg:grid-cols-12 gap-12">
               <div className="lg:col-span-7">
                  <div className="group cursor-pointer">
-                    <div className="aspect-[16/9] rounded-[40px] overflow-hidden bg-charcoal mb-6 shadow-xl relative">
+                    <div className="aspect-[16/9] rounded-[40px] overflow-hidden bg-charcoal mb-6 shadow-xl relative border-4 border-white/10">
                        <img src={`https://images.unsplash.com/${news[0].img}?w=1000&q=80`} alt={news[0].title} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-editorial duration-1000 scale-110 group-hover:scale-100 opacity-80" />
-                       <div className="absolute top-6 left-6 bg-brand text-white px-4 py-2 rounded-full font-black text-[8px] tracking-widest uppercase">{news[0].date}</div>
+                       <div className="absolute top-6 left-6 bg-brand text-white px-4 py-2 rounded-full font-black text-[8px] tracking-widest uppercase shadow-lg">{news[0].date}</div>
                     </div>
                     <h3 className="text-3xl font-black uppercase font-heading mb-4 group-hover:text-brand transition-editorial">{news[0].title}</h3>
-                    <p className="text-charcoal/40 text-lg font-medium leading-relaxed max-w-xl">{news[0].desc}</p>
+                    <p className="text-charcoal/40 text-lg font-medium leading-relaxed max-w-xl italic">{news[0].desc}</p>
                  </div>
               </div>
               <div className="lg:col-span-5 flex flex-col justify-center space-y-12">
@@ -197,7 +200,7 @@ export default function OurImpact() {
                       <div className="text-brand text-xl font-black font-heading tracking-tighter border-t-2 border-brand pt-3">{item.date}</div>
                       <div>
                          <h3 className="text-xl font-black uppercase font-heading mb-2 group-hover:text-brand transition-editorial leading-tight">{item.title}</h3>
-                         <p className="text-charcoal/40 text-sm font-medium leading-relaxed">{item.desc}</p>
+                         <p className="text-charcoal/40 text-sm font-medium leading-relaxed italic">{item.desc}</p>
                       </div>
                    </div>
                  ))}
@@ -207,23 +210,24 @@ export default function OurImpact() {
       </section>
 
       {/* Retrospective - Proportions Refined */}
-      <section className="py-24 px-6 md:px-12 bg-cream rounded-t-[60px]">
-        <div className="max-w-[1200px] mx-auto text-center mb-24">
+      <section className="py-24 px-6 md:px-12 bg-white rounded-t-[60px] -mt-12 relative z-20">
+        <div className="african-pattern absolute inset-0 opacity-5 scale-125"></div>
+        <div className="max-w-[1200px] mx-auto text-center mb-24 relative z-10">
            <h2 className="text-4xl md:text-7xl font-black uppercase font-heading tracking-tighter text-charcoal leading-[0.8] mb-8">
              The <span className="text-brand italic serif">2025</span> <br/> Retrospective
            </h2>
         </div>
         
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
            {[
              "photo-1540317580384-e5d43867caa6", 
              "photo-1556761175-5973dc0f32d7", 
              "photo-1573164574572-cb89e39749b4", 
              "photo-1551818255-e6e10975bc17"
            ].map((img, i) => (
-             <div key={i} className={`aspect-[3/4] rounded-[32px] overflow-hidden shadow-xl relative group ${i % 2 === 1 ? 'translate-y-16' : '-translate-y-16'}`}>
+             <div key={i} className={`aspect-[3/4] rounded-[32px] overflow-hidden shadow-2xl relative group border-4 border-white/10 ${i % 2 === 1 ? 'translate-y-16' : '-translate-y-16'}`}>
                <img src={`https://images.unsplash.com/${img}?w=500&q=80`} alt="Moment" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-editorial duration-1000 group-hover:scale-110" />
-               <div className="absolute inset-0 bg-brand/20 opacity-0 group-hover:opacity-100 transition-editorial"></div>
+               <div className="absolute inset-0 bg-brand/10 opacity-0 group-hover:opacity-100 transition-editorial"></div>
              </div>
            ))}
         </div>

@@ -5,11 +5,11 @@
   --color-brand: #7f3d59;
   --color-brand-dark: #5e2c41;
   --color-brand-light: #a85d7a;
+  --color-gold: #D4AF37;
   --color-accent: #2D8A6E;
-  --color-accent-light: #3DAF8E;
-  --color-warm: #F5F0EB;
+  --color-warm: #fdf8f9;
   --color-cream: #FDFCFA;
-  --color-charcoal: #1a1a2e;
+  --color-charcoal: #2d3748;
   --font-heading: 'Arial', sans-serif;
   --font-body: 'Arial', sans-serif;
 }
@@ -17,7 +17,7 @@
 body {
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
-  @apply bg-cream text-charcoal;
+  @apply bg-warm text-charcoal;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -56,7 +56,11 @@ h1, h2, h3, h4, h5, h6 {
     @apply transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)];
   }
 
+  .glass-panel {
+    @apply bg-white/70 backdrop-blur-md border border-white/30 shadow-[0_8px_32px_0_rgba(45,55,72,0.05)];
+  }
+
   .african-pattern {
-    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L60 30L30 60L0 30Z' fill='none' stroke='%237f3d59' stroke-width='0.5' opacity='0.1'/%3E%3Cpath d='M30 15L45 30L30 45L15 30Z' fill='none' stroke='%237f3d59' stroke-width='0.3' opacity='0.1'/%3E%3Ccircle cx='30' cy='30' r='1.5' fill='%237f3d59' opacity='0.1'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L60 30L30 60L0 30Z' fill='none' stroke='%237f3d59' stroke-width='0.5' opacity='0.15'/%3E%3Cpath d='M30 15L45 30L30 45L15 30Z' fill='none' stroke='%23D4AF37' stroke-width='0.3' opacity='0.1'/%3E%3Ccircle cx='30' cy='30' r='1.5' fill='%237f3d59' opacity='0.15'/%3E%3C/svg%3E");
   }
 }

@@ -179,22 +179,22 @@ export default function About() {
             </p>
           </div>
 
-          <div className="space-y-2">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
              {advisoryBoard.map((m, i) => (
-               <div key={i} onClick={() => setSelected(m)} className="group border-b border-white/10 py-8 flex flex-col md:flex-row justify-between items-center gap-8 cursor-pointer hover:bg-white/5 transition-editorial px-6 rounded-2xl">
-                  <div className="flex flex-col md:flex-row items-center gap-8 text-center md:text-left">
-                     <span className="text-white/20 text-lg font-black font-heading group-hover:text-brand transition-editorial">0{i+1}</span>
-                     <div>
-                        <h4 className="text-2xl md:text-4xl font-black uppercase font-heading group-hover:translate-x-2 transition-editorial">{m.name}</h4>
-                        <p className="text-brand font-bold tracking-[0.2em] uppercase text-[10px] mt-1">{m.title}</p>
+               <div 
+                 key={i} 
+                 onClick={() => setSelected(m)} 
+                 className="group glass-panel p-8 rounded-[40px] hover:border-brand transition-editorial cursor-pointer flex flex-col items-center text-center relative overflow-hidden"
+               >
+                  <div className="african-pattern absolute inset-0 opacity-5"></div>
+                  <div className="relative z-10">
+                     <div className="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-white shadow-xl mx-auto group-hover:scale-105 transition-editorial duration-700">
+                        <img src={`https://images.unsplash.com/${m.img}?w=400&q=80`} alt={m.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-editorial duration-700" />
                      </div>
-                  </div>
-                  <div className="flex items-center gap-6">
-                     <div className="w-16 h-16 rounded-full overflow-hidden opacity-0 group-hover:opacity-100 transition-editorial -translate-x-6 group-hover:translate-x-0 hidden md:block border border-brand">
-                        <img src={`https://images.unsplash.com/${m.img}?w=300&q=80`} alt={m.name} className="w-full h-full object-cover grayscale" />
-                     </div>
-                     <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-brand group-hover:border-brand transition-editorial">
-                        <ArrowRight size={20} className="group-hover:translate-x-1 transition-editorial" />
+                     <h4 className="text-xl font-black uppercase font-heading leading-tight mb-2 group-hover:text-brand transition-editorial">{m.name}</h4>
+                     <p className="text-brand font-black tracking-widest text-[9px] uppercase mb-6">{m.title}</p>
+                     <div className="inline-flex items-center gap-2 text-[9px] font-black uppercase tracking-widest text-charcoal/40 group-hover:text-brand transition-editorial">
+                        View Bio <ArrowRight size={12} />
                      </div>
                   </div>
                </div>

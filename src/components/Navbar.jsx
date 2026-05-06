@@ -46,7 +46,7 @@ export default function Navbar({ activePage = '' }) {
       </div>
 
       <header className={`fixed left-0 right-0 z-[60] transition-editorial px-6 md:px-12 ${isScrolled ? 'top-4' : 'top-14'}`}>
-        <nav className={`max-w-[1400px] mx-auto transition-editorial ${isScrolled ? 'glass-card rounded-full py-2 px-8' : 'bg-transparent py-4'}`}>
+        <nav className={`max-w-[1400px] mx-auto transition-editorial ${isScrolled ? 'bg-warm/80 backdrop-blur-md rounded-full py-2 px-8 border border-charcoal/5 shadow-lg' : 'bg-transparent py-4'}`}>
           <div className="flex justify-between items-center w-full">
             {/* Logo */}
             <div className="flex-shrink-0">
