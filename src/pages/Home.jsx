@@ -111,38 +111,52 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Immersive Editorial Section */}
-      <section className="section-spacing relative">
-        <div className="editorial-grid max-w-[1400px] mx-auto px-6 md:px-12 items-center">
-          <div className="col-span-12 lg:col-span-7 relative">
-            <div className="relative z-10 rounded-[40px] overflow-hidden aspect-video shadow-2xl">
-              <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32d7?w=1000&q=80" alt="Networking" className="w-full h-full object-cover" />
-            </div>
-            <div className="absolute -top-12 -right-12 w-64 h-64 bg-accent/10 rounded-full blur-3xl -z-10"></div>
-          </div>
-          <div className="col-span-12 lg:col-span-5 lg:pl-12 mt-12 lg:mt-0">
-            <h2 className="text-4xl md:text-5xl font-black uppercase font-heading mb-8 leading-[1]">
-              The Partnership <br/> <span className="text-accent">Opportunity</span>
-            </h2>
-            <p className="text-lg text-charcoal/60 leading-relaxed mb-8 font-medium">
-              Join Africa's most influential network. We provide a bridge between grassroots innovation and global investment, creating measurable economic change for women across the continent.
-            </p>
-            <ul className="space-y-6 mb-12">
-              {[
-                "150+ Strategic Partners Across 50 Nations",
-                "Flagship UN-side Events Branding",
-                "Measurable Economic Impact Outcomes"
-              ].map((txt, i) => (
-                <li key={i} className="flex items-center gap-4 text-xs font-black uppercase tracking-widest text-charcoal/80">
-                  <div className="w-2 h-2 bg-accent rounded-full"></div>
-                  {txt}
-                </li>
-              ))}
-            </ul>
-            <a href="/get-involved" className="inline-flex items-center gap-4 text-accent font-black tracking-widest text-xs uppercase group">
-              Explore Tiers <ArrowRight size={16} className="group-hover:translate-x-2 transition-editorial" />
-            </a>
-          </div>
+      {/* 2. STRATEGIC PARTNERSHIPS - Redesigned Editorial Section */}
+      <section className="section-spacing px-6 md:px-12 bg-white relative overflow-hidden">
+        <div className="max-w-[1400px] mx-auto relative z-10">
+           <div className="editorial-grid items-center gap-24">
+              <div className="col-span-12 lg:col-span-6">
+                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-brand/40 bg-brand/10 backdrop-blur mb-10">
+                    <Users size={14} className="text-brand"/>
+                    <span className="text-brand text-[9px] font-black tracking-[0.3em] uppercase">The Partnership Opportunity</span>
+                 </div>
+                 <h2 className="text-4xl md:text-6xl font-black uppercase font-heading leading-[0.9] tracking-tighter mb-10">
+                    Invest in Africa's Most <br/> <span className="text-brand italic serif normal-case">Impactful</span> Women's Platform
+                 </h2>
+                 <p className="text-xl text-charcoal/60 leading-relaxed font-medium mb-12 italic border-l-8 border-brand pl-12">
+                    Join a growing ecosystem of forward-thinking organizations driving real systemic change. Our partners gain unparalleled access to Africa's most influential women's network — from boardrooms to grassroots communities across 48 countries.
+                 </p>
+                 
+                 <div className="space-y-8 mb-16">
+                    {[
+                      "Access 150+ partners across 50 countries in our strategic network",
+                      "Brand presence at flagship UN-side events and the Annual AWIEF Conference",
+                      "Co-create programmes with measurable social and economic impact outcomes"
+                    ].map((item, i) => (
+                      <div key={i} className="flex gap-6 items-start group">
+                         <div className="w-8 h-8 rounded-full bg-brand/10 flex items-center justify-center shrink-0 group-hover:bg-brand group-hover:text-white transition-editorial border border-brand/20">
+                            <ArrowRight size={14} className="group-hover:translate-x-1 transition-editorial" />
+                         </div>
+                         <p className="text-sm font-bold uppercase tracking-widest text-charcoal/60 leading-relaxed group-hover:text-charcoal transition-editorial">{item}</p>
+                      </div>
+                    ))}
+                 </div>
+
+                 <a href="/get-involved" className="inline-flex items-center gap-6 bg-charcoal text-white px-12 py-6 rounded-full font-black text-[10px] uppercase tracking-[0.3em] hover:bg-brand transition-editorial shadow-2xl">
+                    EXPLORE PARTNERSHIP OPPORTUNITIES <ArrowRight size={18} />
+                 </a>
+              </div>
+              <div className="col-span-12 lg:col-span-6">
+                 <div className="relative aspect-square rounded-[64px] overflow-hidden shadow-2xl group border-4 border-white/40">
+                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32d7?w=1000&q=80" alt="Strategic Partnership" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-editorial duration-1000 scale-110 group-hover:scale-100" />
+                    <div className="absolute inset-0 bg-brand/20 group-hover:bg-transparent transition-editorial"></div>
+                    <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-gold rounded-full flex flex-col items-center justify-center text-white text-center p-8 rotate-12 shadow-2xl border-4 border-white hidden md:flex">
+                       <Sparkles size={40} className="mb-4" />
+                       <p className="text-[10px] font-black uppercase tracking-widest">Co-Create for Systemic Change</p>
+                    </div>
+                 </div>
+              </div>
+           </div>
         </div>
       </section>
 
