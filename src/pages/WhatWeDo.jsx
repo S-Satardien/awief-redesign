@@ -43,104 +43,100 @@ const programmesData = [
 ];
 
 export default function WhatWeDo() {
-  const [hoveredProg, setHoveredProg] = useState(null)
-  const [selectedProg, setSelectedProg] = useState(null)
+  const filterOptions = ['All', 'Idea & Launch Stage', 'Growth & Scale Stage', 'Open Applications'];
+  const [activeFilter, setActiveFilter] = useState('All');
+
+  const filteredProgrammes = programmesData.filter(prog => {
+    if (activeFilter === 'All') return true;
+    if (activeFilter === 'Open Applications') return prog.status === 'Open';
+    return prog.stage === activeFilter;
+  });
 
   return (
-    <div className="min-h-screen font-body text-charcoal bg-[#fcfbf9] overflow-x-hidden">
+    <div className="min-h-screen font-body text-charcoal bg-cream overflow-x-hidden">
       <Navbar activePage="what-we-do" />
 
-      {/* Hero Section - Refined with Wireframe Wording */}
-      <header className="pt-48 pb-24 px-6 md:px-12 max-w-[1400px] mx-auto text-center relative overflow-hidden">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 text-[25rem] font-black text-brand/5 leading-none select-none pointer-events-none uppercase tracking-tighter">
-           Do
-        </div>
-        <div className="relative z-10 max-w-4xl mx-auto">
-          <p className="text-brand font-black tracking-[0.4em] uppercase text-xs mb-8 italic">Ecosystem of Growth</p>
-          <h1 className="text-6xl md:text-8xl font-black uppercase font-heading leading-[0.85] tracking-tighter mb-12">
+      {/* Editorial Header */}
+      <header className="relative bg-charcoal pt-48 pb-32 px-6 md:px-12 overflow-hidden text-center">
+        <div className="african-pattern absolute inset-0 opacity-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-charcoal z-10 pointer-events-none"></div>
+        
+        <div className="max-w-4xl mx-auto relative z-20">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-brand/40 bg-brand/10 backdrop-blur mb-8">
+            <Layers size={14} className="text-brand"/>
+            <span className="text-brand text-[11px] font-black tracking-[0.2em] uppercase">Ecosystem of Growth</span>
+          </div>
+          <h1 className="text-5xl md:text-8xl font-black uppercase font-heading leading-[0.85] tracking-tighter mb-12 text-white">
             What We <span className="text-brand">Do</span>
           </h1>
-          <p className="text-xl md:text-2xl text-charcoal/60 leading-relaxed font-medium">
+          <p className="text-xl md:text-2xl text-white/50 leading-relaxed font-medium">
             From early-stage ideation to cross-border scaling, global networking, and policy reform—discover how we actively break down barriers for African women in business.
           </p>
         </div>
       </header>
 
-      {/* Interactive Programmes Section */}
-      <section className="py-32 px-6 md:px-12 bg-white rounded-t-[60px]" id="programmes">
+      {/* Filterable Programmes Section */}
+      <section className="py-32 px-6 md:px-12 bg-white rounded-t-[60px] -mt-12 relative z-20" id="programmes">
         <div className="max-w-[1400px] mx-auto">
-          <div className="flex flex-col md:flex-row items-end justify-between mb-24 border-b border-charcoal/10 pb-12 gap-8">
-             <div className="max-w-2xl">
-                <p className="text-brand font-black tracking-[0.3em] uppercase text-[10px] mb-4 italic">Capacity Building</p>
-                <h2 className="text-4xl md:text-6xl font-black uppercase font-heading tracking-tighter leading-none">Tailored <span className="text-brand">Programmes</span></h2>
-             </div>
-             <div className="flex gap-4">
-                <p className="text-[10px] font-black uppercase tracking-widest text-charcoal/30 max-w-[150px] leading-tight text-right italic">Find the perfect initiative for your current business stage.</p>
-             </div>
+          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+            <div className="max-w-2xl">
+              <p className="text-brand font-black tracking-[0.3em] uppercase text-[10px] mb-4 italic">Capacity Building</p>
+              <h2 className="text-4xl md:text-6xl font-black uppercase font-heading tracking-tighter leading-none">Tailored <span className="text-brand">Programmes</span></h2>
+              <p className="text-charcoal/50 text-lg mt-6 font-medium">Find the perfect initiative for your current business stage.</p>
+            </div>
+            
+            {/* Filter Bar */}
+            <div className="flex flex-wrap gap-3">
+              {filterOptions.map(option => (
+                <button
+                  key={option}
+                  onClick={() => setActiveFilter(option)}
+                  className={`px-6 py-3 rounded-full text-[10px] font-black uppercase tracking-widest transition-editorial border ${
+                    activeFilter === option 
+                    ? 'bg-charcoal text-white border-charcoal shadow-xl' 
+                    : 'bg-transparent text-charcoal/40 border-charcoal/10 hover:border-brand hover:text-brand'
+                  }`}
+                >
+                  {option}
+                </button>
+              ))}
+            </div>
           </div>
 
-          <div className="grid lg:grid-cols-12 gap-12">
-             <div className="lg:col-span-7 space-y-4">
-                {programmesData.map((p, i) => (
-                  <div 
-                    key={p.id} 
-                    onMouseEnter={() => setHoveredProg(p)}
-                    onClick={() => setSelectedProg(p)}
-                    className="group relative bg-cream rounded-[32px] p-8 md:p-10 border border-charcoal/5 shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-editorial cursor-pointer flex flex-col md:flex-row items-center gap-10 overflow-hidden"
-                  >
-                     <div className={`w-20 h-20 rounded-2xl ${p.color} flex items-center justify-center text-white shrink-0 group-hover:rotate-12 transition-editorial shadow-lg`}>
-                        <span className="text-3xl font-black font-heading">0{i+1}</span>
-                     </div>
-                     <div className="flex-grow">
-                        <div className="flex items-center gap-4 mb-3">
-                           <span className="text-brand font-black tracking-widest text-[9px] uppercase">{p.stage}</span>
-                           <span className={`w-1.5 h-1.5 rounded-full ${p.status === 'Open' ? 'bg-green-500 animate-pulse' : 'bg-charcoal/20'}`}></span>
-                        </div>
-                        <h3 className="text-2xl font-black uppercase font-heading leading-tight group-hover:text-brand transition-editorial">{p.title}</h3>
-                     </div>
-                     <div className="w-12 h-12 rounded-full border border-charcoal/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-editorial group-hover:bg-brand group-hover:border-brand group-hover:text-white">
-                        <ArrowRight size={20} />
-                     </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            {filteredProgrammes.map((p, i) => (
+              <div 
+                key={p.id} 
+                onClick={() => setSelectedProg(p)}
+                className="bg-cream rounded-[40px] p-10 border border-charcoal/5 group hover:border-brand hover:shadow-2xl transition-editorial cursor-pointer flex flex-col h-full relative overflow-hidden"
+              >
+                <div className="african-pattern absolute inset-0 opacity-5"></div>
+                <div className="relative z-10 flex flex-col h-full">
+                  <div className="flex justify-between items-start mb-8">
+                    <div className="flex items-center gap-4">
+                      <div className={`w-12 h-12 rounded-2xl ${p.color} flex items-center justify-center text-white shrink-0 group-hover:rotate-12 transition-editorial shadow-lg`}>
+                        <Zap size={20} />
+                      </div>
+                      <div>
+                        <span className="text-brand font-black tracking-widest text-[9px] uppercase">{p.stage}</span>
+                        <h3 className="text-2xl font-black uppercase font-heading leading-tight group-hover:text-brand transition-editorial mt-1">{p.title}</h3>
+                      </div>
+                    </div>
+                    <span className={`px-4 py-1.5 rounded-full text-[9px] font-black uppercase tracking-widest ${
+                      p.status === 'Open' ? 'bg-green-100 text-green-700' :
+                      p.status === 'Ongoing' ? 'bg-blue-100 text-blue-700' :
+                      'bg-charcoal/5 text-charcoal/40'
+                    }`}>
+                      {p.status}
+                    </span>
                   </div>
-                ))}
-             </div>
-             
-             <div className="lg:col-span-5 hidden lg:block sticky top-32 h-fit">
-                <div className="aspect-[4/5] rounded-[48px] bg-charcoal overflow-hidden relative shadow-2xl group">
-                   {hoveredProg ? (
-                     <div className="h-full flex flex-col animate-in fade-in slide-in-from-bottom-8 duration-700">
-                        <div className={`h-1/2 ${hoveredProg.color} p-12 flex items-end relative overflow-hidden`}>
-                           <div className="absolute top-0 right-0 p-8 text-white/10 text-[15rem] font-black leading-none select-none">
-                              {hoveredProg.id}
-                           </div>
-                           <div className="relative z-10">
-                              <p className="text-white/60 font-black tracking-widest text-[10px] uppercase mb-4 italic">Status: {hoveredProg.status}</p>
-                              <h4 className="text-3xl font-black uppercase font-heading text-white leading-tight">{hoveredProg.title}</h4>
-                           </div>
-                        </div>
-                        <div className="h-1/2 p-12 flex flex-col justify-between bg-white">
-                           <p className="text-lg text-charcoal/40 italic font-medium leading-relaxed border-l-4 border-brand pl-6">
-                             "{hoveredProg.desc}"
-                           </p>
-                           <div className="flex items-center justify-between mt-8">
-                              <span className="text-[10px] font-black uppercase tracking-[0.3em] text-brand italic">Deep Insight</span>
-                              <div className="w-10 h-10 bg-charcoal text-white rounded-full flex items-center justify-center group-hover:scale-110 transition-editorial">
-                                 <Info size={18} />
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                   ) : (
-                     <div className="h-full flex flex-col items-center justify-center text-center p-16">
-                        <div className="w-20 h-20 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-brand mb-10 animate-pulse">
-                           <Rocket size={40} />
-                        </div>
-                        <h4 className="text-3xl font-black uppercase font-heading text-white mb-6 tracking-tighter">Initiative <br/> <span className="text-brand italic">Discovery</span></h4>
-                        <p className="text-white/40 text-base font-medium leading-relaxed italic">Hover over a programme to reveal its core objectives and impact scope.</p>
-                     </div>
-                   )}
+                  <p className="text-charcoal/50 text-sm font-medium leading-relaxed mb-8 flex-grow pr-12">{p.desc}</p>
+                  <div className="flex items-center gap-2 text-brand font-black tracking-widest text-[10px] uppercase group-hover:gap-4 transition-editorial">
+                    Learn More <ArrowRight size={14} />
+                  </div>
                 </div>
-             </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -190,33 +186,49 @@ export default function WhatWeDo() {
                </div>
             </div>
 
-            <div className="grid lg:grid-cols-3 gap-16 relative">
-               <div className="absolute top-1/2 left-0 w-full h-px bg-white/5 -z-10"></div>
-               <div className="absolute top-0 left-1/3 w-px h-full bg-white/5 -z-10"></div>
-               <div className="absolute top-0 left-2/3 w-px h-full bg-white/5 -z-10"></div>
-
-               <div className="group">
-                  <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-brand mb-8 group-hover:bg-brand group-hover:text-white transition-editorial shadow-2xl">
-                     <Mic size={24} />
-                  </div>
-                  <h4 className="text-xl font-black uppercase font-heading mb-4 tracking-tighter">Global <span className="text-brand">Keynotes</span></h4>
-                  <p className="text-base text-white/40 font-medium leading-relaxed italic pr-8">Hear from policymakers and titans shaping the future of African female entrepreneurship.</p>
+            <div className="grid lg:grid-cols-2 gap-12 mt-16 pt-16 border-t border-white/10">
+               {/* What to Expect */}
+               <div>
+                 <h4 className="text-2xl font-black uppercase font-heading mb-8 flex items-center gap-3">
+                   <Lightbulb size={24} className="text-brand" /> What to Expect
+                 </h4>
+                 <div className="space-y-4">
+                   {[
+                     { icon: Mic, t: "Global Keynotes", d: "Hear from policymakers and titans shaping the future of African female entrepreneurship." },
+                     { icon: Briefcase, t: "Masterclasses", d: "Actionable sessions focusing on digital transformation and Series A investment readiness." },
+                     { icon: Star, t: "The Exhibition", d: "Discover innovative products and services from women-owned businesses across the continent." }
+                   ].map((item, i) => (
+                     <div key={i} className="bg-white/5 border border-white/10 p-8 rounded-[32px] flex items-start gap-6 group hover:bg-white/10 transition-editorial">
+                       <div className="mt-1 bg-charcoal rounded-full p-3 border border-brand/30 group-hover:bg-brand transition-editorial"><item.icon size={20} className="text-brand group-hover:text-white"/></div>
+                       <div>
+                         <h5 className="text-white font-black uppercase text-sm mb-1">{item.t}</h5>
+                         <p className="text-white/40 text-xs font-medium leading-relaxed">{item.d}</p>
+                       </div>
+                     </div>
+                   ))}
+                 </div>
                </div>
 
-               <div className="group">
-                  <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-brand mb-8 group-hover:bg-brand group-hover:text-white transition-editorial shadow-2xl">
-                     <Briefcase size={24} />
-                  </div>
-                  <h4 className="text-xl font-black uppercase font-heading mb-4 tracking-tighter">Funding <span className="text-brand">Masterclasses</span></h4>
-                  <p className="text-base text-white/40 font-medium leading-relaxed italic pr-8">Actionable sessions focusing on digital transformation and Series A investment readiness.</p>
-               </div>
-
-               <div className="group">
-                  <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-brand mb-8 group-hover:bg-brand group-hover:text-white transition-editorial shadow-2xl">
-                     <Award size={24} />
-                  </div>
-                  <h4 className="text-xl font-black uppercase font-heading mb-4 tracking-tighter">Awards <span className="text-brand">Gala</span></h4>
-                  <p className="text-base text-white/40 font-medium leading-relaxed italic pr-8">Celebrate pioneers and trailblazers at the continent's most prestigious annual honours night.</p>
+               {/* Why Attend */}
+               <div>
+                 <h4 className="text-2xl font-black uppercase font-heading mb-8 flex items-center gap-3">
+                   <Target size={24} className="text-brand" /> Why Attend?
+                 </h4>
+                 <div className="space-y-4">
+                   {[
+                     { icon: Users, t: "Unmatched Networking", d: "Connect directly with over 1,500 delegates from 50+ countries." },
+                     { icon: TrendingUp, t: "Secure Funding", d: "Direct access to venture capitalists and angel investors looking to back women." },
+                     { icon: Award, t: "Celebrate Excellence", d: "The prestigious AWIEF Awards Gala, honouring the pioneers of African business." }
+                   ].map((item, i) => (
+                     <div key={i} className="bg-white/5 border border-white/10 p-8 rounded-[32px] flex items-start gap-6 group hover:bg-white/10 transition-editorial">
+                       <div className="mt-1 bg-charcoal rounded-full p-3 border border-brand/30 group-hover:bg-brand transition-editorial"><item.icon size={20} className="text-brand group-hover:text-white"/></div>
+                       <div>
+                         <h5 className="text-white font-black uppercase text-sm mb-1">{item.t}</h5>
+                         <p className="text-white/40 text-xs font-medium leading-relaxed">{item.d}</p>
+                       </div>
+                     </div>
+                   ))}
+                 </div>
                </div>
             </div>
          </div>

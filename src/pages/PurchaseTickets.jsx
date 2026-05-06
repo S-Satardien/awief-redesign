@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import { Sparkles, Ticket, Calendar, MapPin, CheckCircle2, Star, ShieldCheck, CreditCard, ArrowRight, Network, Briefcase, Award, ArrowUpRight, X, ShoppingCart, ShoppingBag, ChevronRight, Zap } from 'lucide-react'
+import { Sparkles, Ticket, Calendar, MapPin, CheckCircle2, Star, ShieldCheck, CreditCard, ArrowRight, Network, Briefcase, Award, ArrowUpRight, X, ShoppingCart, ShoppingBag, ChevronRight, Zap, Globe, HeartHandshake } from 'lucide-react'
 
 export default function PurchaseTickets() {
   const [selectedTicket, setSelectedTicket] = useState(null)
@@ -178,6 +178,33 @@ export default function PurchaseTickets() {
            </div>
         </div>
       )}
+
+      {/* Partner Types Section - NEW */}
+      <section className="py-24 px-6 md:px-12 bg-white border-t border-charcoal/5">
+        <div className="max-w-[1400px] mx-auto">
+          <div className="text-center mb-16">
+            <p className="text-brand font-black tracking-[0.4em] uppercase text-[10px] mb-4 italic">Collaborative Ecosystem</p>
+            <h2 className="text-4xl md:text-6xl font-black uppercase font-heading tracking-tighter leading-none mb-8">Our <span className="text-brand">Partner</span> Network</h2>
+            <p className="text-charcoal/50 text-lg max-w-2xl mx-auto font-medium">Join Africa's most influential network of innovators, investors, and policymakers.</p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { t: "Strategic Partners", d: "Principal funders and co-creators driving continent-wide systemic change through our flagship programs.", icon: Globe },
+              { t: "Institutional Partners", d: "Global and regional bodies providing structural backing, policy alignment, and critical network access.", icon: Network },
+              { t: "Supporting Partners", d: "Valued contributors empowering our events, training modules, and grassroots community initiatives.", icon: HeartHandshake }
+            ].map((partner, i) => (
+              <div key={i} className="p-10 bg-cream rounded-[40px] border border-charcoal/5 group hover:border-brand transition-editorial">
+                <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-brand mb-8 shadow-sm group-hover:scale-110 transition-editorial">
+                  <partner.icon size={28} />
+                </div>
+                <h4 className="text-2xl font-black uppercase font-heading mb-4 group-hover:text-brand transition-editorial">{partner.t}</h4>
+                <p className="text-charcoal/50 text-sm font-medium leading-relaxed">{partner.d}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Legacy Archive Teaser */}
       <section className="section-spacing bg-brand text-white text-center relative overflow-hidden">

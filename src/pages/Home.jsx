@@ -8,68 +8,67 @@ export default function Home() {
     <div className="min-h-screen font-body text-charcoal bg-cream overflow-x-hidden">
       <Navbar activePage="home" />
       
-      {/* Editorial Hero Section */}
-      <section className="relative min-h-screen flex items-center pt-20">
-        <div className="editorial-grid max-w-[1600px] mx-auto px-6 md:px-12 w-full h-full">
+      {/* Wireframe Aligned Hero Section */}
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-charcoal">
+        <div className="african-pattern absolute inset-0 opacity-10"></div>
+        <div className="editorial-grid max-w-[1600px] mx-auto px-6 md:px-12 w-full h-full relative z-10">
           {/* Left Text Column */}
-          <div className="col-span-12 lg:col-span-6 flex flex-col justify-center relative z-20 py-12 md:py-24">
-            <div className="space-y-2 mb-8">
-              <p className="text-brand font-black tracking-[0.3em] uppercase text-[10px] md:text-xs">
-                Est. 2015 — Pan-African Impact
-              </p>
-              <h1 className="text-6xl md:text-8xl lg:text-[10rem] font-black leading-[0.85] tracking-tighter uppercase font-heading text-charcoal/10 absolute -left-12 -top-12 md:-left-24 md:-top-24 select-none pointer-events-none">
-                AWIEF
+          <div className="col-span-12 lg:col-span-6 flex flex-col justify-center py-20 lg:py-0">
+            <div className="space-y-4 mb-10">
+              <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-brand/40 bg-brand/10 backdrop-blur">
+                <Sparkles size={14} className="text-brand animate-pulse" />
+                <span className="text-brand text-[10px] font-black tracking-[0.3em] uppercase italic">Est. 2015 — Pan-African Impact</span>
+              </div>
+              <h1 className="text-6xl md:text-8xl lg:text-[7rem] font-black leading-[0.85] tracking-tighter uppercase font-heading text-white">
+                Empowering <br/>
+                <span className="text-brand">Women</span>. <br/>
+                Transforming <br/>
+                Africa.
               </h1>
             </div>
             
-            <h2 className="text-5xl md:text-7xl lg:text-8xl font-black leading-[1] tracking-tighter uppercase font-heading mb-8">
-              Shaping <br/>
-              <span className="text-brand">Future</span> <br/>
-              Economies
-            </h2>
-            
-            <p className="text-lg md:text-xl text-charcoal/60 leading-relaxed max-w-lg mb-12">
+            <p className="text-xl text-white/50 leading-relaxed max-w-lg mb-12 font-medium">
               We are a pan-African organization dedicated to accelerating women's economic empowerment through innovation, leadership, and entrepreneurship.
             </p>
 
-            <div className="flex flex-wrap items-center gap-6">
-              <a href="/purchase-conference-tickets" className="bg-brand text-white px-10 py-5 rounded-full font-black tracking-widest text-xs hover:bg-brand-dark transition-editorial shadow-2xl shadow-brand/20">
+            <div className="flex flex-wrap items-center gap-8">
+              <a href="/purchase-conference-tickets" className="bg-brand text-white px-12 py-6 rounded-full font-black tracking-widest text-xs hover:bg-white hover:text-brand transition-editorial shadow-2xl">
                 ATTEND THE SUMMIT
               </a>
-              <button className="flex items-center gap-4 group">
-                <div className="w-14 h-14 rounded-full border border-charcoal/10 flex items-center justify-center group-hover:bg-charcoal group-hover:text-white transition-editorial">
+              <button className="flex items-center gap-4 group text-white">
+                <div className="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-brand group-hover:border-brand transition-editorial">
                   <Play size={20} fill="currentColor" />
                 </div>
-                <span className="font-black tracking-widest text-[11px] uppercase">Watch Story</span>
+                <span className="font-black tracking-widest text-[11px] uppercase group-hover:text-brand transition-editorial">Watch Story</span>
               </button>
             </div>
           </div>
 
           {/* Right Visual Column */}
-          <div className="col-span-12 lg:col-span-6 relative mt-12 lg:mt-0">
-            <div className="relative h-[500px] md:h-full lg:h-[85vh] rounded-[40px] overflow-hidden shadow-2xl">
+          <div className="col-span-12 lg:col-span-6 relative mt-12 lg:mt-0 flex items-center justify-center">
+            <div className="relative w-full aspect-square md:aspect-[4/5] rounded-[60px] overflow-hidden shadow-2xl border-8 border-white/5 rotate-2 hover:rotate-0 transition-editorial duration-1000">
               <img 
                 src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1000&q=80" 
-                alt="Empowerment" 
+                alt="AWIEF Impact" 
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-editorial duration-[2000ms] scale-110 hover:scale-100"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand/20 to-transparent"></div>
-            </div>
-            
-            {/* Overlapping Info Card */}
-            <div className="absolute -bottom-12 -left-6 md:-left-12 glass-card p-8 rounded-[32px] max-w-sm hidden md:block animate-bounce-slow">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 rounded-full bg-brand text-white flex items-center justify-center">
-                  <Globe size={24} />
+              <div className="absolute inset-0 bg-gradient-to-t from-charcoal to-transparent opacity-60"></div>
+              
+              {/* Overlapping Info Card */}
+              <div className="absolute bottom-12 left-10 right-10 glass-card !bg-white/10 backdrop-blur-xl p-8 rounded-[32px] border border-white/20 hidden md:block">
+                <div className="flex items-center gap-5 mb-4">
+                  <div className="w-14 h-14 rounded-2xl bg-brand text-white flex items-center justify-center shadow-xl">
+                    <Globe size={28} />
+                  </div>
+                  <div>
+                    <h4 className="font-black text-xs tracking-widest uppercase text-white">UN ECOSOC</h4>
+                    <p className="text-[10px] text-brand font-black tracking-widest uppercase mt-1">CONSULTATIVE STATUS</p>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="font-black text-xs tracking-widest uppercase">UN ECOSOC</h4>
-                  <p className="text-[10px] text-charcoal/50 font-bold">CONSULTATIVE STATUS</p>
-                </div>
+                <p className="text-xs text-white/60 leading-relaxed font-medium">
+                  Accredited since 2023, representing the highest level of UN recognition for civil society organizations.
+                </p>
               </div>
-              <p className="text-xs text-charcoal/70 leading-relaxed font-medium">
-                Accredited since 2023, representing the highest level of UN recognition for civil society organizations.
-              </p>
             </div>
           </div>
         </div>

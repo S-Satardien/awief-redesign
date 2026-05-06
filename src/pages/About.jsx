@@ -50,27 +50,39 @@ export default function About() {
       <Navbar activePage="about" />
 
       {/* Hero Refinement */}
-      <header className="pt-40 pb-20 px-6 md:px-12 max-w-[1400px] mx-auto relative">
-        <div className="grid lg:grid-cols-12 gap-12 items-center">
+      <header className="pt-40 pb-20 px-6 md:px-12 max-w-[1400px] mx-auto relative overflow-hidden">
+        <div className="african-pattern absolute inset-0 opacity-5"></div>
+        <div className="grid lg:grid-cols-12 gap-12 items-center relative z-10">
           <div className="lg:col-span-7 relative z-10">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-brand/20 bg-brand/5 mb-8">
               <Sparkles size={12} className="text-brand"/>
-              <span className="text-brand text-[9px] font-black tracking-[0.3em] uppercase">Since 2015</span>
+              <span className="text-brand text-[9px] font-black tracking-[0.3em] uppercase italic">Since 2015 — 12 Years of Impact</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-black uppercase font-heading leading-[0.9] tracking-tighter mb-8">
-              Transforming <br/> <span className="text-brand italic serif">The Narrative</span>
+              Transforming <br/> <span className="text-brand italic">The Narrative</span>
             </h1>
-            <p className="text-xl text-charcoal/60 max-w-lg font-medium leading-relaxed">
-              AWIEF is the catalyst for Africa's female-led economic revolution. We build the infrastructure for success through dedicated support.
+            <p className="text-xl text-charcoal/60 max-w-lg font-medium leading-relaxed mb-12">
+              AWIEF is the catalyst for Africa's female-led economic revolution. We build the infrastructure for success through dedicated support, networking, and advocacy.
             </p>
+            <div className="flex gap-6">
+               <div className="flex flex-col">
+                  <span className="text-3xl font-black text-brand">48</span>
+                  <span className="text-[9px] font-black uppercase tracking-widest text-charcoal/40">Countries</span>
+               </div>
+               <div className="w-px h-10 bg-charcoal/10"></div>
+               <div className="flex flex-col">
+                  <span className="text-3xl font-black text-brand">15k+</span>
+                  <span className="text-[9px] font-black uppercase tracking-widest text-charcoal/40">Entrepreneurs</span>
+               </div>
+            </div>
           </div>
           <div className="lg:col-span-5 relative mt-12 lg:mt-0">
-             <div className="aspect-[4/5] rounded-[48px] overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-editorial duration-1000 max-w-md mx-auto">
+             <div className="aspect-[4/5] rounded-[48px] overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-editorial duration-1000 max-w-md mx-auto border-8 border-white">
                 <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=800&q=80" alt="Empowerment" className="w-full h-full object-cover scale-110 hover:scale-100 transition-editorial duration-1000 grayscale hover:grayscale-0" />
              </div>
-             <div className="absolute -top-8 -right-4 w-40 h-40 bg-white rounded-full flex flex-col items-center justify-center p-6 text-center -rotate-12 shadow-2xl border border-charcoal/5 z-20">
-                <p className="text-brand text-[10px] font-black uppercase tracking-widest leading-tight">Irene Ochem</p>
-                <p className="text-charcoal text-[8px] font-bold uppercase mt-1">Visionary Leader</p>
+             <div className="absolute -top-8 -right-4 w-44 h-44 bg-charcoal rounded-full flex flex-col items-center justify-center p-6 text-center -rotate-12 shadow-2xl border-4 border-brand z-20">
+                <p className="text-brand text-[11px] font-black uppercase tracking-widest leading-tight">Irene Ochem</p>
+                <p className="text-white text-[8px] font-bold uppercase mt-1 tracking-widest">Visionary Leader</p>
              </div>
           </div>
         </div>

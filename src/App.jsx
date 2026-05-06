@@ -6,6 +6,7 @@ import OurImpact from './pages/OurImpact'
 import WhatWeDo from './pages/WhatWeDo'
 import News from './pages/News'
 import GetInvolved from './pages/GetInvolved'
+import Donate from './pages/Donate'
 import ContactUs from './pages/ContactUs'
 import PastConferences from './pages/PastConferences'
 import PastAwards from './pages/PastAwards'
@@ -21,6 +22,7 @@ function App() {
         <Route path="/what-we-do" element={<WhatWeDo />} />
         <Route path="/news" element={<News />} />
         <Route path="/get-involved" element={<GetInvolved />} />
+        <Route path="/donate" element={<Donate />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/past-conferences" element={<PastConferences />} />
         <Route path="/past-awards" element={<PastAwards />} />

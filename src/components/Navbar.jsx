@@ -73,7 +73,17 @@ export default function Navbar({ activePage = '' }) {
                   { label: "Advisory Board", href: "/about#advisory-board" },
                   { label: "Meet the Team", href: "/about#team" },
                   { label: "Our Partners", href: "/about#our-partners" },
-                  { label: "Support", href: "/get-involved" }
+                  { label: "Get Involved", href: "/get-involved" }
+                ]}
+              />
+
+              <NavItemWithDropdown 
+                label="Get Involved" 
+                active="get-involved"
+                links={[
+                  { label: "Donor or Partner", href: "/get-involved#donor-partner" },
+                  { label: "Volunteer", href: "/get-involved#volunteer" },
+                  { label: "Join Community", href: "/get-involved#join-community" }
                 ]}
               />
 
@@ -97,8 +107,8 @@ export default function Navbar({ activePage = '' }) {
 
             {/* CTA */}
             <div className="hidden lg:block">
-              <a href="/get-involved" className="bg-brand text-white px-8 py-3.5 rounded-full text-[10px] font-black tracking-[0.2em] hover:bg-brand-dark transition-editorial shadow-2xl shadow-brand/20">
-                GET INVOLVED
+              <a href="/donate" className="bg-brand text-white px-8 py-3.5 rounded-full text-[10px] font-black tracking-[0.2em] hover:bg-brand-dark transition-editorial shadow-2xl shadow-brand/20 uppercase">
+                Donate
               </a>
             </div>
 
@@ -122,7 +132,7 @@ export default function Navbar({ activePage = '' }) {
               <a href="/what-we-do" className="text-4xl font-heading font-black text-charcoal hover:text-brand uppercase tracking-tighter">WHAT WE DO</a>
               <a href="/news" className="text-4xl font-heading font-black text-charcoal hover:text-brand uppercase tracking-tighter">NEWS</a>
               <a href="/contact-us" className="text-4xl font-heading font-black text-charcoal hover:text-brand uppercase tracking-tighter">CONTACT</a>
-              <a href="/get-involved" className="bg-brand text-white px-12 py-5 rounded-full font-black tracking-widest text-xs shadow-2xl">GET INVOLVED</a>
+              <a href="/donate" className="bg-brand text-white px-12 py-5 rounded-full font-black tracking-widest text-xs shadow-2xl uppercase">Donate</a>
             </div>
           </div>
         )}
