@@ -56,13 +56,13 @@ export default function About() {
     <div className="min-h-screen font-body text-charcoal bg-warm overflow-x-hidden">
       <Navbar activePage="about" />
 
-      {/* Hero Section - Synchronized with Home */}
-      <section className="relative bg-berry pt-40 pb-48 px-8 overflow-hidden text-center">
-        <div className="african-pattern absolute inset-0 opacity-20 scale-150 rotate-12"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-berry/50 z-10 pointer-events-none"></div>
+      {/* Hero Section - Synchronized with Home - Main Brand Color */}
+      <section className="relative bg-brand pt-40 pb-48 px-8 overflow-hidden text-center">
+        <div className="african-pattern absolute inset-0 opacity-20 scale-150 rotate-12 brightness-200"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-brand/50 z-10 pointer-events-none"></div>
         
         <div className="max-w-4xl mx-auto relative z-20">
-          <p className="text-gold text-xs font-bold tracking-[0.3em] uppercase mb-8 flex items-center justify-center gap-4">
+          <p className="text-gold text-xs font-black tracking-[0.3em] uppercase mb-8 flex items-center justify-center gap-4">
             <span className="w-2 h-2 rounded-full bg-gold"></span>
             Who We Are
             <span className="w-2 h-2 rounded-full bg-gold"></span>
@@ -71,7 +71,7 @@ export default function About() {
             Empowering Women <br />
             <span className="text-gold italic serif normal-case">Transforming Africa</span>
           </h1>
-          <p className="text-white/70 text-xl leading-relaxed mb-0 max-w-2xl mx-auto italic">
+          <p className="text-white/80 text-xl leading-relaxed mb-0 max-w-2xl mx-auto italic font-medium">
             AWIEF is a non-profit organization dedicated to empowering women entrepreneurs across Africa, helping them scale their businesses and reach their absolute full potential.
           </p>
         </div>
@@ -112,13 +112,13 @@ export default function About() {
       <section className="py-24 px-6 md:px-12 max-w-[1400px] mx-auto mb-24">
         <div className="editorial-grid items-center gap-24">
           <div className="col-span-12 lg:col-span-5 relative">
-            <div className="relative z-10 rounded-[64px] overflow-hidden shadow-2xl bg-berry aspect-[4/5] border-8 border-white">
+            <div className="relative z-10 rounded-[64px] overflow-hidden shadow-2xl bg-brand aspect-[4/5] border-8 border-white">
               <img 
                 src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=800&q=80" 
                 alt="Irene Ochem, Founder & CEO" 
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-editorial duration-1000"
               />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-berry to-transparent p-12 pt-32">
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand to-transparent p-12 pt-32">
                 <h3 className="text-white text-3xl font-black uppercase font-heading mb-1">Irene Ochem</h3>
                 <p className="text-gold font-black tracking-widest text-xs uppercase italic">Founder & CEO, AWIEF</p>
               </div>
@@ -145,18 +145,18 @@ export default function About() {
         </div>
       </section>
 
-      {/* Keys to Success - Patterned Editorial Section */}
-      <section className="bg-berry py-32 px-8 relative overflow-hidden">
-        <div className="african-pattern absolute inset-0 opacity-30 scale-150"></div>
+      {/* Keys to Success - Clean Editorial Section */}
+      <section className="bg-warm py-32 px-8 relative overflow-hidden border-y border-charcoal/5">
+        <div className="african-pattern absolute inset-0 opacity-[0.03] scale-150 brightness-0"></div>
         <div className="max-w-[1400px] mx-auto relative z-10 text-center">
           <div className="max-w-3xl mx-auto mb-24">
-            <h2 className="text-5xl md:text-7xl font-black text-white mb-8 uppercase font-heading tracking-tighter leading-[0.9]">Our Keys to <span className="text-gold italic serif normal-case">Success</span></h2>
-            <p className="text-white/60 text-xl leading-relaxed font-medium italic">
+            <h2 className="text-5xl md:text-7xl font-black text-charcoal mb-8 uppercase font-heading tracking-tighter leading-[0.9]">Our Keys to <span className="text-brand italic serif normal-case">Success</span></h2>
+            <p className="text-charcoal/50 text-xl leading-relaxed font-medium italic">
               We facilitate, support, and inspire women entrepreneurs by providing knowledge, tools, resources, and valuable connections.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {[
               { icon: TrendingUp, t: "Enterprise Development", d: "Innovative products for enabling ecosystems." },
               { icon: Globe, t: "Annual Conference", d: "World-class networking and pan-African exhibitions." },
@@ -164,12 +164,12 @@ export default function About() {
               { icon: Users, t: "Online Community", d: "A digital space to rise and fulfill potential." },
               { icon: BookOpen, t: "Policy Advocacy", d: "Cross-cutting advocacy for gender equality." },
             ].map((key, i) => (
-              <div key={i} className="glass-panel p-10 rounded-[40px] border border-white/5 hover:border-gold transition-editorial group flex flex-col items-center text-center">
-                <div className="w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center text-gold mb-8 group-hover:bg-gold group-hover:text-berry transition-editorial border border-gold/20">
+              <div key={i} className="bg-white p-10 rounded-[40px] shadow-sm border border-charcoal/5 hover:border-brand transition-editorial group flex flex-col items-center text-center hover:shadow-2xl hover:-translate-y-2">
+                <div className="w-16 h-16 rounded-2xl bg-brand/5 flex items-center justify-center text-brand mb-8 group-hover:bg-brand group-hover:text-white transition-editorial border border-brand/10">
                   <key.icon size={32} strokeWidth={1.5} />
                 </div>
-                <h4 className="text-white font-black uppercase font-heading text-sm mb-4 leading-tight">{key.t}</h4>
-                <p className="text-white/40 text-[10px] font-black tracking-widest uppercase leading-relaxed">{key.d}</p>
+                <h4 className="text-charcoal font-black uppercase font-heading text-sm mb-4 leading-tight">{key.t}</h4>
+                <p className="text-charcoal/40 text-[10px] font-black tracking-widest uppercase leading-relaxed">{key.d}</p>
               </div>
             ))}
           </div>
@@ -177,7 +177,7 @@ export default function About() {
       </section>
 
       {/* Advisory Board - Elevated Profile Grid */}
-      <section className="py-32 px-8 bg-warm relative" id="advisory-board">
+      <section className="py-32 px-8 bg-white relative" id="advisory-board">
         <div className="max-w-[1400px] mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
             <div className="max-w-2xl">
@@ -197,19 +197,19 @@ export default function About() {
               <div 
                 key={idx} 
                 onClick={() => setSelectedBoardMember(member)}
-                className="group relative h-[500px] rounded-[48px] overflow-hidden cursor-pointer shadow-xl hover:-translate-y-2 transition-editorial duration-700"
+                className="group relative h-[450px] rounded-[48px] overflow-hidden cursor-pointer shadow-xl hover:-translate-y-2 transition-editorial duration-700"
               >
                 <img 
                   src={`https://images.unsplash.com/${member.img}?w=800&q=80`} 
                   alt={member.name} 
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-editorial duration-1000 scale-110 group-hover:scale-100"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-berry via-berry/40 to-transparent opacity-80 group-hover:opacity-90 transition-editorial"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/20 to-transparent opacity-80 group-hover:opacity-90 transition-editorial"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-10">
                   <h3 className="text-white font-black text-2xl uppercase font-heading mb-2">{member.name}</h3>
-                  <p className="text-gold font-black text-[10px] tracking-[0.2em] uppercase leading-tight mb-6">{member.title}</p>
+                  <p className="text-brand font-black text-[10px] tracking-[0.2em] uppercase leading-tight mb-6">{member.title}</p>
                   <div className="flex items-center gap-3 text-white text-[10px] font-black tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-editorial">
-                    View Full Bio <ArrowRight size={14} className="text-gold" />
+                    View Full Bio <ArrowRight size={14} className="text-brand" />
                   </div>
                 </div>
               </div>
@@ -218,31 +218,113 @@ export default function About() {
         </div>
       </section>
 
-      {/* Team Grid - Editorial Mosaic */}
-      <section className="py-24 px-8 max-w-[1400px] mx-auto" id="meet-the-team">
-        <div className="text-center mb-24">
+      {/* Meet the Team - More Compact */}
+      <section className="py-24 px-8 max-w-[1200px] mx-auto bg-warm rounded-[64px]" id="meet-the-team">
+        <div className="text-center mb-20">
           <p className="text-brand text-[10px] font-black tracking-[0.4em] uppercase mb-6">Behind the Mission</p>
-          <h2 className="text-5xl md:text-7xl font-black text-charcoal mb-6 uppercase font-heading leading-[0.9] tracking-tighter">Human <span className="text-brand">Capital</span></h2>
-          <p className="text-charcoal/50 text-lg font-medium italic max-w-xl mx-auto leading-relaxed">
+          <h2 className="text-5xl md:text-6xl font-black text-charcoal mb-6 uppercase font-heading leading-[0.9] tracking-tighter">Meet The <span className="text-brand">Team</span></h2>
+          <p className="text-charcoal/40 text-lg font-medium italic max-w-xl mx-auto leading-relaxed">
             The dedicated professionals collaborating with partners and inspiring women to maximize their potential.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
           {team.map((member, i) => (
             <div key={i} className="group text-center">
-              <div className="relative aspect-[4/5] rounded-[48px] overflow-hidden mb-8 shadow-xl border-4 border-transparent group-hover:border-gold/20 transition-editorial duration-700">
+              <div className="relative aspect-square rounded-[40px] overflow-hidden mb-6 shadow-lg border-4 border-white group-hover:border-brand/20 transition-editorial duration-700">
                 <img 
-                  src={`https://images.unsplash.com/${member.img}?w=600&q=80`} 
+                  src={`https://images.unsplash.com/${member.img}?w=500&q=80`} 
                   alt={member.name} 
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-editorial duration-1000 scale-110 group-hover:scale-100"
                 />
-                <div className="absolute inset-0 bg-berry/10 group-hover:bg-transparent transition-editorial"></div>
               </div>
-              <h4 className="text-xl font-black uppercase font-heading text-charcoal mb-1">{member.name}</h4>
-              <p className="text-brand font-black tracking-widest text-[10px] uppercase italic">{member.title}</p>
+              <h4 className="text-lg font-black uppercase font-heading text-charcoal mb-1">{member.name}</h4>
+              <p className="text-brand font-black tracking-widest text-[9px] uppercase italic">{member.title}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Our Partners Section - Restored from about.txt */}
+      <section className="py-32 px-8 bg-white" id="our-partners">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="text-center mb-20">
+            <p className="text-brand text-[10px] font-black tracking-[0.4em] uppercase mb-6">An Ecosystem of Change</p>
+            <h2 className="text-5xl md:text-7xl font-black text-charcoal mb-8 uppercase font-heading tracking-tighter leading-[0.9]">Our <span className="text-brand">Partners</span></h2>
+            <p className="text-charcoal/50 text-xl font-medium italic max-w-2xl mx-auto">
+              We are deeply grateful for the unwavering support of our strategic, institutional, and corporate partners who make our mission a reality across 48 countries.
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {[
+              { id: 'strategic', title: 'Strategic Partners', desc: 'Principal funders and co-creators driving continent-wide systemic change.' },
+              { id: 'institutional', title: 'Institutional Partners', desc: 'Global and regional bodies providing structural backing and policy alignment.' },
+              { id: 'supporting', title: 'Supporting Partners', desc: 'Valued contributors empowering our events and grassroots initiatives.' }
+            ].map((tier) => (
+              <div key={tier.id} className={`border ${expandedTier === tier.id ? 'border-brand' : 'border-charcoal/10'} rounded-[32px] overflow-hidden transition-editorial`}>
+                <button 
+                  onClick={() => toggleTier(tier.id)} 
+                  className={`w-full flex items-center justify-between p-8 ${expandedTier === tier.id ? 'bg-brand/5' : 'bg-white hover:bg-warm'} transition-editorial text-left`}
+                >
+                  <div className="flex items-center gap-6">
+                    <div className={`w-2 h-10 rounded-full ${expandedTier === tier.id ? 'bg-brand' : 'bg-charcoal/20'}`}></div>
+                    <div>
+                      <h3 className={`text-xl font-black uppercase font-heading ${expandedTier === tier.id ? 'text-charcoal' : 'text-charcoal/40'}`}>
+                        {tier.title}
+                      </h3>
+                      <p className="text-sm font-medium text-charcoal/40 mt-1">{tier.desc}</p>
+                    </div>
+                  </div>
+                  <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-editorial ${expandedTier === tier.id ? 'bg-brand text-white rotate-180 shadow-lg' : 'bg-warm text-charcoal/40'}`}>
+                    <ChevronDown size={24} />
+                  </div>
+                </button>
+                <div className={`overflow-hidden transition-all duration-700 ease-in-out ${expandedTier === tier.id ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                  <div className="p-10 bg-warm/30 border-t border-charcoal/5 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                    {[1, 2, 3, 4, 5].map((item) => (
+                      <div key={item} className="h-28 bg-white border border-charcoal/10 rounded-2xl flex items-center justify-center hover:border-brand transition-editorial shadow-sm hover:shadow-xl">
+                         <span className="text-charcoal/20 text-[10px] font-black uppercase tracking-widest">Logo Placeholder</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Support AWIEF Section - Restored from about.txt */}
+      <section className="py-32 px-8 bg-brand relative overflow-hidden text-center" id="support">
+        <div className="african-pattern absolute inset-0 opacity-30 scale-150 rotate-12 brightness-200"></div>
+        <div className="max-w-[1400px] mx-auto relative z-10">
+          <p className="text-gold text-[10px] font-black tracking-[0.4em] uppercase mb-6">Rise With Us</p>
+          <h2 className="text-5xl md:text-8xl font-black text-white mb-10 leading-[0.9] tracking-tighter uppercase font-heading">
+            Support AWIEF. <br/> <span className="text-gold italic serif normal-case">Be the Catalyst.</span>
+          </h2>
+          <p className="text-white/80 text-xl mb-20 max-w-2xl mx-auto italic font-medium">
+            Your unique journey has brought you here. Whether your passion is to build, invest, or advocate, there is a prioritized place for you in our vibrant community. Let’s lift each other up.
+          </p>
+          
+          <div className="grid md:grid-cols-3 gap-8 text-left">
+            {[
+              { id: "donor-partner", icon: HeartHandshake, title: "Donate & Partner", desc: "Provide crucial financial backing or become a strategic corporate partner driving real change." },
+              { id: "volunteer", icon: Users, title: "Volunteer", desc: "Share your valuable time, technical expertise, and mentorship with early-stage founders." },
+              { id: "join-community", icon: Globe, title: "Join the Community", desc: "Step into Africa's most powerful network of female leaders, innovators, and investors." }
+            ].map((card) => (
+              <div key={card.id} className="bg-white/10 backdrop-blur-md p-10 rounded-[48px] border border-white/20 hover:border-gold transition-editorial group cursor-pointer hover:bg-white hover:shadow-2xl">
+                <div className="w-16 h-16 rounded-[20px] bg-white/20 flex items-center justify-center mb-8 group-hover:bg-brand/10 transition-editorial">
+                  <card.icon className="text-white group-hover:text-brand" size={32} strokeWidth={1.5} />
+                </div>
+                <h3 className="text-white font-black text-2xl mb-4 uppercase font-heading group-hover:text-charcoal transition-editorial">{card.title}</h3>
+                <p className="text-white/60 text-sm mb-10 leading-relaxed font-medium group-hover:text-charcoal/60 transition-editorial">{card.desc}</p>
+                <div className="text-gold font-black text-[10px] tracking-widest uppercase flex items-center gap-3 group-hover:text-brand transition-editorial">
+                  Take Action <ArrowRight size={14} />
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
