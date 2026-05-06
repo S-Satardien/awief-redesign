@@ -20,27 +20,22 @@ export default function Home() {
           />
         </div>
 
-        <div className="max-w-[1600px] mx-auto px-6 md:px-12 w-full relative z-20 pt-24 md:pt-0">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-brand/40 bg-brand/10 backdrop-blur mb-10">
-              <Sparkles size={14} className="text-brand animate-pulse" />
-              <span className="text-brand text-[10px] font-black tracking-[0.3em] uppercase italic">Africa's Premier Women's Economic Forum</span>
-            </div>
-            
-            <h1 className="text-5xl md:text-7xl lg:text-[6.5rem] font-black leading-[0.85] tracking-tighter uppercase font-heading text-white mb-10">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-12 w-full relative z-20 pt-48 md:pt-24">
+          <div className="max-w-4xl">
+            <h1 className="text-5xl md:text-7xl lg:text-[7rem] font-black leading-[0.85] tracking-tighter uppercase font-heading text-white mb-10">
               Empowering <br/>
               Women to Shape <br/>
               the <span className="text-gold italic serif normal-case">Global Economy</span>
             </h1>
 
-            <p className="text-xl text-white/50 leading-relaxed max-w-xl mb-12 font-medium italic">
+            <p className="text-xl text-white/60 leading-relaxed max-w-xl mb-12 font-medium italic">
               Africa Women Innovation and Entrepreneurship Forum is a non-profit, award-winning pan-African organization dedicated to women's economic empowerment.
             </p>
 
             {/* UN ECOSOC Badge — Redesigned for Hero */}
             <div className="glass-panel p-8 rounded-[32px] border border-white/10 mb-12 max-w-lg shadow-2xl flex items-center justify-between gap-6">
               <div className="flex items-center gap-6">
-                <div className="w-14 h-14 rounded-full border-2 border-gold/40 flex items-center justify-center text-gold shadow-lg">
+                <div className="w-14 h-14 rounded-full border-2 border-gold/40 flex items-center justify-center text-gold shadow-lg shrink-0">
                   <Globe size={24} />
                 </div>
                 <div>
@@ -48,7 +43,7 @@ export default function Home() {
                   <p className="text-[10px] text-white/40 font-black tracking-widest uppercase mt-1">Accredited Consultative Status since 2023</p>
                 </div>
               </div>
-              <div className="px-4 py-2 rounded-xl bg-gold/10 border border-gold/20 text-gold font-black text-xs">
+              <div className="px-4 py-2 rounded-xl bg-gold/10 border border-gold/20 text-gold font-black text-xs shrink-0">
                 2023
               </div>
             </div>
