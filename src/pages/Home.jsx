@@ -22,15 +22,16 @@ export default function Home() {
 
         <div className="max-w-[1400px] mx-auto relative z-20">
           <div className="max-w-4xl text-center md:text-left mx-auto md:mx-0">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[0.9] tracking-tighter mb-10 uppercase font-heading">
-              Empowering Women <br /> 
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.1] tracking-tighter mb-10 uppercase font-heading">
+              Empowering Women <br />
+              to Shape the <br />
               <span className="text-gold">
                 Global Economy
               </span>
             </h1>
 
-            <p className="text-white/70 text-xl mb-12 leading-relaxed max-w-2xl mx-auto md:mx-0 italic">
-              Africa Women Innovation and Entrepreneurship Forum is a non-profit, pan-African organization dedicated to women's economic empowerment.
+            <p className="text-white/70 text-lg md:text-xl mb-12 leading-relaxed max-w-2xl mx-auto md:mx-0 italic">
+              Africa Women Innovation and Entrepreneurship Forum is a non-profit, award-winning pan-African organization dedicated to women's economic empowerment.
             </p>
 
             {/* UN ECOSOC Consultative Status Badge */}
