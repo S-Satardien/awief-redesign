@@ -309,11 +309,11 @@ export default function About() {
           
           <div className="grid md:grid-cols-3 gap-8 text-left">
             {[
-              { id: "donor-partner", icon: HeartHandshake, title: "Donate & Partner", desc: "Provide crucial financial backing or become a strategic corporate partner driving real change." },
-              { id: "volunteer", icon: Users, title: "Volunteer", desc: "Share your valuable time, technical expertise, and mentorship with early-stage founders." },
-              { id: "join-community", icon: Globe, title: "Join the Community", desc: "Step into Africa's most powerful network of female leaders, innovators, and investors." }
+              { id: "donor-partner", icon: HeartHandshake, title: "Donate & Partner", desc: "Provide crucial financial backing or become a strategic corporate partner driving real change.", link: "/get-involved#donor-partner" },
+              { id: "volunteer", icon: Users, title: "Volunteer", desc: "Share your valuable time, technical expertise, and mentorship with early-stage founders.", link: "/get-involved#volunteer" },
+              { id: "join-community", icon: Globe, title: "Join the Community", desc: "Step into Africa's most powerful network of female leaders, innovators, and investors.", link: "/get-involved#join-community" }
             ].map((card) => (
-              <div key={card.id} className="bg-white/10 backdrop-blur-md p-10 rounded-[48px] border border-white/20 hover:border-gold transition-editorial group cursor-pointer hover:bg-white hover:shadow-2xl">
+              <a href={card.link} key={card.id} className="bg-white/10 backdrop-blur-md p-10 rounded-[48px] border border-white/20 hover:border-gold transition-editorial group cursor-pointer hover:bg-white hover:shadow-2xl">
                 <div className="w-16 h-16 rounded-[20px] bg-white/20 flex items-center justify-center mb-8 group-hover:bg-brand/10 transition-editorial">
                   <card.icon className="text-white group-hover:text-brand" size={32} strokeWidth={1.5} />
                 </div>
@@ -322,7 +322,7 @@ export default function About() {
                 <div className="text-gold font-black text-[10px] tracking-widest uppercase flex items-center gap-3 group-hover:text-brand transition-editorial">
                   Take Action <ArrowRight size={14} />
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>
