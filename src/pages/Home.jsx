@@ -20,7 +20,7 @@ export default function Home() {
           />
         </div>
 
-        <div className="max-w-[1400px] mx-auto relative z-20">
+        <div className="max-w-[1400px] mx-auto relative z-20 pt-64 md:pt-40">
           <div className="max-w-4xl text-center md:text-left mx-auto md:mx-0">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.1] tracking-tighter mb-10 uppercase font-heading">
               Empowering Women <br />
