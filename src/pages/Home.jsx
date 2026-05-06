@@ -146,35 +146,52 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Redesigned Testimonial Section with Patterned Background */}
-      <section className="section-spacing relative bg-charcoal overflow-hidden rounded-[60px] my-12 mx-6 md:mx-12">
-        <div className="african-pattern absolute inset-0 opacity-20 scale-150 rotate-12"></div>
-        <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10">
-           <div className="editorial-grid items-center gap-16 md:gap-24">
-              <div className="col-span-12 lg:col-span-5 order-2 lg:order-1">
-                 <div className="relative">
-                    <div className="aspect-[4/5] rounded-[48px] overflow-hidden border-8 border-white/5 shadow-2xl relative z-10 rotate-3">
-                       <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=800&q=80" alt="Sarah Adebayo" className="w-full h-full object-cover grayscale" />
-                    </div>
-                    <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-brand rounded-full flex items-center justify-center text-white border-4 border-charcoal rotate-12 shadow-2xl hidden md:flex">
-                       <Quote size={48} className="opacity-50" />
-                    </div>
-                 </div>
-              </div>
-              <div className="col-span-12 lg:col-span-7 order-1 lg:order-2">
-                 <div className="flex gap-2 mb-8">
-                    {[1,2,3,4,5].map(star => (
-                      <Sparkles key={star} size={16} className="text-gold" />
-                    ))}
-                 </div>
-                 <h2 className="text-3xl md:text-5xl font-black tracking-tight leading-[1.1] text-white mb-10 italic font-heading">
-                    "AWIEF gave me the tools, the network, and the courage to scale beyond borders. <span className="text-brand">We are stronger together.</span>"
-                  </h2>
-                  <div className="border-l-4 border-brand pl-8">
-                    <h4 className="text-2xl font-black uppercase font-heading text-white">Sarah Adebayo</h4>
-                    <p className="text-gold font-black text-xs tracking-widest uppercase mt-1">CEO, InnovateAfrica</p>
-                  </div>
-              </div>
+      {/* Redesigned Multi-Testimonial Section with Visible Patterned Background */}
+      <section className="section-spacing relative bg-berry overflow-hidden rounded-[60px] my-12 mx-6 md:mx-12">
+        <div className="african-pattern absolute inset-0 opacity-40 scale-150 pointer-events-none"></div>
+        <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
+           <div className="text-center mb-24">
+              <p className="text-gold font-black tracking-[0.4em] uppercase text-[10px] mb-4">Voice of the Ecosystem</p>
+              <h2 className="text-4xl md:text-6xl font-black uppercase font-heading text-white">Impact <span className="text-gold italic serif normal-case">Stories</span></h2>
+           </div>
+
+           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {[
+                {
+                  q: "AWIEF gave me the tools, the network, and the courage to scale beyond borders. We are stronger together.",
+                  n: "Sarah Adebayo",
+                  t: "CEO, InnovateAfrica",
+                  i: "photo-1531123897727-8f129e1688ce"
+                },
+                {
+                  q: "The mentorship I received transformed my approach to tech innovation. AWIEF is a catalyst for African founders.",
+                  n: "Fatima Yusuf",
+                  t: "Founder, GreenTech Nigeria",
+                  i: "photo-1573496359142-b8d87734a5a2"
+                },
+                {
+                  q: "Being part of this pan-African network opened doors to global markets that I never thought possible.",
+                  n: "Elena Mensah",
+                  t: "Director, Accra Logistics",
+                  i: "photo-1567532939604-b6b5b0ad2604"
+                }
+              ].map((item, idx) => (
+                <div key={idx} className="glass-panel p-10 rounded-[48px] border border-white/10 hover:border-gold transition-editorial group">
+                   <div className="flex gap-1 mb-8">
+                      {[1,2,3,4,5].map(s => <Sparkles key={s} size={14} className="text-gold" />)}
+                   </div>
+                   <p className="text-xl text-white font-medium italic leading-relaxed mb-10 group-hover:text-gold transition-editorial">
+                     "{item.q}"
+                   </p>
+                   <div className="flex items-center gap-6 pt-8 border-t border-white/5">
+                      <img src={`https://images.unsplash.com/${item.i}?w=100&h=100&fit=crop`} alt={item.n} className="w-16 h-16 rounded-2xl object-cover grayscale group-hover:grayscale-0 transition-editorial shadow-xl" />
+                      <div>
+                         <h4 className="text-white font-black uppercase font-heading text-sm">{item.n}</h4>
+                         <p className="text-white/40 font-black text-[9px] tracking-widest uppercase">{item.t}</p>
+                      </div>
+                   </div>
+                </div>
+              ))}
            </div>
         </div>
       </section>
