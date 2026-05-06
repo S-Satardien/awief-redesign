@@ -8,55 +8,71 @@ export default function Home() {
     <div className="min-h-screen font-body text-charcoal bg-cream overflow-x-hidden">
       <Navbar activePage="home" />
       
-      {/* Figma-Inspired Berry Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden bg-berry">
-        {/* Background Image with Gradient Overlay */}
-        <div className="absolute top-0 right-0 w-full md:w-[60%] h-full z-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-berry via-berry/80 to-transparent z-10"></div>
+      {/* Hero Section - Exactly from Figma Wireframe Code */}
+      <section className="relative bg-berry pt-24 pb-48 px-8 overflow-hidden">
+        {/* Background Image on Right */}
+        <div className="absolute top-0 right-0 w-full md:w-1/2 h-full z-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-berry via-berry/90 to-transparent z-10"></div>
           <img 
-            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1200&q=80" 
-            alt="AWIEF Impact" 
-            className="w-full h-full object-cover object-top opacity-40 grayscale"
+            src="https://images.unsplash.com/photo-1589707197624-27802d81f462?w=1200&q=80" 
+            alt="Empowering African Women" 
+            className="w-full h-full object-cover object-top opacity-60 grayscale"
           />
         </div>
 
-        <div className="max-w-[1600px] mx-auto px-6 md:px-12 w-full relative z-20 pt-48 md:pt-24">
-          <div className="max-w-4xl">
-            <h1 className="text-5xl md:text-7xl lg:text-[7rem] font-black leading-[0.85] tracking-tighter uppercase font-heading text-white mb-10">
-              Empowering <br/>
-              Women to Shape <br/>
-              the <span className="text-gold italic serif normal-case">Global Economy</span>
+        <div className="max-w-[1400px] mx-auto relative z-20">
+          <div className="max-w-2xl text-center md:text-left mx-auto md:mx-0">
+            <div className="inline-block border border-gold/40 rounded-full px-4 py-1 mb-8">
+              <p className="text-gold text-xs font-bold tracking-[0.15em] uppercase flex items-center justify-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-gold"></span>
+                Africa's Premier Women's Economic Forum
+              </p>
+            </div>
+            
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight mb-6 uppercase font-heading">
+              Empowering Women <br /> to Shape the <br />
+              <span className="text-gold">
+                Global Economy
+              </span>
             </h1>
 
-            <p className="text-xl text-white/60 leading-relaxed max-w-xl mb-12 font-medium italic">
+            <p className="text-white/70 text-lg mb-10 leading-relaxed max-w-xl mx-auto md:mx-0">
               Africa Women Innovation and Entrepreneurship Forum is a non-profit, award-winning pan-African organization dedicated to women's economic empowerment.
             </p>
 
-            {/* UN ECOSOC Badge — Redesigned for Hero */}
-            <div className="glass-panel p-8 rounded-[32px] border border-white/10 mb-12 max-w-lg shadow-2xl flex items-center justify-between gap-6">
-              <div className="flex items-center gap-6">
-                <div className="w-14 h-14 rounded-full border-2 border-gold/40 flex items-center justify-center text-gold shadow-lg shrink-0">
-                  <Globe size={24} />
+            {/* UN ECOSOC Consultative Status Badge */}
+            <div className="bg-white/5 backdrop-blur-md border border-gold/30 rounded-xl p-5 mb-6 max-w-xl mx-auto md:mx-0 flex items-center justify-between">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 border-2 border-gold/60 rounded-full flex items-center justify-center">
+                  <Globe className="text-gold" size={20} />
                 </div>
-                <div>
-                  <h4 className="font-black text-xs tracking-widest uppercase text-white">UN ECOSOC Status</h4>
-                  <p className="text-[10px] text-white/40 font-black tracking-widest uppercase mt-1">Accredited Consultative Status since 2023</p>
+                <div className="text-left">
+                  <h3 className="text-white font-bold text-sm tracking-widest uppercase mb-1">UN ECOSOC Consultative Status</h3>
+                  <p className="text-white/40 text-xs">Accredited Since 2023 - United Nations Economic and Social Council</p>
                 </div>
               </div>
-              <div className="px-4 py-2 rounded-xl bg-gold/10 border border-gold/20 text-gold font-black text-xs shrink-0">
+              <div className="border border-gold/50 rounded-md px-3 py-1.5 text-gold text-xs font-bold tracking-wider shrink-0">
                 2023
               </div>
             </div>
 
-            <div className="flex flex-wrap items-center gap-8">
-              <a href="/purchase-conference-tickets" className="bg-brand text-white px-12 py-6 rounded-full font-black tracking-widest text-xs hover:bg-gold transition-editorial shadow-2xl flex items-center gap-3">
-                REGISTER FOR CONFERENCE <ArrowRight size={18} />
+            <p className="text-white/40 text-xs flex items-center justify-center md:justify-start gap-2 mb-10">
+               <span className="flex gap-1">
+                 <div className="w-5 h-5 rounded-full border border-white/20 flex items-center justify-center"><Sparkles size={10}/></div>
+                 <div className="w-5 h-5 rounded-full border border-white/20 flex items-center justify-center"><Globe size={10}/></div>
+                 <div className="w-5 h-5 rounded-full border border-white/20 flex items-center justify-center"><Users size={10}/></div>
+               </span>
+               Highest UN Advisory Accreditation for Civil Society Organizations
+            </p>
+
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">
+              <a href="/purchase-conference-tickets" className="bg-gradient-to-r from-brand-dark to-brand text-white px-8 py-3.5 rounded font-bold hover:opacity-90 transition-opacity flex items-center gap-2 text-sm shadow-lg">
+                Register for Conference
+                <ArrowRight size={16} />
               </a>
-              <button className="flex items-center gap-4 group text-white">
-                <div className="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-brand group-hover:border-brand transition-editorial">
-                  <Play size={20} fill="currentColor" />
-                </div>
-                <span className="font-black tracking-widest text-[11px] uppercase group-hover:text-brand transition-editorial">Watch Story</span>
+              <button className="border border-white/60 text-white px-8 py-3.5 rounded font-bold hover:bg-white/10 transition-colors flex items-center gap-2 text-sm">
+                <Play size={16} className="fill-current" />
+                Watch Our Story
               </button>
             </div>
           </div>
