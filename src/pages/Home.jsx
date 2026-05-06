@@ -9,10 +9,10 @@ export default function Home() {
       <Navbar activePage="home" />
       
       {/* Figma-Inspired Berry Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden bg-charcoal">
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-berry">
         {/* Background Image with Gradient Overlay */}
         <div className="absolute top-0 right-0 w-full md:w-[60%] h-full z-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-charcoal via-charcoal/80 to-transparent z-10"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-berry via-berry/80 to-transparent z-10"></div>
           <img 
             src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1200&q=80" 
             alt="AWIEF Impact" 

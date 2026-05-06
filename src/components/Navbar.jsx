@@ -13,7 +13,10 @@ export default function Navbar({ activePage = '' }) {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const isActive = (page) => activePage === page ? 'text-brand font-black' : 'text-charcoal/70 hover:text-brand transition-editorial'
+  const isActive = (page) => {
+    if (activePage === page) return 'text-brand font-black'
+    return isScrolled ? 'text-charcoal/70 hover:text-brand transition-editorial' : 'text-white/80 hover:text-white transition-editorial'
+  }
 
   const NavItemWithDropdown = ({ label, links, active }) => (
     <div className="relative group/nav">
