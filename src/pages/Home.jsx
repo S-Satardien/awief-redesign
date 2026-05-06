@@ -146,9 +146,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Redesigned Multi-Testimonial Section with Visible Patterned Background */}
-      <section className="section-spacing relative bg-berry overflow-hidden rounded-[60px] my-12 mx-6 md:mx-12">
-        <div className="african-pattern absolute inset-0 opacity-40 scale-150 pointer-events-none"></div>
+      {/* Redesigned Multi-Testimonial Section with Visible Patterned Background - Main Brand Color */}
+      <section className="section-spacing relative bg-brand overflow-hidden rounded-[60px] my-12 mx-6 md:mx-12">
+        <div className="african-pattern absolute inset-0 opacity-20 scale-150 pointer-events-none brightness-200 contrast-200"></div>
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
            <div className="text-center mb-24">
               <p className="text-gold font-black tracking-[0.4em] uppercase text-[10px] mb-4">Voice of the Ecosystem</p>
