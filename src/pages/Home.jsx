@@ -150,7 +150,7 @@ export default function Home() {
       <section className="section-spacing bg-charcoal text-white">
         <div className="max-w-[1200px] mx-auto px-6 md:px-12 text-center">
           <Quote size={60} className="mx-auto mb-12 text-brand opacity-50" />
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter leading-[1.1] mb-12 italic">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tighter leading-[1.2] mb-12 italic">
             "AWIEF gave me the tools, the network, and the courage to scale beyond borders. We are stronger together."
           </h2>
           <div className="flex flex-col items-center">
