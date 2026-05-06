@@ -146,18 +146,36 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonial Section — Large Typography */}
-      <section className="section-spacing bg-charcoal text-white">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-12 text-center">
-          <Quote size={60} className="mx-auto mb-12 text-brand opacity-50" />
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tighter leading-[1.2] mb-12 italic">
-            "AWIEF gave me the tools, the network, and the courage to scale beyond borders. We are stronger together."
-          </h2>
-          <div className="flex flex-col items-center">
-            <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=200&h=200&fit=crop" alt="Sarah" className="w-24 h-24 rounded-full border-4 border-brand mb-6 object-cover" />
-            <h4 className="text-xl font-black uppercase font-heading">Sarah Adebayo</h4>
-            <p className="text-brand font-bold text-xs tracking-widest uppercase mt-1">CEO, InnovateAfrica</p>
-          </div>
+      {/* Redesigned Testimonial Section with Patterned Background */}
+      <section className="section-spacing relative bg-charcoal overflow-hidden rounded-[60px] my-12 mx-6 md:mx-12">
+        <div className="african-pattern absolute inset-0 opacity-20 scale-150 rotate-12"></div>
+        <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10">
+           <div className="editorial-grid items-center gap-16 md:gap-24">
+              <div className="col-span-12 lg:col-span-5 order-2 lg:order-1">
+                 <div className="relative">
+                    <div className="aspect-[4/5] rounded-[48px] overflow-hidden border-8 border-white/5 shadow-2xl relative z-10 rotate-3">
+                       <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=800&q=80" alt="Sarah Adebayo" className="w-full h-full object-cover grayscale" />
+                    </div>
+                    <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-brand rounded-full flex items-center justify-center text-white border-4 border-charcoal rotate-12 shadow-2xl hidden md:flex">
+                       <Quote size={48} className="opacity-50" />
+                    </div>
+                 </div>
+              </div>
+              <div className="col-span-12 lg:col-span-7 order-1 lg:order-2">
+                 <div className="flex gap-2 mb-8">
+                    {[1,2,3,4,5].map(star => (
+                      <Sparkles key={star} size={16} className="text-gold" />
+                    ))}
+                 </div>
+                 <h2 className="text-3xl md:text-5xl font-black tracking-tight leading-[1.1] text-white mb-10 italic font-heading">
+                    "AWIEF gave me the tools, the network, and the courage to scale beyond borders. <span className="text-brand">We are stronger together.</span>"
+                  </h2>
+                  <div className="border-l-4 border-brand pl-8">
+                    <h4 className="text-2xl font-black uppercase font-heading text-white">Sarah Adebayo</h4>
+                    <p className="text-gold font-black text-xs tracking-widest uppercase mt-1">CEO, InnovateAfrica</p>
+                  </div>
+              </div>
+           </div>
         </div>
       </section>
 
