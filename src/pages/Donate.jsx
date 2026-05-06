@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import { Heart, ShieldCheck, CreditCard, ArrowRight, CheckCircle2, Globe } from 'lucide-react'
+import { Heart, ShieldCheck, CreditCard, ArrowRight, CheckCircle2, Globe, Sparkles } from 'lucide-react'
 
 export default function Donate() {
   const [selectedAmount, setSelectedAmount] = useState('100')

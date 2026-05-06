@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import { HeartHandshake, Users, Globe, ArrowRight, Building, CheckCircle2, Handshake, Gift, Briefcase, GraduationCap, ChevronRight } from 'lucide-react'
+import { HeartHandshake, Users, Globe, ArrowRight, Building, CheckCircle2, Handshake, Gift, Briefcase, GraduationCap, ChevronRight, Sparkles } from 'lucide-react'
 
 export default function GetInvolved() {
   return (
