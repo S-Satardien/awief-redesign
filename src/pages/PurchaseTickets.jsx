@@ -73,14 +73,14 @@ export default function PurchaseTickets() {
             Join 1,500+ female founders, global investors, and policymakers in Cape Town. Choose the pass that fits your journey.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-            <div className="flex items-center gap-3 bg-white border border-charcoal/5 px-6 py-3 rounded-full shadow-sm">
-              <Calendar className="text-brand" size={16} />
-              <span className="text-charcoal text-[9px] font-black uppercase tracking-widest">November 10 - 11, 2026</span>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8">
+            <div className="flex items-center gap-4 bg-brand px-10 py-5 rounded-full shadow-xl group hover:scale-105 transition-editorial">
+              <Calendar className="text-white" size={20} />
+              <span className="text-white text-[11px] font-black uppercase tracking-widest">November 10 - 11, 2026</span>
             </div>
-            <div className="flex items-center gap-3 bg-white border border-charcoal/5 px-6 py-3 rounded-full shadow-sm">
-              <MapPin className="text-brand" size={16} />
-              <span className="text-charcoal text-[9px] font-black uppercase tracking-widest">Cape Town, South Africa</span>
+            <div className="flex items-center gap-4 bg-brand px-10 py-5 rounded-full shadow-xl group hover:scale-105 transition-editorial">
+              <MapPin className="text-white" size={20} />
+              <span className="text-white text-[11px] font-black uppercase tracking-widest">Cape Town, South Africa</span>
             </div>
           </div>
         </div>
