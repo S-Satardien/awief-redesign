@@ -50,7 +50,8 @@ export default function WhatWeDo() {
   const filteredProgrammes = programmesData.filter(prog => {
     if (activeFilter === 'All') return true;
     if (activeFilter === 'Open Applications') return prog.status === 'Open';
-    return prog.stage === activeFilter;
+    // Match partial strings for 'Stage' variations
+    return activeFilter.includes(prog.stage);
   });
 
   return (
@@ -87,15 +88,15 @@ export default function WhatWeDo() {
             </div>
             
             {/* Filter Bar */}
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-4">
               {filterOptions.map(option => (
                 <button
                   key={option}
                   onClick={() => setActiveFilter(option)}
-                  className={`px-6 py-3 rounded-full text-[10px] font-black uppercase tracking-widest transition-editorial border ${
+                  className={`px-8 py-4 rounded-full text-[10px] font-black uppercase tracking-widest transition-editorial border-2 ${
                     activeFilter === option 
-                    ? 'bg-brand text-white border-brand shadow-xl' 
-                    : 'bg-white text-charcoal/40 border-charcoal/10 hover:border-brand hover:text-brand shadow-sm'
+                    ? 'bg-brand text-white border-brand shadow-[0_20px_50px_rgba(127,61,89,0.3)] scale-105' 
+                    : 'bg-white text-charcoal/30 border-charcoal/5 hover:border-brand hover:text-brand shadow-sm hover:scale-105'
                   }`}
                 >
                   {option}
@@ -104,39 +105,42 @@ export default function WhatWeDo() {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProgrammes.map((p, i) => (
-              <div 
-                key={p.id} 
-                onClick={() => setSelectedProg(p)}
-                className="glass-panel p-10 group hover:border-brand transition-editorial cursor-pointer flex flex-col h-full relative overflow-hidden"
-              >
-                <div className="african-pattern absolute inset-0 opacity-5"></div>
-                <div className="relative z-10 flex flex-col h-full">
-                  <div className="flex justify-between items-start mb-8">
-                    <div className="w-14 h-14 rounded-2xl bg-brand/5 flex items-center justify-center text-brand shrink-0 group-hover:bg-brand group-hover:text-white transition-editorial shadow-sm">
-                      <Zap size={24} />
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredProgrammes.map((p, i) => (
+                <div 
+                  key={p.id} 
+                  onClick={() => setSelectedProg(p)}
+                  className="bg-white border border-charcoal/5 p-12 rounded-[48px] group hover:border-brand hover:shadow-[0_40px_100px_rgba(0,0,0,0.05)] transition-editorial cursor-pointer flex flex-col h-full relative overflow-hidden group"
+                >
+                  <div className="african-pattern absolute inset-0 opacity-0 group-hover:opacity-[0.05] transition-editorial"></div>
+                  <div className="relative z-10 flex flex-col h-full">
+                    <div className="flex justify-between items-start mb-10">
+                      <div className="w-16 h-16 rounded-[24px] bg-warm flex items-center justify-center text-brand shrink-0 group-hover:bg-brand group-hover:text-white group-hover:rotate-12 transition-editorial shadow-sm">
+                        {p.stage.includes('Idea') ? <Rocket size={28} /> : <TrendingUp size={28} />}
+                      </div>
+                      <span className={`px-5 py-2 rounded-full text-[9px] font-black uppercase tracking-widest shadow-sm ${
+                        p.status === 'Open' ? 'bg-green-100 text-green-700 border border-green-200' :
+                        p.status === 'Ongoing' ? 'bg-gold/10 text-gold border border-gold/20' :
+                        'bg-charcoal/5 text-charcoal/40 border border-charcoal/10'
+                      }`}>
+                        {p.status}
+                      </span>
                     </div>
-                    <span className={`px-4 py-1.5 rounded-full text-[9px] font-black uppercase tracking-widest ${
-                      p.status === 'Open' ? 'bg-green-100 text-green-700' :
-                      p.status === 'Ongoing' ? 'bg-gold/10 text-gold' :
-                      'bg-charcoal/5 text-charcoal/40'
-                    }`}>
-                      {p.status}
-                    </span>
-                  </div>
-                  <div className="mb-6">
-                    <span className="text-brand font-black tracking-widest text-[9px] uppercase">{p.stage}</span>
-                    <h3 className="text-2xl font-black uppercase font-heading leading-tight group-hover:text-brand transition-editorial mt-2">{p.title}</h3>
-                  </div>
-                  <p className="text-charcoal/60 text-sm font-medium leading-relaxed mb-10 flex-grow">{p.desc}</p>
-                  <div className="flex items-center gap-2 text-brand font-black tracking-widest text-[10px] uppercase group-hover:gap-4 transition-editorial mt-auto">
-                    Learn More <ArrowRight size={14} />
+                    <div className="mb-8">
+                      <div className="flex items-center gap-2 mb-3">
+                         <div className="w-6 h-px bg-gold"></div>
+                         <span className="text-brand font-black tracking-[0.2em] uppercase text-[9px]">{p.stage}</span>
+                      </div>
+                      <h3 className="text-3xl font-black uppercase font-heading leading-[1.1] group-hover:text-brand transition-editorial tracking-tight">{p.title}</h3>
+                    </div>
+                    <p className="text-charcoal/40 text-sm font-medium leading-relaxed mb-12 flex-grow italic">"{p.desc}"</p>
+                    <div className="flex items-center gap-4 text-brand font-black tracking-[0.3em] uppercase text-[10px] group-hover:gap-6 transition-editorial mt-auto">
+                      VIEW PROGRAMME <MoveRight size={18} className="group-hover:translate-x-2 transition-editorial text-gold" />
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
         </div>
       </section>
 
