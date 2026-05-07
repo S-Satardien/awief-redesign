@@ -107,22 +107,22 @@ export default function Donate() {
         </div>
       </section>
 
-      {/* 3. Make Your Donation Section - The Portal */}
-      <section id="donate-section" className="py-40 px-6 md:px-12 bg-warm relative overflow-hidden">
+      {/* 3. Make Your Donation Section - Refined Scale & Dynamic Impact */}
+      <section id="donate-section" className="py-32 px-6 md:px-12 bg-warm relative overflow-hidden">
         <div className="african-pattern absolute inset-0 opacity-[0.03] scale-150 rotate-45"></div>
         <div className="max-w-[1200px] mx-auto relative z-10">
-          <div className="text-center mb-24">
-             <h2 className="text-5xl md:text-[6rem] font-black uppercase font-heading leading-none tracking-tighter mb-8">
+          <div className="text-center mb-16">
+             <h2 className="text-4xl md:text-6xl font-black uppercase font-heading leading-none tracking-tighter mb-6">
                Select Your <span className="text-brand serif italic normal-case">Contribution</span>
              </h2>
-             <div className="flex justify-center gap-4">
+             <div className="flex justify-center gap-3">
                 {['one-time', 'monthly'].map(type => (
                   <button 
                     key={type}
                     onClick={() => setDonationType(type)}
-                    className={`px-10 py-4 rounded-full text-[10px] font-black uppercase tracking-widest transition-editorial border-2 ${
+                    className={`px-8 py-3 rounded-full text-[9px] font-black uppercase tracking-widest transition-editorial border-2 ${
                       donationType === type 
-                      ? 'bg-brand text-white border-brand shadow-xl' 
+                      ? 'bg-brand text-white border-brand shadow-lg' 
                       : 'bg-white text-charcoal/30 border-charcoal/5 hover:border-brand hover:text-brand'
                     }`}
                   >
@@ -132,63 +132,113 @@ export default function Donate() {
              </div>
           </div>
 
-          <div className="grid lg:grid-cols-12 gap-12 items-start">
-             <div className="lg:col-span-8 bg-white p-12 md:p-20 rounded-[64px] shadow-2xl border border-charcoal/5">
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-16">
+          <div className="grid lg:grid-cols-12 gap-10 items-start">
+             <div className="lg:col-span-8 bg-white p-10 md:p-16 rounded-[48px] shadow-xl border border-charcoal/5">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-12">
                    {['50', '100', '250', '500', '1000', 'Custom'].map(amt => (
                      <button
                         key={amt}
                         onClick={() => setSelectedAmount(amt)}
-                        className={`py-12 rounded-[32px] text-2xl font-black transition-editorial border-2 flex flex-col items-center justify-center gap-2 ${
+                        className={`py-8 rounded-[24px] text-xl font-black transition-editorial border-2 flex flex-col items-center justify-center gap-1 ${
                           selectedAmount === amt 
-                          ? 'bg-brand border-brand text-white shadow-[0_20px_50px_rgba(127,61,89,0.3)] scale-105' 
+                          ? 'bg-brand border-brand text-white shadow-xl scale-105' 
                           : 'bg-cream/30 border-charcoal/5 text-charcoal/40 hover:border-brand hover:text-brand shadow-sm'
                         }`}
                      >
-                        <span className="text-[10px] font-black tracking-widest opacity-40 uppercase">USD</span>
+                        <span className="text-[8px] font-black tracking-widest opacity-40 uppercase">USD</span>
                         {amt === 'Custom' ? amt : `$${amt}`}
                      </button>
                    ))}
                 </div>
 
-                <div className="space-y-8">
+                <div className="space-y-6">
                    <div className="group relative">
-                      <input type="email" placeholder="Email Address" className="w-full bg-cream/30 border-b-2 border-charcoal/10 py-6 px-4 focus:outline-none focus:border-brand transition-editorial text-lg font-medium placeholder:text-charcoal/20" />
+                      <input type="email" placeholder="Email Address" className="w-full bg-cream/30 border-b border-charcoal/10 py-5 px-4 focus:outline-none focus:border-brand transition-editorial text-base font-medium placeholder:text-charcoal/20" />
                    </div>
-                   <button className="w-full bg-brand text-white py-10 rounded-[32px] font-black text-xs uppercase tracking-[0.4em] hover:bg-charcoal transition-editorial shadow-[0_30px_60px_rgba(29,11,20,0.2)] flex items-center justify-center gap-6 group">
-                     PROCEED TO SECURE GATEWAY <ArrowRight size={24} className="group-hover:translate-x-3 transition-editorial" />
+                   <button className="w-full bg-brand text-white py-8 rounded-[24px] font-black text-[10px] uppercase tracking-[0.4em] hover:bg-charcoal transition-editorial shadow-2xl flex items-center justify-center gap-4 group">
+                     PROCEED TO SECURE GATEWAY <ArrowRight size={20} className="group-hover:translate-x-2 transition-editorial" />
                    </button>
                 </div>
 
-                <div className="mt-12 flex flex-wrap items-center justify-center gap-10 border-t border-charcoal/5 pt-12 opacity-40">
-                   <div className="flex items-center gap-3">
-                      <Lock size={18} className="text-brand" />
-                      <span className="text-[10px] font-black uppercase tracking-widest">256-bit Encryption</span>
+                <div className="mt-10 flex flex-wrap items-center justify-center gap-8 border-t border-charcoal/5 pt-10 opacity-40">
+                   <div className="flex items-center gap-2">
+                      <Lock size={14} className="text-brand" />
+                      <span className="text-[8px] font-black uppercase tracking-widest">256-bit Encryption</span>
                    </div>
-                   <div className="flex items-center gap-3">
-                      <ShieldCheck size={18} className="text-brand" />
-                      <span className="text-[10px] font-black uppercase tracking-widest">Secure Checkout</span>
+                   <div className="flex items-center gap-2">
+                      <ShieldCheck size={14} className="text-brand" />
+                      <span className="text-[8px] font-black uppercase tracking-widest">Secure Checkout</span>
                    </div>
-                   <div className="flex items-center gap-3">
-                      <CreditCard size={18} className="text-brand" />
-                      <span className="text-[10px] font-black uppercase tracking-widest">All Major Cards</span>
+                   <div className="flex items-center gap-2">
+                      <CreditCard size={14} className="text-brand" />
+                      <span className="text-[8px] font-black uppercase tracking-widest">All Major Cards</span>
                    </div>
                 </div>
              </div>
 
-             <div className="lg:col-span-4 space-y-8">
-                <div className="bg-brand p-12 rounded-[48px] text-white shadow-2xl relative overflow-hidden group">
+             <div className="lg:col-span-4 space-y-6">
+                <div className="bg-brand p-10 rounded-[40px] text-white shadow-2xl relative overflow-hidden group min-h-[400px] flex flex-col justify-center">
                    <div className="african-pattern absolute inset-0 opacity-10 group-hover:opacity-20 transition-editorial scale-150"></div>
                    <div className="relative z-10">
-                      <Heart className="text-gold mb-8" size={40} />
-                      <h4 className="text-2xl font-black uppercase font-heading mb-6 tracking-tight">Your impact with <span className="text-gold">${selectedAmount === 'Custom' ? '500' : selectedAmount}</span></h4>
-                      <ul className="space-y-6">
-                         {[
-                           "Training for 5 female entrepreneurs",
-                           "Direct market access for 2 startups",
-                           "Year-long mentorship program access"
+                      <Heart className="text-gold mb-6" size={32} />
+                      <h4 className="text-xl font-black uppercase font-heading mb-6 tracking-tight leading-tight">Your impact with <span className="text-gold">${selectedAmount === 'Custom' ? '500+' : selectedAmount}</span></h4>
+                      <ul className="space-y-5">
+                         {selectedAmount === '50' && [
+                           "Full scholarship for 1 female founder",
+                           "Digital skills toolkit access",
+                           "Inclusion in community network"
                          ].map((item, i) => (
-                           <li key={i} className="flex gap-4 items-start text-sm font-medium text-white/60 italic leading-snug">
+                           <li key={i} className="flex gap-3 items-start text-sm font-medium text-white/60 italic leading-snug">
+                             <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2 shrink-0"></div>
+                             {item}
+                           </li>
+                         ))}
+                         {selectedAmount === '100' && [
+                           "Training for 2 female entrepreneurs",
+                           "Direct mentorship matching",
+                           "Resource center premium access"
+                         ].map((item, i) => (
+                           <li key={i} className="flex gap-3 items-start text-sm font-medium text-white/60 italic leading-snug">
+                             <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2 shrink-0"></div>
+                             {item}
+                           </li>
+                         ))}
+                         {selectedAmount === '250' && [
+                           "Seed support for 1 early-stage startup",
+                           "Intensive investment readiness training",
+                           "Regional ecosystem networking events"
+                         ].map((item, i) => (
+                           <li key={i} className="flex gap-3 items-start text-sm font-medium text-white/60 italic leading-snug">
+                             <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2 shrink-0"></div>
+                             {item}
+                           </li>
+                         ))}
+                         {selectedAmount === '500' && [
+                           "Full accelerator sponsorship for 1 founder",
+                           "Legal and technical advisory services",
+                           "High-visibility showcase opportunities"
+                         ].map((item, i) => (
+                           <li key={i} className="flex gap-3 items-start text-sm font-medium text-white/60 italic leading-snug">
+                             <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2 shrink-0"></div>
+                             {item}
+                           </li>
+                         ))}
+                         {selectedAmount === '1000' && [
+                           "Scale support for 5 female founders",
+                           "Establishment of a local digital hub",
+                           "Advanced market intelligence reporting"
+                         ].map((item, i) => (
+                           <li key={i} className="flex gap-3 items-start text-sm font-medium text-white/60 italic leading-snug">
+                             <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2 shrink-0"></div>
+                             {item}
+                           </li>
+                         ))}
+                         {(selectedAmount === 'Custom' || !['50', '100', '250', '500', '1000'].includes(selectedAmount)) && [
+                           "Customized strategic impact allocation",
+                           "Direct oversight from programme leads",
+                           "Quarterly impact performance review"
+                         ].map((item, i) => (
+                           <li key={i} className="flex gap-3 items-start text-sm font-medium text-white/60 italic leading-snug">
                              <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2 shrink-0"></div>
                              {item}
                            </li>
