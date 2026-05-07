@@ -9,59 +9,68 @@ export default function Home() {
       <Navbar activePage="home" />
       
       {/* Hero Section - Elevated to Brand Berry Identity */}
-      <section className="relative bg-brand pt-24 pb-48 px-8 overflow-hidden">
+      <section className="relative bg-brand pt-24 pb-24 px-8 overflow-hidden">
         {/* Subtle Pattern & Glow Overlays */}
-        <div className="african-pattern absolute inset-0 opacity-20 scale-150 rotate-12 brightness-200"></div>
+        <div className="african-pattern absolute inset-0 opacity-10 scale-150 rotate-12 brightness-200"></div>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold/5 rounded-full blur-[120px] pointer-events-none"></div>
 
-        {/* Background Image on Right */}
-        <div className="absolute top-0 right-0 w-full md:w-1/2 h-full z-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-brand via-brand/90 to-transparent z-10"></div>
+        {/* Background Image with Improved Blend */}
+        <div className="absolute top-0 right-0 w-full lg:w-2/3 h-full z-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-brand via-brand/60 to-transparent z-10"></div>
           <img 
             src="https://images.unsplash.com/photo-1589707197624-27802d81f462?w=1200&q=80" 
             alt="Empowering African Women" 
-            className="w-full h-full object-cover object-top opacity-60 grayscale"
+            className="w-full h-full object-cover object-top opacity-50 grayscale"
           />
         </div>
 
         <div className="max-w-[1400px] mx-auto relative z-20 pt-32 md:pt-20">
           <div className="max-w-4xl text-center md:text-left mx-auto md:mx-0">
-            <h1 className="text-5xl md:text-6xl lg:text-[7.5rem] font-black text-white leading-[0.85] tracking-tighter mb-12 uppercase font-heading">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.1] tracking-tighter mb-10 uppercase font-heading">
               Empowering Women <br />
               to Shape the <br />
-              <span className="text-gold italic serif normal-case">
+              <span className="text-gold">
                 Global Economy
               </span>
             </h1>
 
-            <p className="text-white/70 text-xl md:text-2xl mb-14 leading-tight font-medium max-w-2xl mx-auto md:mx-0 italic border-l-4 border-gold pl-8">
+            <p className="text-white/70 text-lg md:text-xl mb-12 leading-relaxed max-w-2xl mx-auto md:mx-0 italic">
               Africa Women Innovation and Entrepreneurship Forum is a non-profit, award-winning pan-African organization dedicated to women's economic empowerment.
             </p>
 
             {/* UN ECOSOC Consultative Status Badge */}
-            <div className="bg-white/5 backdrop-blur-md border border-gold/30 rounded-3xl p-6 mb-8 max-w-xl mx-auto md:mx-0 flex items-center justify-between group hover:border-gold transition-editorial">
-              <div className="flex items-center gap-6">
-                <div className="w-14 h-14 border-2 border-gold/60 rounded-2xl flex items-center justify-center bg-gold/10 group-hover:bg-gold group-hover:text-brand transition-editorial">
-                  <Globe className="text-gold group-hover:text-brand" size={24} />
+            <div className="bg-white/5 backdrop-blur-md border border-gold/30 rounded-xl p-5 mb-6 max-w-xl mx-auto md:mx-0 flex items-center justify-between group hover:border-gold transition-editorial">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 border-2 border-gold/60 rounded-full flex items-center justify-center">
+                  <Globe className="text-gold" size={20} />
                 </div>
                 <div className="text-left">
-                  <h3 className="text-white font-black text-sm tracking-[0.2em] uppercase mb-1">UN ECOSOC Consultative Status</h3>
-                  <p className="text-white/40 text-[10px] font-bold uppercase tracking-widest leading-none">Accredited Since 2023 - United Nations</p>
+                  <h3 className="text-white font-bold text-sm tracking-widest uppercase mb-1">UN ECOSOC Consultative Status</h3>
+                  <p className="text-white/40 text-xs">Accredited Since 2023 - United Nations Economic and Social Council</p>
                 </div>
               </div>
-              <div className="bg-gold text-brand rounded-lg px-4 py-2 text-[10px] font-black tracking-wider shrink-0 shadow-xl">
+              <div className="border border-gold/50 rounded-md px-3 py-1.5 text-gold text-xs font-bold tracking-wider shrink-0">
                 2023
               </div>
             </div>
 
-            <div className="flex flex-wrap items-center justify-center md:justify-start gap-8 mt-12">
-              <a href="/purchase-conference-tickets" className="bg-gold text-brand px-12 py-6 rounded-full font-black text-xs uppercase tracking-[0.3em] hover:bg-white transition-editorial shadow-2xl flex items-center gap-4">
-                REGISTER FOR CONFERENCE
-                <ArrowRight size={20} />
+            <p className="text-white/40 text-xs flex items-center justify-center md:justify-start gap-2 mb-10">
+               <span className="flex gap-1">
+                 <div className="w-5 h-5 rounded-full border border-white/20 flex items-center justify-center"><Sparkles size={10}/></div>
+                 <div className="w-5 h-5 rounded-full border border-white/20 flex items-center justify-center"><Globe size={10}/></div>
+                 <div className="w-5 h-5 rounded-full border border-white/20 flex items-center justify-center"><Users size={10}/></div>
+               </span>
+               Highest UN Advisory Accreditation for Civil Society Organizations
+            </p>
+
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">
+              <a href="/purchase-conference-tickets" className="bg-gradient-to-r from-brand-dark to-brand text-white px-8 py-3.5 rounded font-bold hover:opacity-90 transition-opacity flex items-center gap-2 text-sm shadow-lg">
+                Register for Conference
+                <ArrowRight size={16} />
               </a>
-              <button className="flex items-center gap-4 text-white font-black tracking-widest text-[10px] uppercase group">
-                 <div className="w-14 h-14 rounded-full border-2 border-white/20 flex items-center justify-center group-hover:bg-white group-hover:text-brand transition-editorial"><Play size={20} className="fill-current ml-1" /></div>
-                 Watch Our Story
+              <button className="border border-white/60 text-white px-8 py-3.5 rounded font-bold hover:bg-white/10 transition-colors flex items-center gap-2 text-sm">
+                <Play size={16} className="fill-current" />
+                Watch Our Story
               </button>
             </div>
           </div>
@@ -69,9 +78,9 @@ export default function Home() {
       </section>
 
       {/* Asymmetrical Action Section */}
-      <section className="section-spacing px-6 md:px-12 bg-white mt-24">
+      <section className="section-spacing px-6 md:px-12 bg-white mt-12">
         <div className="max-w-[1400px] mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-8">
             <div className="max-w-2xl">
               <p className="text-brand font-black tracking-[0.3em] uppercase text-xs mb-4">Our Ecosystem</p>
               <h2 className="text-4xl md:text-6xl font-black uppercase font-heading leading-[0.9] tracking-tighter">
@@ -111,18 +120,18 @@ export default function Home() {
         <div className="max-w-[1400px] mx-auto relative z-10">
            <div className="editorial-grid items-center gap-24">
               <div className="col-span-12 lg:col-span-6">
-                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-brand/40 bg-brand/10 backdrop-blur mb-10">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-brand/40 bg-brand/10 backdrop-blur mb-5">
                     <Users size={14} className="text-brand"/>
                     <span className="text-brand text-[9px] font-black tracking-[0.3em] uppercase">The Partnership Opportunity</span>
                  </div>
-                 <h2 className="text-4xl md:text-6xl font-black uppercase font-heading leading-[0.9] tracking-tighter mb-10">
+                 <h2 className="text-4xl md:text-6xl font-black uppercase font-heading leading-[0.9] tracking-tighter mb-5">
                     Invest in Africa's Most <br/> <span className="text-brand italic serif normal-case">Impactful</span> Women's Platform
                  </h2>
-                 <p className="text-xl text-charcoal/60 leading-relaxed font-medium mb-12 italic border-l-8 border-brand pl-12">
+                 <p className="text-xl text-charcoal/60 leading-relaxed font-medium mb-6 italic border-l-8 border-brand pl-12">
                     Join a growing ecosystem of forward-thinking organizations driving real systemic change. Our partners gain unparalleled access to Africa's most influential women's network — from boardrooms to grassroots communities across 48 countries.
                  </p>
                  
-                 <div className="space-y-8 mb-16">
+                 <div className="space-y-8 mb-8">
                     {[
                       "Access 150+ partners across 50 countries in our strategic network",
                       "Brand presence at flagship UN-side events and the Annual AWIEF Conference",
@@ -159,7 +168,7 @@ export default function Home() {
       <section className="section-spacing relative bg-brand overflow-hidden rounded-[60px] my-12 mx-6 md:mx-12">
         <div className="african-pattern absolute inset-0 opacity-20 scale-150 pointer-events-none brightness-200 contrast-200"></div>
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
-           <div className="text-center mb-24">
+           <div className="text-center mb-12">
               <p className="text-gold font-black tracking-[0.4em] uppercase text-[10px] mb-4">Voice of the Ecosystem</p>
               <h2 className="text-4xl md:text-6xl font-black uppercase font-heading text-white">Impact <span className="text-gold italic serif normal-case">Stories</span></h2>
            </div>
@@ -208,7 +217,7 @@ export default function Home() {
       {/* Latest Insights Section */}
       <section className="section-spacing px-6 md:px-12 bg-white">
         <div className="max-w-[1400px] mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-8 gap-8">
             <div className="max-w-xl">
                <p className="text-brand font-black tracking-[0.4em] uppercase text-[10px] mb-4">The Perspective</p>
                <h2 className="text-4xl md:text-7xl font-black uppercase font-heading leading-[0.85] tracking-tighter">
@@ -242,10 +251,10 @@ export default function Home() {
           IMPACT
         </div>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-5xl md:text-8xl font-black uppercase font-heading mb-12 leading-[0.85] tracking-tighter">
+          <h2 className="text-5xl md:text-8xl font-black uppercase font-heading mb-6 leading-[0.85] tracking-tighter">
             Join the <br/> <span className="text-brand">Movement</span>
           </h2>
-          <p className="text-xl text-charcoal/60 mb-12 font-medium max-w-xl mx-auto leading-relaxed">
+          <p className="text-xl text-charcoal/60 mb-6 font-medium max-w-xl mx-auto leading-relaxed">
             Nurture your ambitions. Partner, learn, or invest with us to uplift the next generation of visionary African women.
           </p>
           <div className="flex flex-wrap justify-center gap-6">
