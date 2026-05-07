@@ -159,28 +159,28 @@ export default function WhatWeDo() {
                     Economic Empowerment in a Digital Era. The nexus of policy, capital, and innovation.
                   </p>
                   <div className="flex flex-wrap gap-8 items-center">
-                     <a href="/purchase-conference-tickets" className="bg-brand text-white px-12 py-6 rounded-full font-black text-[10px] uppercase tracking-[0.3em] hover:bg-white hover:text-brand transition-editorial shadow-2xl">
+                     <a href="/purchase-conference-tickets" className="bg-white text-charcoal px-12 py-6 rounded-full font-black text-[10px] uppercase tracking-[0.3em] hover:bg-gold hover:text-white transition-editorial shadow-2xl">
                         REGISTER NOW
                      </a>
                      <div className="flex items-center gap-6">
                         <div className="text-right">
-                           <p className="text-[10px] font-black text-brand uppercase tracking-widest">October 8 - 9, 2026</p>
-                           <p className="text-sm font-black uppercase font-heading tracking-tight">Cape Town, South Africa</p>
+                           <p className="text-[10px] font-black text-gold uppercase tracking-widest">October 8 - 9, 2026</p>
+                           <p className="text-sm font-black uppercase font-heading tracking-tight text-white">Cape Town, South Africa</p>
                         </div>
-                        <div className="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-charcoal transition-editorial cursor-pointer">
+                        <div className="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center hover:bg-gold hover:text-white transition-editorial cursor-pointer">
                            <Play size={20} fill="currentColor"/>
                         </div>
                      </div>
                   </div>
                </div>
                <div className="lg:col-span-5 relative">
-                  <div className="aspect-[4/5] rounded-[64px] overflow-hidden shadow-[0_0_100px_rgba(127,61,89,0.3)] rotate-2 hover:rotate-0 transition-editorial duration-1000 relative group border-4 border-white/5">
+                  <div className="aspect-[4/5] rounded-[64px] overflow-hidden shadow-[0_0_100px_rgba(127,61,89,0.3)] rotate-2 hover:rotate-0 transition-editorial duration-1000 relative group border-4 border-white/5 bg-charcoal">
                      <img src="https://images.unsplash.com/photo-1540317580384-e5d43867caa6?w=1000&q=80" alt="Summit" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-editorial duration-1000" />
-                     <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-transparent opacity-80"></div>
+                     <div className="absolute inset-0 bg-gradient-to-t from-brand/80 via-transparent to-transparent opacity-80"></div>
                      <div className="absolute bottom-10 left-10 right-10">
-                        <p className="text-[9px] font-black tracking-widest uppercase text-brand mb-3">Live Momentum</p>
-                        <h4 className="text-2xl font-black uppercase font-heading">1,500 Delegates</h4>
-                        <div className="w-10 h-1 bg-brand mt-4 group-hover:w-full transition-editorial"></div>
+                        <p className="text-[9px] font-black tracking-widest uppercase text-gold mb-3">Live Momentum</p>
+                        <h4 className="text-2xl font-black uppercase font-heading text-white">1,500 Delegates</h4>
+                        <div className="w-10 h-1 bg-gold mt-4 group-hover:w-full transition-editorial"></div>
                      </div>
                   </div>
                </div>
@@ -192,20 +192,20 @@ export default function WhatWeDo() {
                  <h4 className="text-2xl font-black uppercase font-heading mb-8 flex items-center gap-3">
                    <Lightbulb size={24} className="text-brand" /> What to Expect
                  </h4>
-                 <div className="space-y-4"                    {[
-                     { icon: Mic, t: "Global Keynotes", d: "Hear from policymakers and titans shaping the future of African female entrepreneurship." },
-                     { icon: Briefcase, t: "Masterclasses", d: "Actionable sessions focusing on digital transformation and Series A investment readiness." },
-                     { icon: Star, t: "The Exhibition", d: "Discover innovative products and services from women-owned businesses across the continent." }
-                   ].map((item, i) => (
-                     <div key={i} className="bg-white/10 border border-white/20 p-8 rounded-[32px] flex items-start gap-6 group hover:bg-white/20 transition-editorial backdrop-blur-xl">
-                       <div className="mt-1 bg-white/10 rounded-full p-3 border border-gold/30 group-hover:bg-gold transition-editorial"><item.icon size={20} className="text-gold group-hover:text-white"/></div>
-                       <div>
-                         <h5 className="text-white font-black uppercase text-sm mb-1">{item.t}</h5>
-                         <p className="text-white/80 text-xs font-medium leading-relaxed italic">{item.d}</p>
-                       </div>
-                     </div>
-                   ))}
-}
+                 <div className="space-y-4">
+                    {[
+                      { icon: Mic, t: "Global Keynotes", d: "Hear from policymakers and titans shaping the future of African female entrepreneurship." },
+                      { icon: Briefcase, t: "Masterclasses", d: "Actionable sessions focusing on digital transformation and Series A investment readiness." },
+                      { icon: Star, t: "The Exhibition", d: "Discover innovative products and services from women-owned businesses across the continent." }
+                    ].map((item, i) => (
+                      <div key={i} className="bg-white/10 border border-white/20 p-8 rounded-[32px] flex items-start gap-6 group hover:bg-white/20 transition-editorial backdrop-blur-xl">
+                        <div className="mt-1 bg-white/10 rounded-full p-3 border border-gold/30 group-hover:bg-gold transition-editorial"><item.icon size={20} className="text-gold group-hover:text-white"/></div>
+                        <div>
+                          <h5 className="text-white font-black uppercase text-sm mb-1">{item.t}</h5>
+                          <p className="text-white/80 text-xs font-medium leading-relaxed italic">{item.d}</p>
+                        </div>
+                      </div>
+                    ))}
                  </div>
                </div>
 
@@ -214,20 +214,20 @@ export default function WhatWeDo() {
                  <h4 className="text-2xl font-black uppercase font-heading mb-8 flex items-center gap-3">
                    <Target size={24} className="text-brand" /> Why Attend?
                  </h4>
-                 <div className="space-y-4"                    {[
-                     { icon: Users, t: "Unmatched Networking", d: "Connect directly with over 1,500 delegates from 50+ countries." },
-                     { icon: TrendingUp, t: "Secure Funding", d: "Direct access to venture capitalists and angel investors looking to back women." },
-                     { icon: Award, t: "Celebrate Excellence", d: "The prestigious AWIEF Awards Gala, honouring the pioneers of African business." }
-                   ].map((item, i) => (
-                     <div key={i} className="bg-white/10 border border-white/20 p-8 rounded-[32px] flex items-start gap-6 group hover:bg-white/20 transition-editorial backdrop-blur-xl">
-                       <div className="mt-1 bg-white/10 rounded-full p-3 border border-gold/30 group-hover:bg-gold transition-editorial"><item.icon size={20} className="text-gold group-hover:text-white"/></div>
-                       <div>
-                         <h5 className="text-white font-black uppercase text-sm mb-1">{item.t}</h5>
-                         <p className="text-white/80 text-xs font-medium leading-relaxed italic">{item.d}</p>
-                       </div>
-                     </div>
-                   ))}
-}
+                 <div className="space-y-4">
+                    {[
+                      { icon: Users, t: "Unmatched Networking", d: "Connect directly with over 1,500 delegates from 50+ countries." },
+                      { icon: TrendingUp, t: "Secure Funding", d: "Direct access to venture capitalists and angel investors looking to back women." },
+                      { icon: Award, t: "Celebrate Excellence", d: "The prestigious AWIEF Awards Gala, honouring the pioneers of African business." }
+                    ].map((item, i) => (
+                      <div key={i} className="bg-white/10 border border-white/20 p-8 rounded-[32px] flex items-start gap-6 group hover:bg-white/20 transition-editorial backdrop-blur-xl">
+                        <div className="mt-1 bg-white/10 rounded-full p-3 border border-gold/30 group-hover:bg-gold transition-editorial"><item.icon size={20} className="text-gold group-hover:text-white"/></div>
+                        <div>
+                          <h5 className="text-white font-black uppercase text-sm mb-1">{item.t}</h5>
+                          <p className="text-white/80 text-xs font-medium leading-relaxed italic">{item.d}</p>
+                        </div>
+                      </div>
+                    ))}
                  </div>
                </div>
             </div>
