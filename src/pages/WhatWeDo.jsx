@@ -57,10 +57,10 @@ export default function WhatWeDo() {
     <div className="min-h-screen font-body text-charcoal bg-cream overflow-x-hidden">
       <Navbar activePage="what-we-do" />
 
-      {/* Editorial Header */}
-      <header className="relative bg-charcoal pt-56 pb-32 px-6 md:px-12 overflow-hidden text-center">
-        <div className="african-pattern absolute inset-0 opacity-20 scale-150"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-charcoal/50 to-charcoal z-10 pointer-events-none"></div>
+      {/* Editorial Header - Synchronized Brand Identity */}
+      <header className="relative bg-brand pt-56 pb-32 px-6 md:px-12 overflow-hidden text-center">
+        <div className="african-pattern absolute inset-0 opacity-30 scale-150 rotate-12 brightness-200"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-brand/50 to-brand z-10 pointer-events-none"></div>
         
         <div className="max-w-4xl mx-auto relative z-20">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gold/40 bg-gold/10 backdrop-blur mb-8">
@@ -68,9 +68,9 @@ export default function WhatWeDo() {
             <span className="text-gold text-[11px] font-black tracking-[0.2em] uppercase">Ecosystem of Growth</span>
           </div>
           <h1 className="text-6xl md:text-8xl font-black uppercase font-heading leading-[0.85] tracking-tighter mb-12 text-white">
-            What We <span className="text-brand">Do</span>
+            What We <span className="text-gold italic serif normal-case">Do</span>
           </h1>
-          <p className="text-xl md:text-2xl text-white/50 leading-relaxed font-medium max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-white/80 leading-relaxed font-medium max-w-3xl mx-auto italic">
             From early-stage ideation to cross-border scaling, global networking, and policy reform—discover how we actively break down barriers for African women in business.
           </p>
         </div>
@@ -140,9 +140,10 @@ export default function WhatWeDo() {
         </div>
       </section>
 
-      {/* Immersive Summit Experience */}
-      <section className="py-40 px-6 md:px-12 bg-charcoal text-white relative overflow-hidden" id="conference">
-         <div className="absolute top-0 right-0 p-24 opacity-5 pointer-events-none select-none text-[30rem] font-black rotate-12">2026</div>
+      {/* Immersive Summit Experience - High Impact Berry */}
+      <section className="py-40 px-6 md:px-12 bg-brand text-white relative overflow-hidden" id="conference">
+         <div className="african-pattern absolute inset-0 opacity-30 scale-150 rotate-12 brightness-200"></div>
+         <div className="absolute top-0 right-0 p-24 opacity-10 pointer-events-none select-none text-[30rem] font-black rotate-12 text-white/10">2026</div>
          
          <div className="max-w-[1400px] mx-auto relative z-10">
             <div className="grid lg:grid-cols-12 gap-24 items-center mb-40">
@@ -152,9 +153,9 @@ export default function WhatWeDo() {
                      <span className="text-brand text-[9px] font-black tracking-[0.3em] uppercase">Save The Date</span>
                   </div>
                   <h2 className="text-6xl md:text-[8rem] font-black uppercase font-heading leading-[0.75] tracking-tighter mb-10">
-                    Beyond <br/> <span className="text-brand serif italic">Access</span>
+                    Beyond <br/> <span className="text-gold serif italic normal-case">Access</span>
                   </h2>
-                  <p className="text-2xl md:text-3xl text-white/40 font-medium leading-tight italic max-w-2xl border-l-8 border-brand pl-12 mb-16">
+                  <p className="text-2xl md:text-3xl text-white/80 font-medium leading-tight italic max-w-2xl border-l-8 border-gold pl-12 mb-16">
                     Economic Empowerment in a Digital Era. The nexus of policy, capital, and innovation.
                   </p>
                   <div className="flex flex-wrap gap-8 items-center">
@@ -191,20 +192,20 @@ export default function WhatWeDo() {
                  <h4 className="text-2xl font-black uppercase font-heading mb-8 flex items-center gap-3">
                    <Lightbulb size={24} className="text-brand" /> What to Expect
                  </h4>
-                 <div className="space-y-4">
-                   {[
+                 <div className="space-y-4"                    {[
                      { icon: Mic, t: "Global Keynotes", d: "Hear from policymakers and titans shaping the future of African female entrepreneurship." },
                      { icon: Briefcase, t: "Masterclasses", d: "Actionable sessions focusing on digital transformation and Series A investment readiness." },
                      { icon: Star, t: "The Exhibition", d: "Discover innovative products and services from women-owned businesses across the continent." }
                    ].map((item, i) => (
-                     <div key={i} className="bg-white/5 border border-white/10 p-8 rounded-[32px] flex items-start gap-6 group hover:bg-white/10 transition-editorial">
-                       <div className="mt-1 bg-charcoal rounded-full p-3 border border-brand/30 group-hover:bg-brand transition-editorial"><item.icon size={20} className="text-brand group-hover:text-white"/></div>
+                     <div key={i} className="bg-white/10 border border-white/20 p-8 rounded-[32px] flex items-start gap-6 group hover:bg-white/20 transition-editorial backdrop-blur-xl">
+                       <div className="mt-1 bg-white/10 rounded-full p-3 border border-gold/30 group-hover:bg-gold transition-editorial"><item.icon size={20} className="text-gold group-hover:text-white"/></div>
                        <div>
                          <h5 className="text-white font-black uppercase text-sm mb-1">{item.t}</h5>
-                         <p className="text-white/40 text-xs font-medium leading-relaxed">{item.d}</p>
+                         <p className="text-white/80 text-xs font-medium leading-relaxed italic">{item.d}</p>
                        </div>
                      </div>
                    ))}
+}
                  </div>
                </div>
 
@@ -213,20 +214,20 @@ export default function WhatWeDo() {
                  <h4 className="text-2xl font-black uppercase font-heading mb-8 flex items-center gap-3">
                    <Target size={24} className="text-brand" /> Why Attend?
                  </h4>
-                 <div className="space-y-4">
-                   {[
+                 <div className="space-y-4"                    {[
                      { icon: Users, t: "Unmatched Networking", d: "Connect directly with over 1,500 delegates from 50+ countries." },
                      { icon: TrendingUp, t: "Secure Funding", d: "Direct access to venture capitalists and angel investors looking to back women." },
                      { icon: Award, t: "Celebrate Excellence", d: "The prestigious AWIEF Awards Gala, honouring the pioneers of African business." }
                    ].map((item, i) => (
-                     <div key={i} className="bg-white/5 border border-white/10 p-8 rounded-[32px] flex items-start gap-6 group hover:bg-white/10 transition-editorial">
-                       <div className="mt-1 bg-charcoal rounded-full p-3 border border-brand/30 group-hover:bg-brand transition-editorial"><item.icon size={20} className="text-brand group-hover:text-white"/></div>
+                     <div key={i} className="bg-white/10 border border-white/20 p-8 rounded-[32px] flex items-start gap-6 group hover:bg-white/20 transition-editorial backdrop-blur-xl">
+                       <div className="mt-1 bg-white/10 rounded-full p-3 border border-gold/30 group-hover:bg-gold transition-editorial"><item.icon size={20} className="text-gold group-hover:text-white"/></div>
                        <div>
                          <h5 className="text-white font-black uppercase text-sm mb-1">{item.t}</h5>
-                         <p className="text-white/40 text-xs font-medium leading-relaxed">{item.d}</p>
+                         <p className="text-white/80 text-xs font-medium leading-relaxed italic">{item.d}</p>
                        </div>
                      </div>
                    ))}
+}
                  </div>
                </div>
             </div>
@@ -264,8 +265,8 @@ export default function WhatWeDo() {
         </div>
       </section>
 
-      {/* Advocacy Section */}
-      <section className="py-32 px-6 md:px-12 bg-[#fdfaf7] rounded-t-[60px]" id="advocacy">
+      {/* Advocacy Section - Editorial Cream/Berry Split */}
+      <section className="py-32 px-6 md:px-12 bg-warm rounded-t-[60px]" id="advocacy">
         <div className="max-w-[1200px] mx-auto grid lg:grid-cols-12 gap-16 items-center">
           <div className="lg:col-span-7">
              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-brand/10 mb-8">
@@ -304,9 +305,9 @@ export default function WhatWeDo() {
       {/* Programme Modal - Refined Scale */}
       {selectedProg && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-6">
-          <div className="absolute inset-0 bg-charcoal/95 backdrop-blur-xl" onClick={() => setSelectedProg(null)}></div>
+          <div className="absolute inset-0 bg-[#1d0b14]/95 backdrop-blur-xl" onClick={() => setSelectedProg(null)}></div>
           <div className="bg-white rounded-[40px] max-w-xl w-full relative z-10 shadow-2xl overflow-hidden animate-in fade-in zoom-in duration-500 border border-white/10">
-            <button onClick={() => setSelectedProg(null)} className="absolute top-8 right-8 w-10 h-10 bg-cream rounded-full flex items-center justify-center hover:bg-brand hover:text-white transition-editorial z-20">
+            <button onClick={() => setSelectedProg(null)} className="absolute top-8 right-8 w-10 h-10 bg-warm rounded-full flex items-center justify-center hover:bg-brand hover:text-white transition-editorial z-20">
               <X size={20} />
             </button>
             <div className="p-10 md:p-12">
