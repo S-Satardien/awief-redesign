@@ -58,35 +58,29 @@ export default function PurchaseTickets() {
     <div className="min-h-screen font-body text-charcoal bg-cream overflow-x-hidden">
       <Navbar activePage="purchase-tickets" />
 
-      {/* Editorial Hero - High Visibility Berry Entrance */}
-      <header className="relative bg-brand pt-56 pb-48 px-6 md:px-12 overflow-hidden text-center">
-        <div className="african-pattern absolute inset-0 opacity-30 scale-150 rotate-12 brightness-200"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-brand/50 to-brand z-10 pointer-events-none"></div>
-        
-        {/* Subtle background glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold/10 rounded-full blur-[120px] pointer-events-none"></div>
-
+      {/* Minimal Editorial Header - Simplified as requested */}
+      <header className="relative bg-cream pt-48 pb-24 px-6 md:px-12 text-center">
         <div className="max-w-5xl mx-auto relative z-20">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gold/40 bg-gold/10 backdrop-blur mb-8">
-            <Ticket size={14} className="text-gold"/>
-            <span className="text-gold text-[9px] font-black tracking-[0.3em] uppercase">Official Registration</span>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-brand/20 bg-brand/5 backdrop-blur mb-8">
+            <Ticket size={14} className="text-brand"/>
+            <span className="text-brand text-[9px] font-black tracking-[0.3em] uppercase">Official Registration</span>
           </div>
           
-          <h1 className="text-6xl md:text-[8rem] lg:text-[10rem] font-black uppercase font-heading leading-[0.8] tracking-tighter mb-12 text-white">
-            Secure Your <br/> <span className="text-gold italic serif normal-case">Seat</span>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black uppercase font-heading leading-tight tracking-tighter mb-10 text-charcoal">
+            Secure Your <span className="text-brand italic serif normal-case">Seat</span>
           </h1>
-          <p className="text-xl md:text-3xl text-white/80 leading-tight font-medium max-w-3xl mx-auto italic mb-12">
+          <p className="text-lg md:text-2xl text-charcoal/60 leading-relaxed font-medium max-w-3xl mx-auto italic mb-12">
             Join 1,500+ female founders, global investors, and policymakers in Cape Town. Choose the pass that fits your journey.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8">
-            <div className="flex items-center gap-3 bg-white/5 backdrop-blur border border-white/10 px-8 py-4 rounded-full">
-              <Calendar className="text-gold" size={18} />
-              <span className="text-white text-[10px] font-black uppercase tracking-widest">November 10 - 11, 2026</span>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+            <div className="flex items-center gap-3 bg-white border border-charcoal/5 px-6 py-3 rounded-full shadow-sm">
+              <Calendar className="text-brand" size={16} />
+              <span className="text-charcoal text-[9px] font-black uppercase tracking-widest">November 10 - 11, 2026</span>
             </div>
-            <div className="flex items-center gap-3 bg-white/5 backdrop-blur border border-white/10 px-8 py-4 rounded-full">
-              <MapPin className="text-gold" size={18} />
-              <span className="text-white text-[10px] font-black uppercase tracking-widest">Cape Town, South Africa</span>
+            <div className="flex items-center gap-3 bg-white border border-charcoal/5 px-6 py-3 rounded-full shadow-sm">
+              <MapPin className="text-brand" size={16} />
+              <span className="text-charcoal text-[9px] font-black uppercase tracking-widest">Cape Town, South Africa</span>
             </div>
           </div>
         </div>
