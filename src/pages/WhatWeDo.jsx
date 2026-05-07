@@ -234,31 +234,49 @@ export default function WhatWeDo() {
          </div>
       </section>
 
-      {/* Awards Hub */}
-      <section className="py-32 px-6 md:px-12 bg-white" id="awards">
-        <div className="max-w-[1400px] mx-auto">
+      {/* Awards Hub - Esteemed & High Authority */}
+      <section className="py-40 px-6 md:px-12 bg-[#1d0b14] relative overflow-hidden" id="awards">
+        <div className="african-pattern absolute inset-0 opacity-20 scale-150 rotate-12 brightness-200"></div>
+        <div className="max-w-[1400px] mx-auto relative z-10">
           <div className="grid lg:grid-cols-12 gap-24 items-center">
             <div className="lg:col-span-5">
-               <div className="relative aspect-square rounded-[48px] overflow-hidden shadow-2xl group">
-                  <img src="https://images.unsplash.com/photo-1531384441138-2736e62e0919?w=800&q=80" alt="Awards" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-editorial duration-1000" />
-                  <div className="absolute inset-0 bg-brand/10 group-hover:bg-transparent transition-editorial"></div>
+               <div className="relative aspect-[3/4] rounded-[64px] overflow-hidden shadow-2xl group border-4 border-white/10">
+                  <img src="https://images.unsplash.com/photo-1531384441138-2736e62e0919?w=800&q=80" alt="Awards Ceremony" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-editorial duration-1000" />
+                  <div className="absolute inset-0 bg-brand/30 group-hover:bg-transparent transition-editorial"></div>
+                  <div className="absolute bottom-12 left-12 right-12 p-10 bg-white/10 backdrop-blur-xl rounded-[32px] border border-white/20">
+                     <div className="text-gold font-black text-[10px] uppercase tracking-[0.4em] mb-4 italic">The Prize of Pioneers</div>
+                     <h4 className="text-3xl font-black text-white uppercase font-heading leading-tight italic">Celebrating <br/> Excellence</h4>
+                  </div>
                </div>
             </div>
             <div className="lg:col-span-7">
-               <p className="text-brand font-black tracking-[0.4em] uppercase text-[10px] mb-8 italic">Honouring Excellence</p>
-               <h2 className="text-5xl md:text-[6rem] font-black uppercase font-heading leading-[0.8] tracking-tighter mb-10">
-                 AWIEF <span className="text-brand">Awards</span>
+               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-gold/40 bg-gold/10 backdrop-blur mb-10">
+                  <Award size={14} className="text-gold"/>
+                  <span className="text-gold text-[9px] font-black tracking-[0.3em] uppercase">Honouring Industry Leaders</span>
+               </div>
+               <h2 className="text-6xl md:text-[8rem] font-black uppercase font-heading leading-[0.8] tracking-tighter mb-12 text-white">
+                 AWIEF <span className="text-gold italic serif normal-case">Awards</span>
                </h2>
-               <div className="grid md:grid-cols-2 gap-6 mb-12">
-                  {["Tech Entrepreneur", "Agri Entrepreneur", "Creative Industry", "Social Impact"].map((cat, i) => (
-                    <div key={i} className="p-8 bg-cream rounded-[32px] border border-charcoal/5 hover:border-brand transition-editorial group flex items-center justify-between">
-                       <h4 className="text-base font-black uppercase font-heading">{cat}</h4>
-                       <Zap size={16} className="text-brand opacity-0 group-hover:opacity-100 transition-editorial" />
+               <p className="text-white/40 text-2xl font-medium leading-relaxed italic max-w-2xl border-l-8 border-gold pl-12 mb-16">
+                 The most prestigious recognition for female entrepreneurs in Africa.
+               </p>
+               <div className="grid md:grid-cols-2 gap-8 mb-16">
+                  {[
+                    { cat: "Tech Entrepreneur", icon: Zap },
+                    { cat: "Agri Entrepreneur", icon: TrendingUp },
+                    { cat: "Creative Industry", icon: Sparkles },
+                    { cat: "Social Impact", icon: Target }
+                  ].map((item, i) => (
+                    <div key={i} className="p-10 bg-white/5 rounded-[40px] border border-white/10 hover:border-gold transition-editorial group flex items-center justify-between backdrop-blur shadow-2xl">
+                       <h4 className="text-xl font-black uppercase font-heading text-white group-hover:text-gold transition-editorial">{item.cat}</h4>
+                       <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-brand transition-editorial">
+                          <item.icon size={20} />
+                       </div>
                     </div>
                   ))}
                </div>
-               <a href="/past-awards" className="inline-flex items-center gap-6 text-brand font-black tracking-widest text-[9px] uppercase group">
-                  EXPLORE ARCHIVE <div className="w-10 h-10 rounded-full bg-brand text-white flex items-center justify-center group-hover:scale-110 transition-editorial"><ArrowRight size={16}/></div>
+               <a href="/past-awards" className="inline-flex items-center gap-8 bg-gold text-[#1d0b14] px-12 py-6 rounded-full font-black text-[10px] uppercase tracking-[0.3em] hover:bg-white transition-editorial shadow-2xl">
+                  EXPLORE THE ARCHIVE <ArrowRight size={20}/>
                </a>
             </div>
           </div>
