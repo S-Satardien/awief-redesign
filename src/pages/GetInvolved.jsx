@@ -81,21 +81,27 @@ export default function GetInvolved() {
 
       {/* 2. CORPORATE PARTNER & CSI - Strategic Appeal */}
       <section className="section-spacing px-6 md:px-12 bg-charcoal text-white relative overflow-hidden" id="corporate-partner">
-        <div className="african-pattern absolute inset-0 opacity-10 scale-150"></div>
+        <div className="african-pattern absolute inset-0 opacity-20 scale-150 rotate-12 brightness-200"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-brand/20 via-transparent to-black/40 pointer-events-none"></div>
+        
         <div className="max-w-[1400px] mx-auto relative z-10">
            <div className="editorial-grid items-center gap-24">
               <div className="col-span-12 lg:col-span-6 order-2 lg:order-1">
-                 <div className="grid grid-cols-2 gap-6">
-                    <div className="aspect-[3/4] rounded-[48px] overflow-hidden border-4 border-white/10 rotate-3 shadow-2xl">
-                       <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32d7?w=800&q=80" alt="Corporate Partnership" className="w-full h-full object-cover grayscale" />
+                 <div className="grid grid-cols-2 gap-6 relative">
+                    <div className="aspect-[3/4] rounded-[48px] overflow-hidden border-4 border-white/10 rotate-3 shadow-2xl relative z-10 group">
+                       <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32d7?w=800&q=80" alt="Corporate Partnership" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-editorial duration-1000" />
+                       <div className="absolute inset-0 bg-brand/20 group-hover:bg-transparent transition-editorial"></div>
                     </div>
-                    <div className="aspect-[3/4] rounded-[48px] overflow-hidden border-4 border-white/10 -rotate-3 translate-y-12 shadow-2xl">
-                       <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80" alt="CSI Impact" className="w-full h-full object-cover grayscale" />
+                    <div className="aspect-[3/4] rounded-[48px] overflow-hidden border-4 border-white/10 -rotate-3 translate-y-12 shadow-2xl relative z-0 group">
+                       <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80" alt="CSI Impact" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-editorial duration-1000" />
+                       <div className="absolute inset-0 bg-brand/20 group-hover:bg-transparent transition-editorial"></div>
                     </div>
                  </div>
-                 <div className="mt-32 p-12 bg-white/5 border border-white/10 rounded-[48px] backdrop-blur-xl">
+                 <div className="mt-32 p-12 bg-white/5 border border-white/10 rounded-[48px] backdrop-blur-xl relative z-20">
                     <div className="flex items-center gap-4 mb-8">
-                       <Building size={24} className="text-gold" />
+                       <div className="w-12 h-12 rounded-2xl bg-gold/10 flex items-center justify-center border border-gold/20">
+                          <Building size={24} className="text-gold" />
+                       </div>
                        <h4 className="text-gold font-black uppercase font-heading text-xl tracking-tighter leading-none">CSI & CSR Alignment</h4>
                     </div>
                     <ul className="space-y-6">

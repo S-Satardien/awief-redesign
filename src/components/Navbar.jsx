@@ -14,7 +14,7 @@ export default function Navbar({ activePage = '' }) {
   }, [])
 
   const isActive = (page) => {
-    if (activePage === page) return 'text-brand font-black'
+    if (activePage === page) return 'text-gold font-black' // Use Gold for active state for visibility on Berry
     return isScrolled ? 'text-charcoal/70 hover:text-brand transition-editorial' : 'text-white/80 hover:text-white transition-editorial'
   }
 
@@ -84,7 +84,8 @@ export default function Navbar({ activePage = '' }) {
                 label="Get Involved" 
                 active="get-involved"
                 links={[
-                  { label: "Donor or Partner", href: "/get-involved#donor-partner" },
+                  { label: "Individual Donor", href: "/get-involved#individual-donor" },
+                  { label: "Corporate Partner & CSI", href: "/get-involved#corporate-partner" },
                   { label: "Volunteer", href: "/get-involved#volunteer" },
                   { label: "Join Community", href: "/get-involved#join-community" }
                 ]}
