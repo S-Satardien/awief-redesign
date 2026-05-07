@@ -50,10 +50,10 @@ export default function Navbar({ activePage = '' }) {
   return (
     <>
       {/* Top Banner */}
-      <div className="bg-charcoal text-white py-3 px-6 text-center text-[10px] font-black tracking-[0.3em] flex justify-center items-center gap-4 relative z-[70] uppercase">
-        <Sparkles size={12} className="text-brand animate-pulse" />
+      <div className="bg-brand text-white py-3 px-6 text-center text-[10px] font-black tracking-[0.3em] flex justify-center items-center gap-4 relative z-[70] uppercase">
+        <Sparkles size={12} className="text-gold animate-pulse" />
         <span>AWIEF 2026 Conference Tickets are now on sale</span>
-        <a href="/purchase-conference-tickets" className="text-brand hover:text-white transition-editorial underline decoration-2 underline-offset-4 italic">Secure your spot</a>
+        <a href="/purchase-conference-tickets" className="text-gold hover:text-white transition-editorial underline decoration-2 underline-offset-4 italic">Secure your spot</a>
       </div>
 
       <header className={`fixed left-0 right-0 z-[60] transition-editorial px-6 md:px-12 ${isScrolled ? 'top-4' : 'top-14'}`}>
