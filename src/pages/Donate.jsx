@@ -12,7 +12,7 @@ export default function Donate() {
       <Navbar activePage="about" />
 
       {/* 1. "In Your Face" Hero Section - High Visibility Berry Entrance */}
-      <header className="relative bg-brand pt-56 pb-48 px-6 md:px-12 overflow-hidden">
+      <header className="relative bg-brand pt-56 pb-32 px-6 md:px-12 overflow-hidden">
         <div className="african-pattern absolute inset-0 opacity-30 scale-150 rotate-12 brightness-200"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-brand/50 to-brand z-10 pointer-events-none"></div>
         
@@ -52,7 +52,7 @@ export default function Donate() {
       </header>
 
       {/* 2. Why Your Donation Matters - High Authority Editorial Spread */}
-      <section className="py-40 px-6 md:px-12 bg-white rounded-t-[60px] -mt-12 relative z-20">
+      <section className="py-28 px-6 md:px-12 bg-white rounded-t-[60px] -mt-12 relative z-20">
         <div className="max-w-[1400px] mx-auto">
           <div className="grid lg:grid-cols-12 gap-20 items-center">
             <div className="lg:col-span-5">
@@ -108,7 +108,7 @@ export default function Donate() {
       </section>
 
       {/* 3. Make Your Donation Section - Refined Scale & Dynamic Impact */}
-      <section id="donate-section" className="py-32 px-6 md:px-12 bg-warm relative overflow-hidden">
+      <section id="donate-section" className="py-24 px-6 md:px-12 bg-warm relative overflow-hidden">
         <div className="african-pattern absolute inset-0 opacity-[0.03] scale-150 rotate-45"></div>
         <div className="max-w-[1200px] mx-auto relative z-10">
           <div className="text-center mb-16">
@@ -252,7 +252,7 @@ export default function Donate() {
       </section>
 
       {/* 4. How Your Donation is Used - Transparency Visualization */}
-      <section className="py-40 px-6 md:px-12 bg-white rounded-[60px] relative z-30">
+      <section className="py-28 px-6 md:px-12 bg-white rounded-[60px] relative z-30">
         <div className="max-w-[1400px] mx-auto">
           <div className="text-center mb-32">
              <div className="flex items-center justify-center gap-3 text-brand font-black tracking-[0.4em] uppercase text-[10px] mb-8">
@@ -285,7 +285,7 @@ export default function Donate() {
       </section>
 
       {/* 5. Our Commitment to Transparency */}
-      <section className="py-40 px-6 md:px-12 bg-brand text-white overflow-hidden relative">
+      <section className="py-28 px-6 md:px-12 bg-brand text-white overflow-hidden relative">
         <div className="african-pattern absolute inset-0 opacity-20 scale-150 rotate-12 brightness-200"></div>
         <div className="max-w-[1400px] mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-24 items-center">
