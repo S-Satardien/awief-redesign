@@ -73,7 +73,7 @@ export default function Navbar({ activePage = '' }) {
             </div>
             
             {/* Desktop Links */}
-            <div className="hidden lg:flex items-center gap-10 text-[11px] font-black tracking-[0.2em] uppercase">
+            <div className="hidden lg:flex items-center gap-10 text-[11px] font-black tracking-[0.2em]">
               <a href="/" className={isActive('home')}>Home</a>
               
               <NavItemWithDropdown 
@@ -85,17 +85,6 @@ export default function Navbar({ activePage = '' }) {
                   { label: "Meet the Team", href: "/about#team" },
                   { label: "Our Partners", href: "/about#our-partners" },
                   { label: "Get Involved", href: "/get-involved" }
-                ]}
-              />
-
-              <NavItemWithDropdown 
-                label="Get Involved" 
-                active="get-involved"
-                links={[
-                  { label: "Individual Donor", href: "/get-involved#individual-donor" },
-                  { label: "Corporate Partner & CSI", href: "/get-involved#corporate-partner" },
-                  { label: "Volunteer", href: "/get-involved#volunteer" },
-                  { label: "Join Community", href: "/get-involved#join-community" }
                 ]}
               />
 
@@ -114,12 +103,23 @@ export default function Navbar({ activePage = '' }) {
 
               <a href="/news" className={isActive('news')}>News</a>
 
+              <NavItemWithDropdown 
+                label="Get Involved" 
+                active="get-involved"
+                links={[
+                  { label: "Individual Donor", href: "/get-involved#individual-donor" },
+                  { label: "Corporate Partner & CSI", href: "/get-involved#corporate-partner" },
+                  { label: "Volunteer", href: "/get-involved#volunteer" },
+                  { label: "Join Community", href: "/get-involved#join-community" }
+                ]}
+              />
+
               <a href="/contact-us" className={isActive('contact')}>Contact Us</a>
             </div>
 
             {/* CTA */}
             <div className="hidden lg:block">
-              <a href="/donate" className="bg-brand text-white px-8 py-3.5 rounded-full text-[10px] font-black tracking-[0.2em] hover:bg-brand-dark transition-editorial shadow-2xl shadow-brand/20 uppercase">
+              <a href="/donate" className="bg-brand text-white px-8 py-3.5 rounded-full text-[10px] font-black tracking-[0.2em] hover:bg-brand-dark transition-editorial shadow-2xl shadow-brand/20">
                 Donate
               </a>
             </div>
@@ -138,13 +138,14 @@ export default function Navbar({ activePage = '' }) {
               <X size={32} />
             </button>
             <div className="flex flex-col items-center gap-8">
-              <a href="/" className="text-4xl font-heading font-black text-charcoal hover:text-brand uppercase tracking-tighter">HOME</a>
-              <a href="/about" className="text-4xl font-heading font-black text-charcoal hover:text-brand uppercase tracking-tighter">ABOUT</a>
-              <a href="/our-impact" className="text-4xl font-heading font-black text-charcoal hover:text-brand uppercase tracking-tighter">OUR IMPACT</a>
-              <a href="/what-we-do" className="text-4xl font-heading font-black text-charcoal hover:text-brand uppercase tracking-tighter">WHAT WE DO</a>
-              <a href="/news" className="text-4xl font-heading font-black text-charcoal hover:text-brand uppercase tracking-tighter">NEWS</a>
-              <a href="/contact-us" className="text-4xl font-heading font-black text-charcoal hover:text-brand uppercase tracking-tighter">CONTACT</a>
-              <a href="/donate" className="bg-brand text-white px-12 py-5 rounded-full font-black tracking-widest text-xs shadow-2xl uppercase">Donate</a>
+              <a href="/" className="text-4xl font-heading font-black text-charcoal hover:text-brand tracking-tighter">Home</a>
+              <a href="/about" className="text-4xl font-heading font-black text-charcoal hover:text-brand tracking-tighter">About</a>
+              <a href="/our-impact" className="text-4xl font-heading font-black text-charcoal hover:text-brand tracking-tighter">Our Impact</a>
+              <a href="/what-we-do" className="text-4xl font-heading font-black text-charcoal hover:text-brand tracking-tighter">What We Do</a>
+              <a href="/news" className="text-4xl font-heading font-black text-charcoal hover:text-brand tracking-tighter">News</a>
+              <a href="/get-involved" className="text-4xl font-heading font-black text-charcoal hover:text-brand tracking-tighter">Get Involved</a>
+              <a href="/contact-us" className="text-4xl font-heading font-black text-charcoal hover:text-brand tracking-tighter">Contact Us</a>
+              <a href="/donate" className="bg-brand text-white px-12 py-5 rounded-full font-black tracking-widest text-xs shadow-2xl">Donate</a>
             </div>
           </div>
         )}
