@@ -16,24 +16,26 @@ export default function ContactUs() {
     <div className="min-h-screen font-body text-charcoal bg-[#fcfbf9] overflow-x-hidden">
       <Navbar activePage="contact" />
 
-      {/* Header Scale Refinement */}
-      <header className="pt-40 pb-12 px-6 md:px-12 max-w-[1400px] mx-auto relative overflow-hidden">
-        <div className="absolute top-0 left-0 text-[20rem] font-black text-brand/5 leading-none select-none pointer-events-none -ml-24 -mt-12 rotate-12">
-           TALK
-        </div>
-        <div className="relative z-10 flex flex-col md:flex-row justify-between items-end gap-12">
-           <div className="max-w-3xl">
-              <div className="flex items-center gap-3 text-brand font-black tracking-[0.4em] uppercase text-[10px] mb-8">
-                 <span className="w-10 h-0.5 bg-brand"></span>
-                 Get In Touch
+      {/* Editorial Hero - High Visibility Berry Entrance */}
+      <header className="relative bg-brand pt-56 pb-32 px-6 md:px-12 overflow-hidden">
+        <div className="african-pattern absolute inset-0 opacity-30 scale-150 rotate-12 brightness-200"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-brand/50 to-brand z-10 pointer-events-none"></div>
+        
+        <div className="max-w-[1400px] mx-auto relative z-20">
+          <div className="editorial-grid items-center gap-16">
+            <div className="col-span-12 lg:col-span-8">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-gold/40 bg-gold/10 backdrop-blur mb-8">
+                <Globe size={14} className="text-gold"/>
+                <span className="text-gold text-[9px] font-black tracking-[0.3em] uppercase">Global Network</span>
               </div>
-              <h1 className="text-6xl md:text-8xl font-black uppercase font-heading leading-[0.85] tracking-tighter mb-8">
-                 Open <span className="text-brand italic serif">Dialogue</span>
+              <h1 className="text-6xl md:text-[8rem] lg:text-[10rem] font-black uppercase font-heading leading-[0.8] tracking-tighter mb-12 text-white">
+                Get In <br/> <span className="text-gold italic serif normal-case">Touch</span>
               </h1>
-           </div>
-           <p className="text-xl md:text-2xl text-charcoal/40 max-w-sm font-medium leading-tight italic text-right">
-             Our team is ready to connect and co-create with you.
-           </p>
+              <p className="text-xl md:text-2xl text-white/80 leading-relaxed font-medium max-w-3xl italic">
+                Whether you're looking to partner, have questions about our upcoming conference, or want to learn more about our programmes, our team is ready to connect.
+              </p>
+            </div>
+          </div>
         </div>
       </header>
 
@@ -104,35 +106,46 @@ export default function ContactUs() {
             )}
           </div>
 
-          {/* Islands - Scaled Down */}
+          {/* Islands - High Impact Berry */}
           <div className="lg:col-span-5 flex flex-col space-y-6">
-             <div className="bg-charcoal p-12 rounded-[40px] text-white shadow-2xl relative overflow-hidden flex-grow flex flex-col justify-between">
-                <div className="absolute top-0 right-0 p-8 opacity-10 rotate-12">
-                   <Globe size={150} className="text-white"/>
+             <div className="bg-brand p-12 rounded-[48px] text-white shadow-2xl relative overflow-hidden flex-grow flex flex-col justify-between border-2 border-white/5">
+                <div className="african-pattern absolute inset-0 opacity-20 scale-150 rotate-12 brightness-200"></div>
+                <div className="absolute top-0 right-0 p-8 opacity-5 rotate-12 pointer-events-none">
+                   <Globe size={200} className="text-white"/>
                 </div>
+                
                 <div className="space-y-12 relative z-10">
                    <div className="group">
-                      <p className="text-brand font-black tracking-[0.4em] uppercase text-[10px] mb-6">Headquarters</p>
-                      <h4 className="text-2xl font-black uppercase font-heading leading-tight mb-3">Cape Town, ZA</h4>
-                      <p className="text-white/40 text-lg font-medium leading-relaxed italic border-l-2 border-brand pl-6">
-                         16 Bell Crescent, Westlake, Tokai, 7945.
+                      <p className="text-gold font-black tracking-[0.4em] uppercase text-[10px] mb-6 flex items-center gap-3 italic">
+                        <MapPin size={14}/> Headquarters
+                      </p>
+                      <h4 className="text-3xl font-black uppercase font-heading leading-tight mb-4 tracking-tight">Cape Town, ZA</h4>
+                      <p className="text-white/60 text-lg font-medium leading-relaxed italic border-l-4 border-gold pl-8">
+                         16 Bell Crescent, Westlake Business Park,<br/>
+                         Tokai, Cape Town, 7945.
                       </p>
                    </div>
-                   <div className="grid md:grid-cols-2 gap-8">
+                   
+                   <div className="grid md:grid-cols-2 gap-12">
                       <div className="group">
-                         <p className="text-brand font-black tracking-[0.4em] uppercase text-[9px] mb-4">Direct Line</p>
-                         <a href="tel:+27210206022" className="text-lg font-black uppercase font-heading hover:text-brand transition-editorial">+27 21 020 6022</a>
+                         <p className="text-gold font-black tracking-[0.4em] uppercase text-[9px] mb-4 flex items-center gap-2">
+                           <Phone size={12}/> Direct Line
+                         </p>
+                         <a href="tel:+27210206022" className="text-xl font-black uppercase font-heading hover:text-gold transition-editorial tracking-tighter">+27 21 020 6022</a>
                       </div>
                       <div className="group">
-                         <p className="text-brand font-black tracking-[0.4em] uppercase text-[9px] mb-4">Email Lead</p>
-                         <a href="mailto:info@awieforum.org" className="text-lg font-black uppercase font-heading hover:text-brand transition-editorial underline">info@awieforum.org</a>
+                         <p className="text-gold font-black tracking-[0.4em] uppercase text-[9px] mb-4 flex items-center gap-2">
+                           <Mail size={12}/> Email Lead
+                         </p>
+                         <a href="mailto:info@awieforum.org" className="text-xl font-black uppercase font-heading hover:text-gold transition-editorial underline tracking-tighter decoration-gold/30">info@awieforum.org</a>
                       </div>
                    </div>
                 </div>
+
                 <div className="pt-12 mt-12 border-t border-white/10 flex items-center justify-between relative z-10">
-                   <div className="flex gap-6">
-                      {['FB', 'TW', 'LI', 'IG'].map(s => (
-                        <a key={s} href="#" className="text-[10px] font-black uppercase tracking-widest hover:text-brand transition-editorial">{s}</a>
+                   <div className="flex gap-8">
+                      {['f', 't', 'in', 'ig'].map(s => (
+                        <a key={s} href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[11px] font-black uppercase tracking-widest hover:bg-gold hover:text-brand transition-editorial">{s}</a>
                       ))}
                    </div>
                 </div>
@@ -153,17 +166,18 @@ export default function ContactUs() {
         </div>
       </section>
 
-      {/* Gratitude - Scale Refinement */}
-      <section className="py-32 px-6 md:px-12 bg-cream overflow-hidden relative">
-        <div className="max-w-4xl mx-auto relative z-10 text-center">
-           <div className="w-24 h-24 rounded-full bg-brand/10 flex items-center justify-center mb-12 mx-auto">
-              <Heart className="text-brand fill-current" size={48} />
+      {/* Thank You Section - Figma Editorial Copy */}
+      <section className="py-40 px-6 md:px-12 bg-cream overflow-hidden relative border-y border-charcoal/5">
+        <div className="african-pattern absolute inset-0 opacity-[0.03] scale-150 rotate-12"></div>
+        <div className="max-w-5xl mx-auto relative z-10 text-center">
+           <div className="w-24 h-24 rounded-full bg-brand/10 flex items-center justify-center mb-12 mx-auto border border-brand/5 shadow-inner">
+              <Heart className="text-brand fill-current opacity-80" size={48} />
            </div>
-           <h2 className="text-4xl md:text-7xl font-black uppercase font-heading leading-[0.8] tracking-tighter mb-12">
-              Our Deepest <br/> <span className="text-brand serif italic">Gratitude</span>
+           <h2 className="text-5xl md:text-[6rem] font-black uppercase font-heading leading-[0.8] tracking-tighter mb-12">
+              Thank You to <br/> <span className="text-brand serif italic normal-case">Our Community</span>
            </h2>
-           <p className="text-2xl font-medium text-charcoal/40 italic leading-tight max-w-3xl mx-auto">
-             AWIEF is more than an organization; it is a movement. Thank you for your passion.
+           <p className="text-xl md:text-2xl font-medium text-charcoal/60 italic leading-relaxed max-w-4xl mx-auto">
+             AWIEF is more than an organization; it is a movement. To our incredible donors, corporate partners, mentors, and the thousands of resilient women entrepreneurs who make up our network—<strong className="text-brand not-italic">thank you</strong>. Your continued support, expertise, and passion are the catalysts driving real systemic change across the African continent.
            </p>
         </div>
       </section>
