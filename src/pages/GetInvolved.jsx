@@ -80,26 +80,26 @@ export default function GetInvolved() {
       </section>
 
       {/* 2. CORPORATE PARTNER & CSI - Strategic Appeal */}
-      <section className="section-spacing px-6 md:px-12 bg-charcoal text-white relative overflow-hidden" id="corporate-partner">
-        <div className="african-pattern absolute inset-0 opacity-20 scale-150 rotate-12 brightness-200"></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-brand/20 via-transparent to-black/40 pointer-events-none"></div>
+      <section className="section-spacing px-6 md:px-12 bg-brand text-white relative overflow-hidden" id="corporate-partner">
+        <div className="african-pattern absolute inset-0 opacity-30 scale-150 rotate-12 brightness-200"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-brand/50 pointer-events-none"></div>
         
         <div className="max-w-[1400px] mx-auto relative z-10">
            <div className="editorial-grid items-center gap-24">
               <div className="col-span-12 lg:col-span-6 order-2 lg:order-1">
                  <div className="grid grid-cols-2 gap-6 relative">
-                    <div className="aspect-[3/4] rounded-[48px] overflow-hidden border-4 border-white/10 rotate-3 shadow-2xl relative z-10 group">
+                    <div className="aspect-[3/4] rounded-[48px] overflow-hidden border-4 border-white/20 rotate-3 shadow-2xl relative z-10 group bg-charcoal">
                        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32d7?w=800&q=80" alt="Corporate Partnership" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-editorial duration-1000" />
                        <div className="absolute inset-0 bg-brand/20 group-hover:bg-transparent transition-editorial"></div>
                     </div>
-                    <div className="aspect-[3/4] rounded-[48px] overflow-hidden border-4 border-white/10 -rotate-3 translate-y-12 shadow-2xl relative z-0 group">
+                    <div className="aspect-[3/4] rounded-[48px] overflow-hidden border-4 border-white/20 -rotate-3 translate-y-12 shadow-2xl relative z-0 group bg-charcoal">
                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80" alt="CSI Impact" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-editorial duration-1000" />
                        <div className="absolute inset-0 bg-brand/20 group-hover:bg-transparent transition-editorial"></div>
                     </div>
                  </div>
-                 <div className="mt-32 p-12 bg-white/5 border border-white/10 rounded-[48px] backdrop-blur-xl relative z-20">
+                 <div className="mt-32 p-12 bg-white/10 border border-white/20 rounded-[48px] backdrop-blur-xl relative z-20">
                     <div className="flex items-center gap-4 mb-8">
-                       <div className="w-12 h-12 rounded-2xl bg-gold/10 flex items-center justify-center border border-gold/20">
+                       <div className="w-12 h-12 rounded-2xl bg-white/20 flex items-center justify-center border border-white/30">
                           <Building size={24} className="text-gold" />
                        </div>
                        <h4 className="text-gold font-black uppercase font-heading text-xl tracking-tighter leading-none">CSI & CSR Alignment</h4>
@@ -111,7 +111,7 @@ export default function GetInvolved() {
                          "Pan-African Brand Exposure at Flagship Events",
                          "Custom Program Co-creation & Implementation"
                        ].map((item, i) => (
-                         <li key={i} className="flex items-start gap-4 text-[10px] font-black uppercase tracking-widest text-white/60 leading-relaxed italic">
+                         <li key={i} className="flex items-start gap-4 text-[10px] font-black uppercase tracking-widest text-white/70 leading-relaxed italic">
                             <CheckCircle2 size={16} className="text-gold shrink-0" /> {item}
                          </li>
                        ))}
@@ -126,13 +126,13 @@ export default function GetInvolved() {
                  <h2 className="text-5xl md:text-7xl font-black uppercase font-heading leading-[0.85] tracking-tighter mb-10">
                     Partner <br/> <span className="text-gold italic serif normal-case">With AWIEF</span>
                  </h2>
-                 <p className="text-xl md:text-2xl text-white/40 leading-relaxed font-medium mb-12 italic border-l-8 border-gold pl-12">
+                 <p className="text-xl md:text-2xl text-white/80 leading-relaxed font-medium mb-12 italic border-l-8 border-gold pl-12">
                     Drive systemic change. Align your corporate values with the future of African industry.
                  </p>
-                 <p className="text-lg text-white/30 font-medium leading-relaxed mb-12">
+                 <p className="text-lg text-white/70 font-medium leading-relaxed mb-12">
                     We partner with forward-thinking organizations to design and implement tailored enterprise development programmes. From CSI initiatives to large-scale CSR campaigns, we provide the platform for you to deliver measurable socio-economic impact.
                  </p>
-                 <a href="/contact" className="inline-flex items-center gap-6 bg-gold text-white px-12 py-6 rounded-full font-black text-[10px] uppercase tracking-[0.3em] hover:bg-white hover:text-charcoal transition-editorial shadow-2xl">
+                 <a href="/contact" className="inline-flex items-center gap-6 bg-white text-charcoal px-12 py-6 rounded-full font-black text-[10px] uppercase tracking-[0.3em] hover:bg-gold hover:text-white transition-editorial shadow-2xl">
                     EXPLORE CSI PARTNERSHIPS <ArrowRight size={18} />
                  </a>
               </div>
