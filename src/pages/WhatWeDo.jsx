@@ -172,6 +172,11 @@ export default function WhatWeDo() {
                         </div>
                      </div>
                   </div>
+                  <div className="mt-16 flex items-center gap-4">
+                     <a href="/past-conferences" className="text-white/40 font-black text-[10px] uppercase tracking-[0.4em] hover:text-gold transition-editorial flex items-center gap-3 group">
+                        VIEW PAST CONFERENCES <MoveRight size={18} className="group-hover:translate-x-2 transition-editorial text-gold" />
+                     </a>
+                  </div>
                </div>
                <div className="lg:col-span-5 relative">
                   <div className="aspect-[4/5] rounded-[64px] overflow-hidden shadow-[0_0_100px_rgba(127,61,89,0.3)] rotate-2 hover:rotate-0 transition-editorial duration-1000 relative group border-4 border-white/5 bg-charcoal">
@@ -234,50 +239,75 @@ export default function WhatWeDo() {
          </div>
       </section>
 
-      {/* Awards Hub - Esteemed & High Authority */}
-      <section className="py-40 px-6 md:px-12 bg-[#1d0b14] relative overflow-hidden" id="awards">
-        <div className="african-pattern absolute inset-0 opacity-20 scale-150 rotate-12 brightness-200"></div>
+      {/* Awards Hub - High Authority White Spread */}
+      <section className="py-40 px-6 md:px-12 bg-white relative overflow-hidden" id="awards">
         <div className="max-w-[1400px] mx-auto relative z-10">
-          <div className="grid lg:grid-cols-12 gap-24 items-center">
-            <div className="lg:col-span-5">
-               <div className="relative aspect-[3/4] rounded-[64px] overflow-hidden shadow-2xl group border-4 border-white/10">
-                  <img src="https://images.unsplash.com/photo-1531384441138-2736e62e0919?w=800&q=80" alt="Awards Ceremony" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-editorial duration-1000" />
-                  <div className="absolute inset-0 bg-brand/30 group-hover:bg-transparent transition-editorial"></div>
-                  <div className="absolute bottom-12 left-12 right-12 p-10 bg-white/10 backdrop-blur-xl rounded-[32px] border border-white/20">
-                     <div className="text-gold font-black text-[10px] uppercase tracking-[0.4em] mb-4 italic">The Prize of Pioneers</div>
-                     <h4 className="text-3xl font-black text-white uppercase font-heading leading-tight italic">Celebrating <br/> Excellence</h4>
-                  </div>
-               </div>
+          <div className="flex flex-col lg:flex-row gap-24">
+            
+            {/* 1/3 Feature Block */}
+            <div className="w-full lg:w-1/3">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-brand/20 bg-brand/5 backdrop-blur mb-8">
+                <Award size={14} className="text-brand"/>
+                <span className="text-brand text-[9px] font-black tracking-[0.3em] uppercase">Honouring Industry Leaders</span>
+              </div>
+              <h2 className="text-6xl md:text-7xl font-black uppercase font-heading leading-[0.85] tracking-tighter mb-10 text-charcoal">
+                AWIEF <br/> <span className="text-brand italic serif normal-case">Awards</span>
+              </h2>
+              <p className="text-charcoal/60 text-xl font-medium leading-relaxed italic mb-12 border-l-8 border-gold pl-10">
+                Spotlighting the pioneers, the visionaries, and the remarkable economic contributions of female founders across the continent.
+              </p>
+              
+              <div className="bg-warm border border-charcoal/5 rounded-[48px] p-10 relative overflow-hidden shadow-sm group hover:shadow-xl transition-editorial">
+                 <div className="absolute right-[-40px] top-[-40px] text-brand/5 group-hover:scale-110 transition-editorial">
+                    <Star size={200} className="fill-current" />
+                 </div>
+                 <h4 className="text-charcoal font-black text-2xl uppercase font-heading mb-4 relative z-10 leading-tight tracking-tight">2026 Nominations <br/> <span className="text-brand italic serif normal-case">Now Open</span></h4>
+                 <p className="text-charcoal/40 text-sm font-medium mb-8 relative z-10 italic">Do you know a trailblazer who deserves global recognition?</p>
+                 <a href="/nominate" className="inline-flex items-center gap-4 bg-brand text-white px-8 py-4 rounded-full font-black text-[9px] uppercase tracking-[0.3em] hover:bg-gold transition-editorial relative z-10 shadow-lg">
+                   SUBMIT NOMINATION <ArrowRight size={14}/>
+                 </a>
+              </div>
+              
+              <div className="mt-12">
+                 <a href="/hall-of-fame" className="inline-flex items-center gap-4 text-brand font-black tracking-widest text-[10px] uppercase group">
+                   HALL OF FAME ALUMNI <div className="w-10 h-10 rounded-full border border-brand/20 flex items-center justify-center group-hover:bg-brand group-hover:text-white transition-editorial"><ArrowRight size={16}/></div>
+                 </a>
+              </div>
             </div>
-            <div className="lg:col-span-7">
-               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-gold/40 bg-gold/10 backdrop-blur mb-10">
-                  <Award size={14} className="text-gold"/>
-                  <span className="text-gold text-[9px] font-black tracking-[0.3em] uppercase">Honouring Industry Leaders</span>
-               </div>
-               <h2 className="text-6xl md:text-[8rem] font-black uppercase font-heading leading-[0.8] tracking-tighter mb-12 text-white">
-                 AWIEF <span className="text-gold italic serif normal-case">Awards</span>
-               </h2>
-               <p className="text-white/40 text-2xl font-medium leading-relaxed italic max-w-2xl border-l-8 border-gold pl-12 mb-16">
-                 The most prestigious recognition for female entrepreneurs in Africa.
-               </p>
-               <div className="grid md:grid-cols-2 gap-8 mb-16">
+
+            {/* 2/3 Content Spread */}
+            <div className="w-full lg:w-2/3 flex flex-col gap-12">
+               <div className="grid md:grid-cols-2 gap-8">
                   {[
-                    { cat: "Tech Entrepreneur", icon: Zap },
-                    { cat: "Agri Entrepreneur", icon: TrendingUp },
-                    { cat: "Creative Industry", icon: Sparkles },
-                    { cat: "Social Impact", icon: Target }
+                    { cat: "Tech Entrepreneur", icon: Zap, d: "For leveraging technology to create innovative, scalable solutions that address Africa's challenges." },
+                    { cat: "Agri Entrepreneur", icon: TrendingUp, d: "Recognizing outstanding success and innovation in the agriculture and food security value chain." },
+                    { cat: "Creative Industry", icon: Sparkles, d: "For disrupting and driving economic value within fashion, arts, media, and entertainment." },
+                    { cat: "Social Entrepreneur", icon: Target, d: "Celebrating founders whose business models are fundamentally designed to solve social problems." }
                   ].map((item, i) => (
-                    <div key={i} className="p-10 bg-white/5 rounded-[40px] border border-white/10 hover:border-gold transition-editorial group flex items-center justify-between backdrop-blur shadow-2xl">
-                       <h4 className="text-xl font-black uppercase font-heading text-white group-hover:text-gold transition-editorial">{item.cat}</h4>
-                       <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-brand transition-editorial">
-                          <item.icon size={20} />
+                    <div key={i} className="p-10 bg-warm/30 border border-charcoal/5 rounded-[40px] hover:border-brand/30 hover:shadow-2xl transition-editorial group backdrop-blur shadow-sm relative overflow-hidden">
+                       <div className="african-pattern absolute inset-0 opacity-0 group-hover:opacity-[0.03] transition-editorial"></div>
+                       <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-8 border border-charcoal/5 group-hover:bg-brand group-hover:text-white transition-editorial shadow-sm">
+                          <item.icon size={24} />
                        </div>
+                       <h4 className="text-2xl font-black uppercase font-heading text-charcoal mb-4 group-hover:text-brand transition-editorial leading-tight tracking-tight">{item.cat}</h4>
+                       <p className="text-charcoal/50 text-sm font-medium leading-relaxed italic">{item.d}</p>
                     </div>
                   ))}
                </div>
-               <a href="/past-awards" className="inline-flex items-center gap-8 bg-gold text-[#1d0b14] px-12 py-6 rounded-full font-black text-[10px] uppercase tracking-[0.3em] hover:bg-white transition-editorial shadow-2xl">
-                  EXPLORE THE ARCHIVE <ArrowRight size={20}/>
-               </a>
+               
+               <div className="relative aspect-[21/9] rounded-[48px] overflow-hidden shadow-2xl group border-4 border-warm">
+                  <img 
+                    src="https://images.unsplash.com/photo-1531384441138-2736e62e0919?w=1200&q=80" 
+                    alt="Awards Gala" 
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-editorial duration-1000" 
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-brand/60 via-transparent to-transparent"></div>
+                  <div className="absolute inset-0 bg-gold/10 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-editorial"></div>
+                  <div className="absolute bottom-10 left-10">
+                     <p className="text-gold font-black text-[10px] uppercase tracking-[0.4em] mb-2 italic">Annual Gala Celebration</p>
+                     <h3 className="text-4xl font-black text-white uppercase font-heading italic">The Peak of <br/> Achievement</h3>
+                  </div>
+               </div>
             </div>
           </div>
         </div>
