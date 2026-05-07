@@ -14,8 +14,16 @@ export default function Navbar({ activePage = '' }) {
   }, [])
 
   const isActive = (page) => {
-    if (activePage === page) return 'text-gold font-black' // Use Gold for active state for visibility on Berry
-    return isScrolled ? 'text-charcoal/70 hover:text-brand transition-editorial' : 'text-white/80 hover:text-white transition-editorial'
+    if (activePage === page) return 'text-gold font-black' 
+    
+    // If we are on a light-header page and haven't scrolled yet, use brand color for visibility
+    const isLightHeaderPage = activePage === 'past-conferences' || activePage === 'purchase-tickets'
+    
+    if (isScrolled) return 'text-charcoal/70 hover:text-brand transition-editorial'
+    
+    return isLightHeaderPage 
+      ? 'text-brand hover:text-charcoal transition-editorial' 
+      : 'text-white/80 hover:text-white transition-editorial'
   }
 
   const NavItemWithDropdown = ({ label, links, active }) => (

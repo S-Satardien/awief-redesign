@@ -38,7 +38,7 @@ export default function PurchaseTickets() {
 
   return (
     <div className="min-h-screen font-body text-charcoal bg-cream overflow-x-hidden">
-      <Navbar activePage="what-we-do" />
+      <Navbar activePage="purchase-tickets" />
 
       {/* Editorial Header */}
       <header className="pt-48 pb-24 px-6 md:px-12 max-w-[1400px] mx-auto text-center relative overflow-hidden">
