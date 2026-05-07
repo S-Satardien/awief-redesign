@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import { ArrowRight, Calendar, X, Search, Mail } from 'lucide-react'
+import { ArrowRight, Calendar, X, Search, Mail, MoveRight } from 'lucide-react'
 
 const featured = {
   id: 'featured', category: "Partnerships", date: "April 28, 2026",
