@@ -16,15 +16,14 @@ export default function OurImpact() {
         <div className="african-pattern absolute inset-0 opacity-20 scale-150 rotate-12 brightness-200"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-brand/50 z-10 pointer-events-none"></div>
         
-        <div className="max-w-4xl mx-auto relative z-20">
+        <div className="max-w-5xl mx-auto relative z-20">
           <p className="text-gold text-xs font-black tracking-[0.3em] uppercase mb-8 flex items-center justify-center gap-4">
             <span className="w-2 h-2 rounded-full bg-gold"></span>
             Measuring Our Success
             <span className="w-2 h-2 rounded-full bg-gold"></span>
           </p>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[0.9] tracking-tighter mb-10 uppercase font-heading">
-            Our <br />
-            <span className="text-gold italic serif normal-case">Impact</span>
+            Our <span className="text-gold italic serif normal-case">Impact</span>
           </h1>
           <p className="text-white/80 text-xl leading-relaxed mb-0 max-w-2xl mx-auto italic font-medium">
             We measure our success not just in numbers, but in the glass ceilings shattered, the communities uplifted, and the thriving enterprises built by African women.
@@ -34,8 +33,8 @@ export default function OurImpact() {
 
       {/* The Core Metrics - High Impact Panel */}
       <section className="px-6 md:px-12 -mt-24 relative z-30 max-w-[1400px] mx-auto mb-32">
-        <div className="bg-charcoal border border-white/10 p-12 md:p-20 rounded-[48px] shadow-2xl relative overflow-hidden">
-          <div className="african-pattern absolute inset-0 opacity-10"></div>
+        <div className="bg-[#1d0b14] border border-white/10 p-12 md:p-20 rounded-[48px] shadow-2xl relative overflow-hidden">
+          <div className="african-pattern absolute inset-0 opacity-10 brightness-200"></div>
           
           <div className="grid md:grid-cols-3 gap-16 text-center relative z-10">
             {/* Metric 1 */}
@@ -138,11 +137,11 @@ export default function OurImpact() {
 
       {/* AWIEF Awards Showcase - Feature Spread */}
       <section className="py-32 px-8 max-w-[1400px] mx-auto">
-        <div className="bg-charcoal rounded-[64px] overflow-hidden flex flex-col lg:flex-row items-stretch shadow-2xl relative">
+        <div className="bg-[#1d0b14] rounded-[64px] overflow-hidden flex flex-col lg:flex-row items-stretch shadow-2xl relative">
           <div className="african-pattern absolute inset-0 opacity-10 scale-150 brightness-200"></div>
           
           <div className="w-full lg:w-1/2 relative min-h-[500px] lg:min-h-auto order-2 lg:order-1">
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-charcoal z-10"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#1d0b14] z-10"></div>
             <img 
               src="https://images.unsplash.com/photo-1561489396-888724a1543d?w=1200&q=80" 
               alt="AWIEF Awards Celebration" 
@@ -150,13 +149,13 @@ export default function OurImpact() {
             />
             <div className="absolute inset-0 bg-brand/30 mix-blend-multiply"></div>
             <div className="absolute bottom-12 left-12 z-20">
-               <div className="bg-gold text-charcoal p-10 rounded-full shadow-2xl rotate-12 border-4 border-charcoal animate-float">
+               <div className="bg-gold text-[#1d0b14] p-10 rounded-full shadow-2xl rotate-12 border-4 border-[#1d0b14] animate-float">
                   <Award size={48} />
                </div>
             </div>
           </div>
 
-          <div className="w-full lg:w-1/2 p-12 md:p-24 relative z-20 flex flex-col justify-center bg-charcoal order-1 lg:order-2">
+          <div className="w-full lg:w-1/2 p-12 md:p-24 relative z-20 flex flex-col justify-center bg-[#1d0b14] order-1 lg:order-2">
             <p className="text-gold text-[10px] font-black tracking-[0.4em] uppercase mb-8">Excellence Unlocked</p>
             <h2 className="text-5xl md:text-7xl font-black text-white mb-8 leading-[0.9] tracking-tighter uppercase font-heading">
               Celebrating <br/> <span className="text-gold italic serif normal-case">The Visionaries</span>
