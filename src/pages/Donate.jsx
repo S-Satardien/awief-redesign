@@ -131,7 +131,6 @@ export default function Donate() {
                 ))}
              </div>
           </div>
-
           <div className="grid lg:grid-cols-12 gap-10 items-start">
              <div className="lg:col-span-8 bg-white p-10 md:p-16 rounded-[48px] shadow-xl border border-charcoal/5">
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-12">
@@ -142,10 +141,10 @@ export default function Donate() {
                         className={`py-8 rounded-[24px] text-xl font-black transition-editorial border-2 flex flex-col items-center justify-center gap-1 ${
                           selectedAmount === amt 
                           ? 'bg-brand border-brand text-white shadow-xl scale-105' 
-                          : 'bg-cream/30 border-charcoal/5 text-charcoal/40 hover:border-brand hover:text-brand shadow-sm'
+                          : 'bg-cream/30 border-charcoal/5 text-charcoal hover:border-brand shadow-sm'
                         }`}
                      >
-                        <span className="text-[8px] font-black tracking-widest opacity-40 uppercase">USD</span>
+                        <span className="text-[8px] font-black tracking-widest opacity-60 uppercase">USD</span>
                         {amt === 'Custom' ? amt : `$${amt}`}
                      </button>
                    ))}
@@ -153,25 +152,22 @@ export default function Donate() {
 
                 <div className="space-y-6">
                    <div className="group relative">
-                      <input type="email" placeholder="Email Address" className="w-full bg-cream/30 border-b border-charcoal/10 py-5 px-4 focus:outline-none focus:border-brand transition-editorial text-base font-medium placeholder:text-charcoal/20" />
+                      <input type="email" placeholder="Email Address" className="w-full bg-cream/30 border-b border-charcoal/20 py-5 px-4 focus:outline-none focus:border-brand transition-editorial text-base font-medium placeholder:text-charcoal" />
                    </div>
-                   <button className="w-full bg-brand text-white py-8 rounded-[24px] font-black text-[10px] uppercase tracking-[0.4em] hover:bg-charcoal transition-editorial shadow-2xl flex items-center justify-center gap-4 group">
-                     PROCEED TO SECURE GATEWAY <ArrowRight size={20} className="group-hover:translate-x-2 transition-editorial" />
-                   </button>
                 </div>
 
-                <div className="mt-10 flex flex-wrap items-center justify-center gap-8 border-t border-charcoal/5 pt-10 opacity-40">
-                   <div className="flex items-center gap-2">
+                <div className="mt-10 flex flex-wrap items-center justify-center gap-8 border-t border-charcoal/5 pt-10">
+                   <div className="flex items-center gap-2 opacity-60">
                       <Lock size={14} className="text-brand" />
-                      <span className="text-[8px] font-black uppercase tracking-widest">256-bit Encryption</span>
+                      <span className="text-[8px] font-black uppercase tracking-widest text-charcoal">256-bit Encryption</span>
                    </div>
-                   <div className="flex items-center gap-2">
+                   <div className="flex items-center gap-2 opacity-60">
                       <ShieldCheck size={14} className="text-brand" />
-                      <span className="text-[8px] font-black uppercase tracking-widest">Secure Checkout</span>
+                      <span className="text-[8px] font-black uppercase tracking-widest text-charcoal">Secure Checkout</span>
                    </div>
-                   <div className="flex items-center gap-2">
+                   <div className="flex items-center gap-2 opacity-60">
                       <CreditCard size={14} className="text-brand" />
-                      <span className="text-[8px] font-black uppercase tracking-widest">All Major Cards</span>
+                      <span className="text-[8px] font-black uppercase tracking-widest text-charcoal">All Major Cards</span>
                    </div>
                 </div>
              </div>
@@ -246,6 +242,10 @@ export default function Donate() {
                       </ul>
                    </div>
                 </div>
+
+                <button className="w-full bg-brand text-white py-8 rounded-[24px] font-black text-[10px] uppercase tracking-[0.4em] hover:bg-charcoal transition-editorial shadow-2xl flex items-center justify-center gap-4 group">
+                   PROCEED TO SECURE GATEWAY <ArrowRight size={20} className="group-hover:translate-x-2 transition-editorial" />
+                </button>
              </div>
           </div>
         </div>
