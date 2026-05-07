@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import { MapPin, Phone, Mail, Send, CheckCircle2, Heart, Scale, ShieldCheck, Globe, Sparkles, MoveRight } from 'lucide-react'
+import { MapPin, Phone, Mail, Send, CheckCircle2, Heart, Scale, ShieldCheck, Globe, MoveRight } from 'lucide-react'
 
 export default function ContactUs() {
   const [formStatus, setFormStatus] = useState('idle')
@@ -257,14 +257,6 @@ export default function ContactUs() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-                   <a href="#" className="inline-flex items-center gap-4 font-black tracking-widest text-[10px] uppercase group">
-                      Download full documents <div className="w-12 h-12 rounded-full bg-charcoal text-white flex items-center justify-center group-hover:bg-brand transition-editorial shadow-xl"><MoveRight size={20}/></div>
-                   </a>
-                </div>
-             </div>
           </div>
         </div>
       </section>
