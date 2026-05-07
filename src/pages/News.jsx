@@ -61,7 +61,7 @@ export default function News() {
               </div>
             </div>
           
-            <div className="col-span-12 lg:col-span-5 lg:pl-12 space-y-12">
+            <div className="col-span-12 lg:col-span-5 lg:pl-12">
               {/* The Digest - High Impact Berry */}
               <div className="p-12 bg-brand-dark rounded-[48px] text-white shadow-2xl relative overflow-hidden group border-2 border-white/10">
                  <div className="african-pattern absolute inset-0 opacity-20 group-hover:opacity-40 transition-editorial scale-150"></div>
@@ -84,39 +84,39 @@ export default function News() {
                     </div>
                  </div>
               </div>
-
-              {/* Filter Perspectives */}
-              <div className="p-12 bg-white rounded-[48px] border border-charcoal/5 shadow-sm">
-                 <div className="flex items-center gap-3 mb-10">
-                    <div className="w-1.5 h-10 bg-gold"></div>
-                    <h3 className="text-xs font-black tracking-[0.3em] uppercase text-brand italic">
-                      Filter Perspectives
-                    </h3>
-                 </div>
-                 <div className="flex flex-wrap gap-4">
-                   {['All', 'Partnerships', 'Insights', 'Announcements', 'Events'].map(f => (
-                     <button 
-                        key={f} 
-                        onClick={() => setFilter(f)} 
-                        className={`px-8 py-4 rounded-full text-[10px] font-black uppercase tracking-widest transition-editorial border-2 ${
-                          filter === f 
-                          ? 'bg-brand text-white border-brand shadow-[0_20px_50px_rgba(127,61,89,0.3)] scale-105' 
-                          : 'bg-warm text-charcoal/30 border-charcoal/5 hover:border-brand hover:text-brand shadow-sm hover:scale-105'
-                        }`}
-                      >
-                       {f}
-                     </button>
-                   ))}
-                 </div>
-              </div>
             </div>
           </div>
         </div>
       </header>
 
       {/* Asymmetrical Article Grid - White Editorial Spread */}
-      <section className="py-32 px-6 md:px-12 bg-warm rounded-t-[60px] -mt-12 relative z-20">
+      <section className="py-40 px-6 md:px-12 bg-warm rounded-t-[60px] -mt-12 relative z-20">
         <div className="max-w-[1400px] mx-auto">
+          {/* Horizontal Theme Filter */}
+          <div className="mb-24 flex flex-col md:flex-row md:items-center justify-between gap-8 border-b border-charcoal/5 pb-12">
+            <div className="flex items-center gap-4">
+              <div className="w-2 h-12 bg-gold"></div>
+              <h3 className="text-xl font-black uppercase font-heading tracking-tight text-charcoal">
+                Filter stories <br/> <span className="text-brand italic serif normal-case">according to theme</span>
+              </h3>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              {['All', 'Partnerships', 'Insights', 'Announcements', 'Events'].map(f => (
+                <button 
+                  key={f} 
+                  onClick={() => setFilter(f)} 
+                  className={`px-8 py-4 rounded-full text-[10px] font-black uppercase tracking-widest transition-editorial border-2 ${
+                    filter === f 
+                    ? 'bg-brand text-white border-brand shadow-[0_20px_50px_rgba(127,61,89,0.3)] scale-105' 
+                    : 'bg-white text-charcoal/30 border-charcoal/5 hover:border-brand hover:text-brand shadow-sm hover:scale-105'
+                  }`}
+                >
+                  {f}
+                </button>
+              ))}
+            </div>
+          </div>
+
           <div className="editorial-grid gap-16">
             {newsData.filter(a => filter === 'All' || a.category === filter).map((a, i) => (
               <div 
