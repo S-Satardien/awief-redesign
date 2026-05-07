@@ -309,7 +309,7 @@ export default function About() {
           
           <div className="grid md:grid-cols-3 gap-8 text-left">
             {[
-              { id: "donor-partner", icon: HeartHandshake, title: "Donate & Partner", desc: "Provide crucial financial backing or become a strategic corporate partner driving real change.", link: "/get-involved#donor-partner" },
+              { id: "donor-partner", icon: HeartHandshake, title: "Donate & Partner", desc: "Provide crucial financial backing or become a strategic corporate partner driving real change.", link: "/get-involved#corporate-partner" },
               { id: "volunteer", icon: Users, title: "Volunteer", desc: "Share your valuable time, technical expertise, and mentorship with early-stage founders.", link: "/get-involved#volunteer" },
               { id: "join-community", icon: Globe, title: "Join the Community", desc: "Step into Africa's most powerful network of female leaders, innovators, and investors.", link: "/get-involved#join-community" }
             ].map((card) => (

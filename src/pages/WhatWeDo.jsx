@@ -171,13 +171,13 @@ export default function WhatWeDo() {
                            <p className="text-[10px] font-black text-gold uppercase tracking-widest">October 8 - 9, 2026</p>
                            <p className="text-sm font-black uppercase font-heading tracking-tight text-white">Cape Town, South Africa</p>
                         </div>
-                        <div className="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center hover:bg-gold hover:text-white transition-editorial cursor-pointer">
+                        <a href="https://www.youtube.com/watch?v=qg1mfSal_Eg" target="_blank" rel="noopener noreferrer" className="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center hover:bg-gold hover:text-white transition-editorial cursor-pointer">
                            <Play size={20} fill="currentColor"/>
-                        </div>
+                        </a>
                      </div>
                   </div>
                   <div className="mt-16 flex items-center gap-4">
-                     <a href="/past-conferences" className="text-white/40 font-black text-[10px] uppercase tracking-[0.4em] hover:text-gold transition-editorial flex items-center gap-3 group">
+                     <a href="/past-conferences" className="text-white/40 font-black text-[10px] uppercase tracking-[0.4em] hover:bg-gold hover:text-white transition-editorial flex items-center gap-3 group">
                         VIEW PAST CONFERENCES <MoveRight size={18} className="group-hover:translate-x-2 transition-editorial text-gold" />
                      </a>
                   </div>

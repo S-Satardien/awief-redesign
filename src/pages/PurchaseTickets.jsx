@@ -142,7 +142,7 @@ export default function PurchaseTickets() {
                 Hear from <span className="text-gold serif italic normal-case">Visionaries</span>
               </h2>
             </div>
-            <a href="#" className="flex items-center gap-4 text-gold font-black tracking-widest text-[10px] uppercase group">
+            <a href="/2026-speakers" className="flex items-center gap-4 text-gold font-black tracking-widest text-[10px] uppercase group">
                View Full Lineup <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-gold group-hover:text-brand transition-editorial"><ArrowRight size={20}/></div>
             </a>
           </div>
@@ -256,9 +256,9 @@ export default function PurchaseTickets() {
                   We offer specialized discounts for corporate delegations and group bookings of 5 or more attendees. Contact our sales team directly to arrange a custom package and invoice.
                 </p>
              </div>
-             <button className="bg-charcoal text-white px-12 py-6 rounded-full font-black text-[10px] uppercase tracking-widest hover:bg-brand transition-editorial shadow-2xl shrink-0 relative z-10">
+             <a href="/contact-us" className="bg-charcoal text-white px-12 py-6 rounded-full font-black text-[10px] uppercase tracking-widest hover:bg-brand transition-editorial shadow-2xl shrink-0 relative z-10">
                 CONTACT SALES TEAM
-             </button>
+             </a>
           </div>
         </div>
       </section>

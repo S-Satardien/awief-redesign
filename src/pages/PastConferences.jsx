@@ -104,7 +104,7 @@ export default function PastConferences() {
         <h2 className="text-5xl md:text-8xl font-black uppercase font-heading leading-none tracking-tighter mb-12">
           Join Us in <br/> <span className="text-brand">2026</span>
         </h2>
-        <a href="/purchase-tickets" className="inline-block bg-white text-charcoal px-12 py-6 rounded-full font-black text-xs uppercase tracking-[0.2em] hover:bg-brand hover:text-white transition-editorial shadow-2xl">
+        <a href="/purchase-conference-tickets" className="inline-block bg-white text-charcoal px-12 py-6 rounded-full font-black text-xs uppercase tracking-[0.2em] hover:bg-brand hover:text-white transition-editorial shadow-2xl">
           SECURE YOUR PLACE
         </a>
       </section>

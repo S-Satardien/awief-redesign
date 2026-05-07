@@ -9,7 +9,7 @@ export default function Donate() {
 
   return (
     <div className="min-h-screen font-body text-charcoal bg-cream overflow-x-hidden">
-      <Navbar activePage="about" />
+      <Navbar activePage="donate" />
 
       {/* 1. "In Your Face" Hero Section - High Visibility Berry Entrance */}
       <header className="relative bg-brand pt-56 pb-32 px-6 md:px-12 overflow-hidden">

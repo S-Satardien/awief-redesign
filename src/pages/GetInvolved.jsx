@@ -132,7 +132,7 @@ export default function GetInvolved() {
                  <p className="text-lg text-white/70 font-medium leading-relaxed mb-12">
                     We partner with forward-thinking organizations to design and implement tailored enterprise development programmes. From CSI initiatives to large-scale CSR campaigns, we provide the platform for you to deliver measurable socio-economic impact.
                  </p>
-                 <a href="/contact" className="inline-flex items-center gap-6 bg-white text-charcoal px-12 py-6 rounded-full font-black text-[10px] uppercase tracking-[0.3em] hover:bg-gold hover:text-white transition-editorial shadow-2xl">
+                 <a href="/contact-us" className="inline-flex items-center gap-6 bg-white text-charcoal px-12 py-6 rounded-full font-black text-[10px] uppercase tracking-[0.3em] hover:bg-gold hover:text-white transition-editorial shadow-2xl">
                     EXPLORE CSI PARTNERSHIPS <ArrowRight size={18} />
                  </a>
               </div>
@@ -173,7 +173,7 @@ export default function GetInvolved() {
                       </div>
                     ))}
                  </div>
-                 <a href="/contact" className="inline-flex items-center gap-6 bg-charcoal text-white px-12 py-6 rounded-full font-black text-[10px] uppercase tracking-[0.3em] hover:bg-brand transition-editorial shadow-2xl">
+                 <a href="/contact-us" className="inline-flex items-center gap-6 bg-charcoal text-white px-12 py-6 rounded-full font-black text-[10px] uppercase tracking-[0.3em] hover:bg-brand transition-editorial shadow-2xl">
                     APPLY TO VOLUNTEER <ArrowRight size={18} />
                  </a>
               </div>

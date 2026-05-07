@@ -91,9 +91,9 @@ export default function OurImpact() {
                 Discover the real-world impact of the AWIEF network through the voices of the resilient founders who are transforming their communities.
               </p>
             </div>
-            <button className="bg-charcoal text-white px-12 py-6 rounded-full font-black text-[10px] uppercase tracking-[0.3em] hover:bg-brand transition-editorial shadow-2xl flex items-center gap-4 shrink-0">
+            <a href="https://www.youtube.com/watch?v=qg1mfSal_Eg" target="_blank" rel="noopener noreferrer" className="bg-charcoal text-white px-12 py-6 rounded-full font-black text-[10px] uppercase tracking-[0.3em] hover:bg-brand transition-editorial shadow-2xl flex items-center gap-4 shrink-0">
                <Play size={18} fill="currentColor" /> Watch All Stories
-            </button>
+            </a>
           </div>
 
           <div className="grid lg:grid-cols-3 gap-12">
@@ -114,7 +114,7 @@ export default function OurImpact() {
                 img: "photo-1531123897727-8f129e1688ce" 
               }
             ].map((story, i) => (
-              <div key={i} className="group cursor-pointer">
+              <a href="https://www.youtube.com/watch?v=qg1mfSal_Eg" target="_blank" rel="noopener noreferrer" key={i} className="group cursor-pointer">
                 <div className="relative aspect-video rounded-[40px] overflow-hidden mb-8 shadow-xl border-4 border-white group-hover:border-brand/20 transition-editorial duration-700">
                   <img src={`https://images.unsplash.com/${story.img}?w=800&q=80`} alt={story.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-editorial duration-1000 scale-110 group-hover:scale-100"/>
                   <div className="absolute inset-0 bg-charcoal/40 group-hover:bg-transparent transition-editorial duration-700"></div>
@@ -129,7 +129,7 @@ export default function OurImpact() {
                 </div>
                 <h3 className="text-2xl font-black text-charcoal mb-2 uppercase font-heading group-hover:text-brand transition-editorial">{story.name}</h3>
                 <p className="text-brand font-black tracking-widest text-[10px] uppercase italic">{story.role}</p>
-              </div>
+              </a>
             ))}
           </div>
         </div>
@@ -169,7 +169,7 @@ export default function OurImpact() {
                </p>
             </div>
             <div>
-              <a href="/what-we-do#awards" className="inline-flex items-center gap-6 bg-white text-charcoal px-12 py-6 rounded-full font-black text-[10px] uppercase tracking-[0.3em] hover:bg-gold hover:text-white transition-editorial shadow-2xl">
+              <a href="/past-awards" className="inline-flex items-center gap-6 bg-white text-charcoal px-12 py-6 rounded-full font-black text-[10px] uppercase tracking-[0.3em] hover:bg-gold hover:text-white transition-editorial shadow-2xl">
                 VIEW PAST WINNERS <ArrowRight size={18} />
               </a>
             </div>
@@ -202,7 +202,7 @@ export default function OurImpact() {
              ))}
           </div>
 
-          <a href="#" className="text-charcoal font-black text-[10px] uppercase tracking-[0.3em] flex items-center justify-center gap-4 hover:text-brand transition-editorial group">
+          <a href="/past-conferences" className="text-charcoal font-black text-[10px] uppercase tracking-[0.3em] flex items-center justify-center gap-4 hover:text-brand transition-editorial group">
             Explore the 2025 Retrospective <ChevronRight size={18} className="group-hover:translate-x-2 transition-editorial" />
           </a>
         </div>

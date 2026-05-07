@@ -82,7 +82,7 @@ export default function Navbar({ activePage = '' }) {
                 links={[
                   { label: "About AWIEF", href: "/about" },
                   { label: "Advisory Board", href: "/about#advisory-board" },
-                  { label: "Meet the Team", href: "/about#team" },
+                  { label: "Meet the Team", href: "/about#meet-the-team" },
                   { label: "Our Partners", href: "/about#our-partners" },
                   { label: "Get Involved", href: "/get-involved" }
                 ]}

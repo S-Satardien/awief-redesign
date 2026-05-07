@@ -68,10 +68,10 @@ export default function Home() {
                 Register for Conference
                 <ArrowRight size={16} />
               </a>
-              <button className="border border-white/60 text-white px-8 py-3.5 rounded font-bold hover:bg-white/10 transition-colors flex items-center gap-2 text-sm">
+              <a href="https://www.youtube.com/watch?v=qg1mfSal_Eg" target="_blank" rel="noopener noreferrer" className="border border-white/60 text-white px-8 py-3.5 rounded font-bold hover:bg-white/10 transition-colors flex items-center gap-2 text-sm">
                 <Play size={16} className="fill-current" />
                 Watch Our Story
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -94,7 +94,7 @@ export default function Home() {
             {[
               { icon: Calendar, title: "Summits", label: "Attend", desc: "Connect with global leaders and influencers at our flagship events and summits.", bg: "bg-brand/5", link: "/purchase-conference-tickets" },
               { icon: FileText, title: "Programmes", label: "Apply", desc: "Access mentorship, training, and resources through our tailored accelerator and development programs.", bg: "bg-berry/5", link: "/what-we-do#programmes" },
-              { icon: Users, title: "Partnerships", label: "Partner", desc: "Collaborate with forward-thinking organizations to drive real systemic change.", bg: "bg-charcoal/5", link: "/get-involved#donor-partner" },
+              { icon: Users, title: "Partnerships", label: "Partner", desc: "Collaborate with forward-thinking organizations to drive real systemic change.", bg: "bg-charcoal/5", link: "/get-involved#corporate-partner" },
               { icon: BookOpen, title: "Resources", label: "Learn", desc: "Access our exclusive database of reports, training, and research on women's empowerment.", bg: "bg-brand-light/5", link: "/what-we-do#advocacy" },
             ].map((item, i) => (
               <a href={item.link} key={i} className={`p-10 rounded-[32px] ${item.bg} group hover:bg-brand transition-editorial h-auto flex flex-col justify-between cursor-pointer border border-transparent hover:shadow-2xl`}>
