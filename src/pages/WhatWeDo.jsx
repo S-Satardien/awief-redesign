@@ -269,7 +269,7 @@ export default function WhatWeDo() {
               </div>
               
               <div className="mt-12">
-                 <a href="/hall-of-fame" className="inline-flex items-center gap-4 text-brand font-black tracking-widest text-[10px] uppercase group">
+                 <a href="/past-awards" className="inline-flex items-center gap-4 text-brand font-black tracking-widest text-[10px] uppercase group">
                    HALL OF FAME ALUMNI <div className="w-10 h-10 rounded-full border border-brand/20 flex items-center justify-center group-hover:bg-brand group-hover:text-white transition-editorial"><ArrowRight size={16}/></div>
                  </a>
               </div>

@@ -17,43 +17,52 @@ export default function PastAwards() {
     <div className="min-h-screen font-body text-charcoal bg-cream overflow-x-hidden">
       <Navbar />
 
-      {/* Editorial Header */}
-      <header className="pt-48 pb-24 px-6 md:px-12 max-w-[1400px] mx-auto text-center relative">
-        <div className="absolute top-24 left-1/2 -translate-x-1/2 text-[15rem] md:text-[25rem] font-black text-brand/5 select-none pointer-events-none uppercase tracking-tighter">
-          Hall
+      {/* Editorial Header - High Impact Berry Hall of Fame */}
+      <header className="relative bg-brand pt-56 pb-32 px-6 md:px-12 overflow-hidden text-center">
+        <div className="african-pattern absolute inset-0 opacity-30 scale-150 rotate-12 brightness-200"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-brand/50 to-brand z-10 pointer-events-none"></div>
+        
+        <div className="max-w-4xl mx-auto relative z-20">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gold/40 bg-gold/10 backdrop-blur mb-8">
+            <Award size={14} className="text-gold"/>
+            <span className="text-gold text-[11px] font-black tracking-[0.2em] uppercase">Industry Excellence</span>
+          </div>
+          <h1 className="text-6xl md:text-[8rem] lg:text-[10rem] font-black uppercase font-heading leading-[0.85] tracking-tighter mb-12 text-white">
+            Hall <span className="text-gold italic serif normal-case">Of Fame</span>
+          </h1>
+          <p className="text-xl md:text-2xl text-white/80 leading-relaxed font-medium max-w-3xl mx-auto italic">
+            A tribute to the visionaries and pioneers who have redefined the economic landscape for women across the African continent.
+          </p>
         </div>
-        <p className="text-brand font-black tracking-[0.4em] uppercase text-xs mb-8 relative z-10">Celebrating Excellence</p>
-        <h1 className="text-5xl md:text-[8rem] font-black uppercase font-heading leading-[0.85] tracking-tighter mb-12 relative z-10">
-          Of <span className="text-brand">Fame</span>
-        </h1>
-        <p className="text-xl text-charcoal/60 max-w-2xl mx-auto font-medium leading-relaxed relative z-10">
-          A tribute to the visionaries who have redefined the economic landscape for women across the African continent.
-        </p>
       </header>
 
-      {/* Archive Portal */}
-      <section className="section-spacing px-6 md:px-12 bg-white rounded-t-[60px]">
+      {/* Archive Portal - White Editorial Spread */}
+      <section className="py-32 px-6 md:px-12 bg-white rounded-t-[60px] -mt-12 relative z-20">
         <div className="max-w-[1400px] mx-auto">
-          <div className="editorial-grid gap-16">
+          <div className="grid lg:grid-cols-12 gap-24">
             {/* Sidebar Filters */}
             <div className="col-span-12 lg:col-span-3">
-              <div className="sticky top-32 space-y-12">
+              <div className="sticky top-32 space-y-16">
                 <div>
-                  <h3 className="text-xs font-black tracking-[0.3em] uppercase text-brand mb-8 italic">The Years</h3>
-                  <div className="space-y-4">
+                  <p className="text-brand font-black tracking-[0.3em] uppercase text-[10px] mb-8 italic border-l-4 border-gold pl-6">Timeline of Achievement</p>
+                  <div className="space-y-6">
                     {['All', '2025', '2024', '2023', '2022'].map(y => (
-                      <button key={y} onClick={() => setFilter(y)} className={`block text-2xl font-black uppercase font-heading transition-editorial hover:text-brand ${filter === y ? 'text-brand' : 'text-charcoal/20'}`}>
+                      <button 
+                        key={y} 
+                        onClick={() => setFilter(y)} 
+                        className={`block text-4xl font-black uppercase font-heading transition-editorial hover:text-brand tracking-tighter ${filter === y ? 'text-brand' : 'text-charcoal/10'}`}
+                      >
                         {y}
                       </button>
                     ))}
                   </div>
                 </div>
                 
-                <div className="p-8 bg-cream rounded-[32px] border border-charcoal/5">
-                   <h3 className="text-[10px] font-black tracking-[0.2em] uppercase text-charcoal/40 mb-6">Quick Search</h3>
-                   <div className="flex items-center gap-4 border-b border-charcoal/10 pb-4">
-                     <Search size={16} className="text-charcoal/20"/>
-                     <input type="text" placeholder="Winner Name..." className="bg-transparent focus:outline-none text-sm font-medium w-full"/>
+                <div className="p-10 bg-warm rounded-[48px] border border-charcoal/5 shadow-sm group hover:shadow-xl transition-editorial">
+                   <h3 className="text-[10px] font-black tracking-[0.2em] uppercase text-charcoal/40 mb-8">Quick Search</h3>
+                   <div className="flex items-center gap-4 border-b-2 border-charcoal/10 pb-4 focus-within:border-brand transition-editorial">
+                     <Search size={18} className="text-charcoal/20"/>
+                     <input type="text" placeholder="Search Winner..." className="bg-transparent focus:outline-none text-sm font-black uppercase tracking-widest w-full placeholder:text-charcoal/20"/>
                    </div>
                 </div>
               </div>
@@ -61,25 +70,35 @@ export default function PastAwards() {
 
             {/* Winner Portrait Grid */}
             <div className="col-span-12 lg:col-span-9">
-              <div className="grid md:grid-cols-2 gap-12">
+              <div className="grid md:grid-cols-2 gap-16">
                 {awardsData.map((winner, i) => (
-                  <div key={i} className={`group cursor-pointer ${i % 2 === 1 ? 'md:mt-24' : ''}`}>
-                    <div className="relative aspect-[3/4] rounded-[40px] overflow-hidden shadow-2xl mb-8">
-                      <img src={`https://images.unsplash.com/${winner.img}?w=800&q=80`} alt={winner.name} className="w-full h-full object-cover transition-editorial duration-1000 grayscale group-hover:grayscale-0 group-hover:scale-105" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-transparent to-transparent opacity-60"></div>
-                      <div className="absolute top-8 right-8">
-                         <div className="bg-white/10 backdrop-blur-xl border border-white/20 text-white px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-widest">
+                  <div key={i} className={`group cursor-pointer relative ${i % 2 === 1 ? 'md:mt-32' : ''}`}>
+                    <div className="relative aspect-[3/4] rounded-[64px] overflow-hidden shadow-2xl mb-10 border-4 border-warm transition-editorial group-hover:border-brand/20">
+                      <img 
+                        src={`https://images.unsplash.com/${winner.img}?w=800&q=80`} 
+                        alt={winner.name} 
+                        className="w-full h-full object-cover transition-editorial duration-1000 grayscale group-hover:grayscale-0 group-hover:scale-110" 
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-brand/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-editorial duration-700"></div>
+                      <div className="absolute inset-0 bg-gold/10 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-editorial"></div>
+                      
+                      <div className="absolute top-10 right-10">
+                         <div className="bg-white/10 backdrop-blur-xl border border-white/20 text-white px-8 py-3 rounded-full text-[10px] font-black uppercase tracking-widest">
                            {winner.year}
                          </div>
                       </div>
-                      <div className="absolute bottom-12 left-12 right-12">
-                         <p className="text-brand font-black tracking-widest text-[10px] uppercase mb-2">
-                           {winner.category}
-                         </p>
-                         <h3 className="text-3xl md:text-4xl font-black text-white uppercase font-heading">
+
+                      <div className="absolute bottom-12 left-12 right-12 translate-y-8 group-hover:translate-y-0 transition-editorial duration-700">
+                         <div className="flex items-center gap-3 mb-4">
+                            <div className="w-8 h-px bg-gold"></div>
+                            <p className="text-gold font-black tracking-[0.3em] uppercase text-[9px]">
+                              {winner.category}
+                            </p>
+                         </div>
+                         <h3 className="text-4xl font-black text-white uppercase font-heading leading-[0.85] tracking-tighter mb-4">
                            {winner.name}
                          </h3>
-                         <p className="text-white/60 text-sm font-medium mt-2">
+                         <p className="text-white/60 text-sm font-black uppercase tracking-widest italic">
                            {winner.company}
                          </p>
                       </div>
@@ -88,9 +107,9 @@ export default function PastAwards() {
                 ))}
               </div>
               
-              <div className="mt-24 text-center">
-                 <button className="bg-charcoal text-white px-12 py-6 rounded-full font-black text-xs uppercase tracking-[0.2em] hover:bg-brand transition-editorial shadow-2xl">
-                   VIEW FULL ARCHIVE
+              <div className="mt-32 text-center">
+                 <button className="bg-brand text-white px-16 py-8 rounded-full font-black text-[10px] uppercase tracking-[0.4em] hover:bg-gold hover:text-white transition-editorial shadow-2xl flex items-center gap-6 mx-auto group">
+                   VIEW FULL ARCHIVE <ArrowRight size={18} className="group-hover:translate-x-2 transition-editorial" />
                  </button>
               </div>
             </div>
@@ -98,14 +117,15 @@ export default function PastAwards() {
         </div>
       </section>
 
-      {/* Kinetic Typography Marquee */}
-      <section className="py-24 bg-charcoal overflow-hidden">
-        <div className="flex whitespace-nowrap animate-marquee">
+      {/* Kinetic Typography Marquee - High Authority */}
+      <section className="py-32 bg-brand overflow-hidden relative border-t border-white/10">
+        <div className="african-pattern absolute inset-0 opacity-10 scale-150 rotate-12 brightness-200"></div>
+        <div className="flex whitespace-nowrap animate-marquee relative z-10">
           {[1,2,3,4].map(i => (
             <div key={i} className="flex items-center">
-              <span className="text-[6rem] md:text-[10rem] font-black text-white/5 uppercase tracking-tighter px-12">Excellence</span>
-              <span className="text-[6rem] md:text-[10rem] font-black text-brand uppercase tracking-tighter px-12 italic">Impact</span>
-              <span className="text-[6rem] md:text-[10rem] font-black text-white/5 uppercase tracking-tighter px-12">Resilience</span>
+              <span className="text-[6rem] md:text-[12rem] font-black text-white/10 uppercase tracking-[0.2em] px-12">Excellence</span>
+              <span className="text-[6rem] md:text-[12rem] font-black text-gold uppercase tracking-[0.2em] px-12 italic serif normal-case">Impact</span>
+              <span className="text-[6rem] md:text-[12rem] font-black text-white/10 uppercase tracking-[0.2em] px-12">Resilience</span>
             </div>
           ))}
         </div>
