@@ -182,49 +182,84 @@ export default function ContactUs() {
         </div>
       </section>
 
-      {/* Legal Spread - Proportions Refined */}
+      {/* Legal Spread - High Authority Editorial */}
       <section className="py-32 px-6 md:px-12 bg-white rounded-t-[60px]">
-        <div className="max-w-[1300px] mx-auto">
-          <div className="grid lg:grid-cols-12 gap-20">
-             <div className="lg:col-span-5">
-                <div className="flex items-center gap-3 text-brand font-black tracking-[0.4em] uppercase text-[10px] mb-10">
-                   <span className="w-10 h-0.5 bg-brand"></span>
-                   Governance
+        <div className="max-w-[1400px] mx-auto">
+          <div className="flex items-center gap-3 text-brand font-black tracking-[0.4em] uppercase text-[10px] mb-12">
+             <div className="w-10 h-0.5 bg-brand"></div>
+             Governance Hub
+          </div>
+          <h2 className="text-5xl md:text-7xl font-black uppercase font-heading leading-[0.8] tracking-tighter mb-20">
+            Legal <br/> <span className="text-charcoal italic serif">Framework</span>
+          </h2>
+
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Terms & Conditions */}
+            <div className="bg-cream p-12 md:p-16 rounded-[48px] border border-charcoal/5 shadow-xl flex flex-col h-[600px] group hover:border-brand/20 transition-editorial">
+              <div className="flex items-center gap-5 mb-10">
+                <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center text-brand shadow-sm group-hover:bg-brand group-hover:text-white transition-editorial">
+                  <Scale size={28} />
                 </div>
-                <h2 className="text-5xl md:text-7xl font-black uppercase font-heading leading-[0.8] tracking-tighter mb-10">
-                  Legal <br/> <span className="text-charcoal italic serif">Framework</span>
-                </h2>
-                <div className="space-y-10">
-                   <div className="flex gap-6 items-start group">
-                      <div className="w-12 h-12 rounded-full border border-charcoal/5 flex items-center justify-center shrink-0 group-hover:bg-brand group-hover:text-white transition-editorial">
-                         <Scale size={20} />
-                      </div>
-                      <div>
-                         <h4 className="text-xl font-black uppercase font-heading mb-2">Terms of Use</h4>
-                         <p className="text-charcoal/40 text-base font-medium leading-relaxed italic">The rules of our ecosystem.</p>
-                      </div>
-                   </div>
-                   <div className="flex gap-6 items-start group">
-                      <div className="w-12 h-12 rounded-full border border-charcoal/5 flex items-center justify-center shrink-0 group-hover:bg-brand group-hover:text-white transition-editorial">
-                         <ShieldCheck size={20} />
-                      </div>
-                      <div>
-                         <h4 className="text-xl font-black uppercase font-heading mb-2">Privacy Standards</h4>
-                         <p className="text-charcoal/40 text-base font-medium leading-relaxed italic">Protecting your data integrity.</p>
-                      </div>
-                   </div>
+                <h3 className="text-3xl font-black uppercase font-heading leading-none">Terms & <span className="text-brand">Conditions</span></h3>
+              </div>
+              <div className="overflow-y-auto pr-6 space-y-10 custom-scrollbar flex-grow">
+                <div>
+                  <span className="text-brand font-black block mb-4 tracking-[0.3em] uppercase text-[9px]">01. Acceptance</span>
+                  <p className="text-charcoal/60 font-medium leading-relaxed italic text-base">By accessing and using the AWIEF website, registering for events, or applying for our programmes, you accept and agree to be bound by these Terms and Conditions.</p>
                 </div>
-             </div>
-             <div className="lg:col-span-7 space-y-12">
-                <div className="bg-cream p-10 md:p-16 rounded-[48px] shadow-xl border border-charcoal/5 h-[400px] flex flex-col">
-                   <div className="overflow-y-auto pr-6 space-y-8 text-base font-medium text-charcoal/60 flex-grow custom-scrollbar">
-                      <p><span className="text-charcoal font-black block mb-3 tracking-[0.3em] uppercase text-[9px]">01. Commitment</span> We maintain industry-standard encryption for all user data across our digital hubs.</p>
-                      <p><span className="text-charcoal font-black block mb-3 tracking-[0.3em] uppercase text-[9px]">02. Ticketing</span> Event tickets are non-refundable but transferable with 48-hour notice.</p>
-                      <p><span className="text-charcoal font-black block mb-3 tracking-[0.3em] uppercase text-[9px]">03. IP Rights</span> All content and visual property displayed is protected under international law.</p>
-                      <p><span className="text-charcoal font-black block mb-3 tracking-[0.3em] uppercase text-[9px]">04. Conduct</span> We maintain zero-tolerance for harassment across all platforms.</p>
-                   </div>
+                <div>
+                  <span className="text-brand font-black block mb-4 tracking-[0.3em] uppercase text-[9px]">02. Registration & Ticketing</span>
+                  <p className="text-charcoal/60 font-medium leading-relaxed italic text-base">All tickets purchased for the AWIEF Annual Conference and related events are subject to availability. Early Bird pricing is time-sensitive. Tickets are generally non-refundable unless stated otherwise in specific event documentation.</p>
                 </div>
-                <div className="flex justify-end">
+                <div>
+                  <span className="text-brand font-black block mb-4 tracking-[0.3em] uppercase text-[9px]">03. Intellectual Property</span>
+                  <p className="text-charcoal/60 font-medium leading-relaxed italic text-base">All content, logos, graphics, and materials presented on this site and during our programmes are the intellectual property of AWIEF or its partners. You may not reproduce, distribute, or create derivative works without explicit written consent.</p>
+                </div>
+                <div>
+                  <span className="text-brand font-black block mb-4 tracking-[0.3em] uppercase text-[9px]">04. User Conduct</span>
+                  <p className="text-charcoal/60 font-medium leading-relaxed italic text-base">The AWIEF community is a safe, inclusive space. Any harassment, discriminatory behavior, or violation of our code of conduct during physical events or on our digital platforms will result in immediate termination of membership and access.</p>
+                </div>
+                <div>
+                  <span className="text-brand font-black block mb-4 tracking-[0.3em] uppercase text-[9px]">05. Modifications</span>
+                  <p className="text-charcoal/60 font-medium leading-relaxed italic text-base">AWIEF reserves the right to modify these terms at any time. Continued use of our platforms constitutes acceptance of any changes.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Privacy Policy */}
+            <div className="bg-warm p-12 md:p-16 rounded-[48px] border border-charcoal/5 shadow-xl flex flex-col h-[600px] group hover:border-brand/20 transition-editorial">
+              <div className="flex items-center gap-5 mb-10">
+                <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center text-brand shadow-sm group-hover:bg-brand group-hover:text-white transition-editorial">
+                  <ShieldCheck size={28} />
+                </div>
+                <h3 className="text-3xl font-black uppercase font-heading leading-none">Privacy <span className="text-brand">Policy</span></h3>
+              </div>
+              <div className="overflow-y-auto pr-6 space-y-10 custom-scrollbar flex-grow">
+                <div>
+                  <span className="text-brand font-black block mb-4 tracking-[0.3em] uppercase text-[9px]">01. Data Collection</span>
+                  <p className="text-charcoal/60 font-medium leading-relaxed italic text-base">We collect personal information (such as name, email, phone number, and company details) when you register for events, apply for accelerators, or subscribe to our newsletter.</p>
+                </div>
+                <div>
+                  <span className="text-brand font-black block mb-4 tracking-[0.3em] uppercase text-[9px]">02. Data Usage</span>
+                  <p className="text-charcoal/60 font-medium leading-relaxed italic text-base">Your data is used exclusively to facilitate event registration, manage programme applications, communicate important updates, and improve your user experience. We do not sell your personal data to third parties.</p>
+                </div>
+                <div>
+                  <span className="text-brand font-black block mb-4 tracking-[0.3em] uppercase text-[9px]">03. Third-Party Sharing</span>
+                  <p className="text-charcoal/60 font-medium leading-relaxed italic text-base">We may share necessary information with trusted third-party service providers (e.g., payment processors, event management platforms) strictly for the purpose of operating our services. These partners are bound by confidentiality agreements.</p>
+                </div>
+                <div>
+                  <span className="text-brand font-black block mb-4 tracking-[0.3em] uppercase text-[9px]">04. Data Security</span>
+                  <p className="text-charcoal/60 font-medium leading-relaxed italic text-base">AWIEF employs industry-standard security measures to protect your personal information from unauthorized access, alteration, or disclosure.</p>
+                </div>
+                <div>
+                  <span className="text-brand font-black block mb-4 tracking-[0.3em] uppercase text-[9px]">05. Your Rights</span>
+                  <p className="text-charcoal/60 font-medium leading-relaxed italic text-base">You have the right to access, correct, or request the deletion of your personal data at any time. To exercise these rights or to unsubscribe, please contact us at info@awieforum.org.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
                    <a href="#" className="inline-flex items-center gap-4 font-black tracking-widest text-[10px] uppercase group">
                       Download full documents <div className="w-12 h-12 rounded-full bg-charcoal text-white flex items-center justify-center group-hover:bg-brand transition-editorial shadow-xl"><MoveRight size={20}/></div>
                    </a>
